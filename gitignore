@@ -1,0 +1,14 @@
+# Saída do build do MkDocs
+site/
+
+# Cache do Material
+.cache/
+
+# Ambientes virtuais Python
+.venv/
+venv/
+__pycache__/
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db

@@ -1,0 +1,66 @@
+site_name: Motor Gráfico em Rust
+site_description: Trilha de estudos e documentação do desenvolvimento
+site_author: Seu Nome
+
+# Troque "seuusuario" e "seurepo" pelos valores reais do seu repositório
+site_url: https://seuusuario.github.io/seurepo/
+
+repo_url: https://github.com/seuusuario/seurepo
+repo_name: seuusuario/seurepo
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: pt-BR
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - toc.follow
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep purple
+      accent: deep purple
+      toggle:
+        icon: material/brightness-7
+        name: Mudar para modo escuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      accent: deep purple
+      toggle:
+        icon: material/brightness-4
+        name: Mudar para modo claro
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+nav:
+  - Início: index.md
+  - Fundamentos de Rust: fundamentos-rust.md
+  - Matemática para Gráficos: matematica-graficos.md
+  - Fundamentos de Computação Gráfica: fundamentos-graficos.md
+  - GPU com wgpu: gpu-wgpu.md
+  - Arquitetura de Motor: arquitetura-motor.md
+  - Subsistemas: subsistemas.md
+  - Códigos de Referência: codigos-referencia.md
+  - Rust vs. C++: comparacao-rust-cpp.md
+  - Sequência Prática: sequencia-pratica.md
