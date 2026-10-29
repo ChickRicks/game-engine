@@ -10,13 +10,13 @@ entrada, áudio e física.
 
 ## Navegação rápida
 
-- **[Fundamentos de Rust](arquitetura-moto/index.md)** — ownership, borrowing,
+- **[Fundamentos de Rust](docs/arquitetura-moto/index.md)** — ownership, borrowing,
   lifetimes e traits, a base necessária antes de encostar em gráficos.
 
-- **[Matemática para Gráficos](matematica-graficos/index.md)** — revisão direcionada
+- **[Matemática para Gráficos](docs/matematica-graficos/index.md)** — revisão direcionada
   de álgebra linear: matrizes de transformação, coordenadas homogêneas e quaternions.
 
-- **[Fundamentos de Computação Gráfica](fundamentos-graficos/index.md)** — pipeline
+- **[Fundamentos de Computação Gráfica](docs/fundamentos-graficos/index.md)** — pipeline
   gráfico, rasterização, shaders e depth buffer, independente de API.
 
 - **[GPU com wgpu](gpu-wgpu/index.md)** — a API moderna de GPU em Rust, portável entre
