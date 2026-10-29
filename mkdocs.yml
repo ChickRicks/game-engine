@@ -21,6 +21,7 @@ theme:
     - search.highlight
     - content.code.copy
     - toc.follow
+    - navigation.expand
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -53,14 +54,33 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
 
+# NAVEGAÇÃO HIERÁRQUICA
+# Cada seção é uma lista aninhada. O nome antes dos dois pontos é a categoria
+# (sem link próprio), e os itens abaixo são os arquivos dentro daquela pasta.
 nav:
   - Início: index.md
-  - Fundamentos de Rust: fundamentos-rust.md
-  - Matemática para Gráficos: matematica-graficos.md
-  - Fundamentos de Computação Gráfica: fundamentos-graficos.md
-  - GPU com wgpu: gpu-wgpu.md
-  - Arquitetura de Motor: arquitetura-motor.md
-  - Subsistemas: subsistemas.md
-  - Códigos de Referência: codigos-referencia.md
-  - Rust vs. C++: comparacao-rust-cpp.md
-  - Sequência Prática: sequencia-pratica.md
+  - Fundamentos de Rust:
+    - Introdução: fundamentos-rust/index.md
+    - Ownership e Borrowing: fundamentos-rust/ownership.md
+    - Traits e Lifetimes: fundamentos-rust/traits.md
+  - Matemática para Gráficos:
+    - Introdução: matematica-graficos/index.md
+    - Transformações Lineares: matematica-graficos/transformacoes.md
+    - Coordenadas Homogêneas: matematica-graficos/coordenadas-homogeneas.md
+    - Quaternions: matematica-graficos/quaternions.md
+  - Fundamentos de Computação Gráfica:
+    - Introdução: fundamentos-graficos/index.md
+    - Pipeline Gráfico: fundamentos-graficos/pipeline.md
+  - GPU com wgpu:
+    - Introdução: gpu-wgpu/index.md
+    - Primeiro Triângulo: gpu-wgpu/primeiro-triangulo.md
+    - Shaders WGSL: gpu-wgpu/shaders-wgsl.md
+    - Texturas e Materiais: gpu-wgpu/texturas.md
+  - Arquitetura de Motor:
+    - Introdução: arquitetura-motor/index.md
+    - ECS em Rust: arquitetura-motor/ecs.md
+  - Subsistemas:
+    - Introdução: subsistemas/index.md
+    - Entrada e Janelas: subsistemas/entrada.md
+    - Áudio: subsistemas/audio.md
+    - Física: subsistemas/fisica.md
