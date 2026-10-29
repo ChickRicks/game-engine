@@ -13,15 +13,18 @@ theme:
   name: material
   language: pt-BR
   features:
-    - navigation.tabs
+    # navigation.tabs FOI REMOVIDO DE PROPÓSITO.
+    # Com ele ativo, os itens de primeiro nível viram abas no topo e a barra
+    # lateral só mostra os filhos da aba ativa. Sem ele, a árvore completa
+    # fica visível na lateral.
     - navigation.sections
     - navigation.top
     - navigation.indexes
+    - navigation.expand
     - search.suggest
     - search.highlight
     - content.code.copy
     - toc.follow
-    - navigation.expand
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -55,8 +58,11 @@ markdown_extensions:
       alternate_style: true
 
 # NAVEGAÇÃO HIERÁRQUICA
-# Cada seção é uma lista aninhada. O nome antes dos dois pontos é a categoria
-# (sem link próprio), e os itens abaixo são os arquivos dentro daquela pasta.
+# Cada seção é uma lista aninhada. O nome antes dos dois pontos é a categoria,
+# e os itens abaixo são os arquivos dentro daquela pasta.
+#
+# REGRA: todo caminho listado aqui precisa existir em disco, senão o build falha.
+# Enquanto um arquivo não existir, deixe a linha comentada com "#".
 nav:
   - Início: index.md
   - Fundamentos de Rust:

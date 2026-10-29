@@ -8,24 +8,30 @@ Registro da trilha de estudos, decisões técnicas e progresso na construção
 de um motor próprio — cobrindo renderização com wgpu, arquitetura ECS,
 entrada, áudio e física.
 
+Cada seção abaixo corresponde a uma pasta em `docs/` e funciona como um
+mini-projeto independente, com material teórico e registro do que foi
+implementado.
+
 ## Navegação rápida
 
-- **[Fundamentos de Rust](docs/arquitetura-moto/index.md)** — ownership, borrowing,
+- **[Fundamentos de Rust](fundamentos-rust/index.md)** — ownership, borrowing,
   lifetimes e traits, a base necessária antes de encostar em gráficos.
 
-- **[Matemática para Gráficos](docs/matematica-graficos/index.md)** — revisão direcionada
-  de álgebra linear: matrizes de transformação, coordenadas homogêneas e quaternions.
+- **[Matemática para Gráficos](matematica-graficos/index.md)** — revisão
+  direcionada de álgebra linear: matrizes de transformação, coordenadas
+  homogêneas e quaternions.
 
-- **[Fundamentos de Computação Gráfica](docs/fundamentos-graficos/index.md)** — pipeline
-  gráfico, rasterização, shaders e depth buffer, independente de API.
+- **[Fundamentos de Computação Gráfica](fundamentos-graficos/index.md)** —
+  pipeline gráfico, rasterização, shaders e depth buffer, independente de API.
 
-- **[GPU com wgpu](gpu-wgpu/index.md)** — a API moderna de GPU em Rust, portável entre
-  Vulkan, Metal, DirectX 12 e WebGPU.
+- **[GPU com wgpu](gpu-wgpu/index.md)** — a API moderna de GPU em Rust,
+  portável entre Vulkan, Metal, DirectX 12 e WebGPU.
 
-- **[Arquitetura de Motor](arquitetura-motor/index.md)** — game loop, gestão de recursos,
-  ECS e design orientado a dados.
+- **[Arquitetura de Motor](arquitetura-motor/index.md)** — game loop, gestão
+  de recursos, ECS e design orientado a dados.
 
-- **[Subsistemas](subsistemas/index.md)** — entrada, áudio, física e serialização de cena.
+- **[Subsistemas](subsistemas/index.md)** — entrada, áudio, física e
+  serialização de cena.
 
 ## Status
 
