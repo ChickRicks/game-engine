@@ -75,6 +75,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#motor-grafico-em-rust" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -462,6 +467,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Início
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="." class="md-nav__link md-nav__link--active">
         
@@ -479,6 +504,58 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sobre-este-projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sobre este projeto
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#navegacao-rapida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navegação rápida
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Status
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -744,6 +821,49 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sobre-este-projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sobre este projeto
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#navegacao-rapida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navegação rápida
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Status
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -763,9 +883,40 @@
   
 
 
-  <h1>Início</h1>
-
-<p>Colocando algo para ele salvar</p>
+<h1 id="motor-grafico-em-rust">Motor Gráfico em Rust<a class="headerlink" href="#motor-grafico-em-rust" title="Permanent link">&para;</a></h1>
+<p>Documentação do desenvolvimento de um motor de jogos geral, escrito em Rust.</p>
+<h2 id="sobre-este-projeto">Sobre este projeto<a class="headerlink" href="#sobre-este-projeto" title="Permanent link">&para;</a></h2>
+<p>Registro da trilha de estudos, decisões técnicas e progresso na construção
+de um motor próprio — cobrindo renderização com wgpu, arquitetura ECS,
+entrada, áudio e física.</p>
+<h2 id="navegacao-rapida">Navegação rápida<a class="headerlink" href="#navegacao-rapida" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><strong><a href="fundamentos-rust.md">Fundamentos de Rust</a></strong> — ownership, borrowing,
+  lifetimes e traits, a base necessária antes de encostar em gráficos.</p>
+</li>
+<li>
+<p><strong><a href="matematica-graficos.md">Matemática para Gráficos</a></strong> — revisão direcionada
+  de álgebra linear: matrizes de transformação, coordenadas homogêneas e quaternions.</p>
+</li>
+<li>
+<p><strong><a href="fundamentos-graficos.md">Fundamentos de Computação Gráfica</a></strong> — pipeline
+  gráfico, rasterização, shaders e depth buffer, independente de API.</p>
+</li>
+<li>
+<p><strong><a href="gpu-wgpu.md">GPU com wgpu</a></strong> — a API moderna de GPU em Rust, portável entre
+  Vulkan, Metal, DirectX 12 e WebGPU.</p>
+</li>
+<li>
+<p><strong><a href="arquitetura-motor.md">Arquitetura de Motor</a></strong> — game loop, gestão de recursos,
+  ECS e design orientado a dados.</p>
+</li>
+<li>
+<p><strong><a href="subsistemas.md">Subsistemas</a></strong> — entrada, áudio, física e serialização de cena.</p>
+</li>
+</ul>
+<h2 id="status">Status<a class="headerlink" href="#status" title="Permanent link">&para;</a></h2>
+<p>Projeto em fase inicial de estudos.</p>
 
 
 
