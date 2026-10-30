@@ -2,82 +2,82 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://seuusuario.github.io/seurepo/</loc>
-         <lastmod>2026-10-29</lastmod>
+         <lastmod>2026-10-30</lastmod>
     </url>
     <url>
          <loc>https://seuusuario.github.io/seurepo/arquitetura-motor/</loc>
-         <lastmod>2026-10-29</lastmod>
+         <lastmod>2026-10-30</lastmod>
     </url>
     <url>
          <loc>https://seuusuario.github.io/seurepo/arquitetura-motor/ecs/</loc>
-         <lastmod>2026-10-29</lastmod>
+         <lastmod>2026-10-30</lastmod>
     </url>
     <url>
          <loc>https://seuusuario.github.io/seurepo/fundamentos-graficos/</loc>
-         <lastmod>2026-10-29</lastmod>
+         <lastmod>2026-10-30</lastmod>
     </url>
     <url>
          <loc>https://seuusuario.github.io/seurepo/fundamentos-graficos/pipeline/</loc>
-         <lastmod>2026-10-29</lastmod>
+         <lastmod>2026-10-30</lastmod>
     </url>
     <url>
          <loc>https://seuusuario.github.io/seurepo/fundamentos-rust/</loc>
-         <lastmod>2026-10-29</lastmod>
+         <lastmod>2026-10-30</lastmod>
     </url>
     <url>
          <loc>https://seuusuario.github.io/seurepo/fundamentos-rust/ownership/</loc>
-         <lastmod>2026-10-29</lastmod>
+         <lastmod>2026-10-30</lastmod>
     </url>
     <url>
          <loc>https://seuusuario.github.io/seurepo/fundamentos-rust/traits/</loc>
-         <lastmod>2026-10-29</lastmod>
+         <lastmod>2026-10-30</lastmod>
     </url>
     <url>
          <loc>https://seuusuario.github.io/seurepo/gpu-wgpu/</loc>
-         <lastmod>2026-10-29</lastmod>
+         <lastmod>2026-10-30</lastmod>
     </url>
     <url>
          <loc>https://seuusuario.github.io/seurepo/gpu-wgpu/primeiro-triangulo/</loc>
-         <lastmod>2026-10-29</lastmod>
+         <lastmod>2026-10-30</lastmod>
     </url>
     <url>
          <loc>https://seuusuario.github.io/seurepo/gpu-wgpu/shaders-wgsl/</loc>
-         <lastmod>2026-10-29</lastmod>
+         <lastmod>2026-10-30</lastmod>
     </url>
     <url>
          <loc>https://seuusuario.github.io/seurepo/gpu-wgpu/texturas/</loc>
-         <lastmod>2026-10-29</lastmod>
+         <lastmod>2026-10-30</lastmod>
     </url>
     <url>
          <loc>https://seuusuario.github.io/seurepo/matematica-graficos/</loc>
-         <lastmod>2026-10-29</lastmod>
+         <lastmod>2026-10-30</lastmod>
     </url>
     <url>
          <loc>https://seuusuario.github.io/seurepo/matematica-graficos/coordenadas-homogeneas/</loc>
-         <lastmod>2026-10-29</lastmod>
+         <lastmod>2026-10-30</lastmod>
     </url>
     <url>
          <loc>https://seuusuario.github.io/seurepo/matematica-graficos/quaternions/</loc>
-         <lastmod>2026-10-29</lastmod>
+         <lastmod>2026-10-30</lastmod>
     </url>
     <url>
          <loc>https://seuusuario.github.io/seurepo/matematica-graficos/transformacoes/</loc>
-         <lastmod>2026-10-29</lastmod>
+         <lastmod>2026-10-30</lastmod>
     </url>
     <url>
          <loc>https://seuusuario.github.io/seurepo/subsistemas/</loc>
-         <lastmod>2026-10-29</lastmod>
+         <lastmod>2026-10-30</lastmod>
     </url>
     <url>
          <loc>https://seuusuario.github.io/seurepo/subsistemas/audio/</loc>
-         <lastmod>2026-10-29</lastmod>
+         <lastmod>2026-10-30</lastmod>
     </url>
     <url>
          <loc>https://seuusuario.github.io/seurepo/subsistemas/entrada/</loc>
-         <lastmod>2026-10-29</lastmod>
+         <lastmod>2026-10-30</lastmod>
     </url>
     <url>
          <loc>https://seuusuario.github.io/seurepo/subsistemas/fisica/</loc>
-         <lastmod>2026-10-29</lastmod>
+         <lastmod>2026-10-30</lastmod>
     </url>
 </urlset>
