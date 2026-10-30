@@ -1,6 +1,13 @@
 site_name: Motor Gráfico em Rust
 site_description: Trilha de estudos e documentação do desenvolvimento
 site_author: Seu Nome
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
 # Troque "seuusuario" e "seurepo" pelos valores reais do seu repositório
 site_url: https://seuusuario.github.io/seurepo/
