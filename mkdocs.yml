@@ -1,6 +1,6 @@
 site_name: Motor Gráfico em Rust
 site_description: Trilha de estudos e documentação do desenvolvimento
-site_author: Seu Nome
+site_author: ChickRicks
 markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
@@ -12,7 +12,7 @@ extra_javascript:
 site_url: https://ChickRicks.github.io/game-engine/
 
 repo_url: https://github.com/ChickRicks/game-engine
-repo_name: seuusuario/seurepo
+repo_name: ChickRicks/game-engine
 edit_uri: edit/main/docs/
 
 theme:
