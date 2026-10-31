@@ -2,7 +2,7 @@
 ---
 status: pendente
 criado: 2026/10/31
-atualizado: 2026/10/31\
+atualizado: 2026/10/31
 autor: ChickRicks
 ---
 
