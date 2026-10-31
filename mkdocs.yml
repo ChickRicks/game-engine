@@ -73,27 +73,28 @@ markdown_extensions:
 nav:
   - Início: index.md
   - Fundamentos de Rust:
-    - Introdução: fundamentos-rust/index.md
-    - Ownership e Borrowing: fundamentos-rust/ownership.md
-    - Traits e Lifetimes: fundamentos-rust/traits.md
+    - Introdução: 1-fundamentos-rust/index.md
+    - Básicos de rust: 1-fundamentos-rust/basics.md
+    - Ownership e Borrowing: 1-fundamentos-rust/ownership.md
+    - Traits e Lifetimes: 1-fundamentos-rust/traits.md
   - Matemática para Gráficos:
-    - Introdução: matematica-graficos/index.md
-    - Transformações Lineares: matematica-graficos/transformacoes.md
-    - Coordenadas Homogêneas: matematica-graficos/coordenadas-homogeneas.md
-    - Quaternions: matematica-graficos/quaternions.md
+    - Introdução: 2-matematica-graficos/index.md
+    - Transformações Lineares: 2-matematica-graficos/transformacoes.md
+    - Coordenadas Homogêneas: 2-matematica-graficos/coordenadas-homogeneas.md
+    - Quaternions: 2-matematica-graficos/quaternions.md
   - Fundamentos de Computação Gráfica:
-    - Introdução: fundamentos-graficos/index.md
-    - Pipeline Gráfico: fundamentos-graficos/pipeline.md
+    - Introdução: 3-fundamentos-graficos/index.md
+    - Pipeline Gráfico: 3-fundamentos-graficos/pipeline.md
   - GPU com wgpu:
-    - Introdução: gpu-wgpu/index.md
-    - Primeiro Triângulo: gpu-wgpu/primeiro-triangulo.md
-    - Shaders WGSL: gpu-wgpu/shaders-wgsl.md
-    - Texturas e Materiais: gpu-wgpu/texturas.md
+    - Introdução: 4-gpu-wgpu/index.md
+    - Primeiro Triângulo: 4-gpu-wgpu/primeiro-triangulo.md
+    - Shaders WGSL: 4-gpu-wgpu/shaders-wgsl.md
+    - Texturas e Materiais: 4-gpu-wgpu/texturas.md
   - Arquitetura de Motor:
-    - Introdução: arquitetura-motor/index.md
-    - ECS em Rust: arquitetura-motor/ecs.md
+    - Introdução: 5-arquitetura-motor/index.md
+    - ECS em Rust: 5-arquitetura-motor/ecs.md
   - Subsistemas:
-    - Introdução: subsistemas/index.md
-    - Entrada e Janelas: subsistemas/entrada.md
-    - Áudio: subsistemas/audio.md
-    - Física: subsistemas/fisica.md
+    - Introdução: 6-subsistemas/index.md
+    - Entrada e Janelas: 6-subsistemas/entrada.md
+    - Áudio: 6-subsistemas/audio.md
+    - Física: 6-subsistemas/fisica.md

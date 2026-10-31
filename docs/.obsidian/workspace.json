@@ -41,7 +41,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1. fundamentos-rust/index.md",
+                "file": "index.md",
                 "mode": "source",
                 "source": false
               },
@@ -226,16 +226,18 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "da92a71f617bedb7",
+  "active": "6a4597e3e190322a",
   "lastOpenFiles": [
-    "1. fundamentos-rust/basics.md",
+    "index.md",
+    "2-matematica-graficos/index.md",
     "1. fundamentos-rust/index.md",
+    "1. fundamentos-rust",
+    "1. fundamentos-rust/basics.md",
     "1. fundamentos-rust/traits.md",
     "1. fundamentos-rust/Sem título.md",
     "1. fundamentos-rust/borrowing.md",
     "1. fundamentos-rust/ownership.md",
     "1. fundamentos-rust/ownership.md",
-    "index.md",
     "Template.md",
     "5. arquitetura-motor/index.md",
     "5. arquitetura-motor/ecs.md",
