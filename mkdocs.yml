@@ -9,10 +9,9 @@ extra_javascript:
   - javascripts/mathjax.js
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
-# Troque "seuusuario" e "seurepo" pelos valores reais do seu repositório
-site_url: https://seuusuario.github.io/seurepo/
+site_url: https://ChickRicks.github.io/game-engine/
 
-repo_url: https://github.com/seuusuario/seurepo
+repo_url: https://github.com/ChickRicks/game-engine
 repo_name: seuusuario/seurepo
 edit_uri: edit/main/docs/
 
@@ -20,10 +19,6 @@ theme:
   name: material
   language: pt-BR
   features:
-    # navigation.tabs FOI REMOVIDO DE PROPÓSITO.
-    # Com ele ativo, os itens de primeiro nível viram abas no topo e a barra
-    # lateral só mostra os filhos da aba ativa. Sem ele, a árvore completa
-    # fica visível na lateral.
     - navigation.sections
     - navigation.top
     - navigation.indexes
@@ -64,12 +59,6 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
 
-# NAVEGAÇÃO HIERÁRQUICA
-# Cada seção é uma lista aninhada. O nome antes dos dois pontos é a categoria,
-# e os itens abaixo são os arquivos dentro daquela pasta.
-#
-# REGRA: todo caminho listado aqui precisa existir em disco, senão o build falha.
-# Enquanto um arquivo não existir, deixe a linha comentada com "#".
 nav:
   - Início: index.md
   - Fundamentos de Rust:
