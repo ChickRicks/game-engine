@@ -1,9 +1,9 @@
 
 ---
 status: pendente
-criado: {{date}}
-atualizado: {{date}}
-autor: Seu Nome
+criado: 2026/10/26
+atualizado: 2026/10/26
+autor: ChickRicks
 ---
 
 # {{title}}
