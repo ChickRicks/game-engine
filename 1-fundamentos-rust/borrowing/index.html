@@ -15,6 +15,10 @@
         <link rel="canonical" href="https://ChickRicks.github.io/game-engine/1-fundamentos-rust/borrowing/">
       
       
+        <link rel="prev" href="../ownership/">
+      
+      
+        <link rel="next" href="../traits/">
       
       
         
@@ -76,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#title" class="md-skip">
+        <a href="#borrowing" class="md-skip">
           Pular para conteúdo
         </a>
       
@@ -284,6 +288,8 @@
       
   
   
+    
+  
   
   
     
@@ -299,6 +305,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -308,13 +318,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <div class="md-nav__link md-nav__container">
@@ -342,7 +350,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -397,7 +405,154 @@
   <span class="md-ellipsis">
     
   
-    Ownership e Borrowing
+    Ownership
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Borrowing
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Borrowing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#resumo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conteudo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conteúdo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links-relacionados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Links relacionados
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Status
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../traits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lifetimes
   
 
     
@@ -418,14 +573,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../traits/" class="md-nav__link">
+      <a href="../smart-pointers/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Traits e Lifetimes
+    Smart Pointers
   
 
     
@@ -1248,11 +1403,11 @@
 
 <hr />
 <p>status: pendente
-criado: 2026/10/26
-atualizado: 2026/10/26
+criado: 2026/10/31
+atualizado: 2026/10/31
 autor: ChickRicks</p>
 <hr />
-<h1 id="title">{{title}}<a class="headerlink" href="#title" title="Permanent link">&para;</a></h1>
+<h1 id="borrowing">Borrowing<a class="headerlink" href="#borrowing" title="Permanent link">&para;</a></h1>
 <h2 id="resumo">Resumo<a class="headerlink" href="#resumo" title="Permanent link">&para;</a></h2>
 <!-- Descreva brevemente o objetivo deste tópico -->
 
