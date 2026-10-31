@@ -24,10 +24,12 @@ autor: Seu Nome
 > - [ ] Revisado
 
 ---
+
+---
 status: pendente
 criado: {{date}}
 atualizado: {{date}}
-autor: Seu Nome
+autor: ChickRicks
 ---
 
 # {{title}}
@@ -46,3 +48,5 @@ autor: Seu Nome
 > - [x] Estrutura criada
 > - [ ] Conteúdo preenchido
 > - [ ] Revisado
+
+---
