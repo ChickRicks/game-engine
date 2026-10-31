@@ -1,95 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://seuusuario.github.io/seurepo/</loc>
+         <loc>https://ChickRicks.github.io/game-engine/</loc>
          <lastmod>2026-10-31</lastmod>
     </url>
     <url>
-         <loc>https://seuusuario.github.io/seurepo/Template/</loc>
+         <loc>https://ChickRicks.github.io/game-engine/Template/</loc>
          <lastmod>2026-10-31</lastmod>
     </url>
     <url>
-         <loc>https://seuusuario.github.io/seurepo/1-fundamentos-rust/</loc>
+         <loc>https://ChickRicks.github.io/game-engine/1-fundamentos-rust/</loc>
          <lastmod>2026-10-31</lastmod>
     </url>
     <url>
-         <loc>https://seuusuario.github.io/seurepo/1-fundamentos-rust/basics/</loc>
+         <loc>https://ChickRicks.github.io/game-engine/1-fundamentos-rust/basics/</loc>
          <lastmod>2026-10-31</lastmod>
     </url>
     <url>
-         <loc>https://seuusuario.github.io/seurepo/1-fundamentos-rust/borrowing/</loc>
+         <loc>https://ChickRicks.github.io/game-engine/1-fundamentos-rust/borrowing/</loc>
          <lastmod>2026-10-31</lastmod>
     </url>
     <url>
-         <loc>https://seuusuario.github.io/seurepo/1-fundamentos-rust/ownership/</loc>
+         <loc>https://ChickRicks.github.io/game-engine/1-fundamentos-rust/ownership/</loc>
          <lastmod>2026-10-31</lastmod>
     </url>
     <url>
-         <loc>https://seuusuario.github.io/seurepo/1-fundamentos-rust/traits/</loc>
+         <loc>https://ChickRicks.github.io/game-engine/1-fundamentos-rust/traits/</loc>
          <lastmod>2026-10-31</lastmod>
     </url>
     <url>
-         <loc>https://seuusuario.github.io/seurepo/2-matematica-graficos/</loc>
+         <loc>https://ChickRicks.github.io/game-engine/2-matematica-graficos/</loc>
          <lastmod>2026-10-31</lastmod>
     </url>
     <url>
-         <loc>https://seuusuario.github.io/seurepo/2-matematica-graficos/coordenadas-homogeneas/</loc>
+         <loc>https://ChickRicks.github.io/game-engine/2-matematica-graficos/coordenadas-homogeneas/</loc>
          <lastmod>2026-10-31</lastmod>
     </url>
     <url>
-         <loc>https://seuusuario.github.io/seurepo/2-matematica-graficos/quaternions/</loc>
+         <loc>https://ChickRicks.github.io/game-engine/2-matematica-graficos/quaternions/</loc>
          <lastmod>2026-10-31</lastmod>
     </url>
     <url>
-         <loc>https://seuusuario.github.io/seurepo/2-matematica-graficos/transformacoes/</loc>
+         <loc>https://ChickRicks.github.io/game-engine/2-matematica-graficos/transformacoes/</loc>
          <lastmod>2026-10-31</lastmod>
     </url>
     <url>
-         <loc>https://seuusuario.github.io/seurepo/3-fundamentos-graficos/</loc>
+         <loc>https://ChickRicks.github.io/game-engine/3-fundamentos-graficos/</loc>
          <lastmod>2026-10-31</lastmod>
     </url>
     <url>
-         <loc>https://seuusuario.github.io/seurepo/3-fundamentos-graficos/pipeline/</loc>
+         <loc>https://ChickRicks.github.io/game-engine/3-fundamentos-graficos/pipeline/</loc>
          <lastmod>2026-10-31</lastmod>
     </url>
     <url>
-         <loc>https://seuusuario.github.io/seurepo/4-gpu-wgpu/</loc>
+         <loc>https://ChickRicks.github.io/game-engine/4-gpu-wgpu/</loc>
          <lastmod>2026-10-31</lastmod>
     </url>
     <url>
-         <loc>https://seuusuario.github.io/seurepo/4-gpu-wgpu/primeiro-triangulo/</loc>
+         <loc>https://ChickRicks.github.io/game-engine/4-gpu-wgpu/primeiro-triangulo/</loc>
          <lastmod>2026-10-31</lastmod>
     </url>
     <url>
-         <loc>https://seuusuario.github.io/seurepo/4-gpu-wgpu/shaders-wgsl/</loc>
+         <loc>https://ChickRicks.github.io/game-engine/4-gpu-wgpu/shaders-wgsl/</loc>
          <lastmod>2026-10-31</lastmod>
     </url>
     <url>
-         <loc>https://seuusuario.github.io/seurepo/4-gpu-wgpu/texturas/</loc>
+         <loc>https://ChickRicks.github.io/game-engine/4-gpu-wgpu/texturas/</loc>
          <lastmod>2026-10-31</lastmod>
     </url>
     <url>
-         <loc>https://seuusuario.github.io/seurepo/5-arquitetura-motor/</loc>
+         <loc>https://ChickRicks.github.io/game-engine/5-arquitetura-motor/</loc>
          <lastmod>2026-10-31</lastmod>
     </url>
     <url>
-         <loc>https://seuusuario.github.io/seurepo/5-arquitetura-motor/ecs/</loc>
+         <loc>https://ChickRicks.github.io/game-engine/5-arquitetura-motor/ecs/</loc>
          <lastmod>2026-10-31</lastmod>
     </url>
     <url>
-         <loc>https://seuusuario.github.io/seurepo/6-subsistemas/</loc>
+         <loc>https://ChickRicks.github.io/game-engine/6-subsistemas/</loc>
          <lastmod>2026-10-31</lastmod>
     </url>
     <url>
-         <loc>https://seuusuario.github.io/seurepo/6-subsistemas/audio/</loc>
+         <loc>https://ChickRicks.github.io/game-engine/6-subsistemas/audio/</loc>
          <lastmod>2026-10-31</lastmod>
     </url>
     <url>
-         <loc>https://seuusuario.github.io/seurepo/6-subsistemas/entrada/</loc>
+         <loc>https://ChickRicks.github.io/game-engine/6-subsistemas/entrada/</loc>
          <lastmod>2026-10-31</lastmod>
     </url>
     <url>
-         <loc>https://seuusuario.github.io/seurepo/6-subsistemas/fisica/</loc>
+         <loc>https://ChickRicks.github.io/game-engine/6-subsistemas/fisica/</loc>
          <lastmod>2026-10-31</lastmod>
     </url>
 </urlset>
