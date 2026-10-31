@@ -64,8 +64,10 @@ nav:
   - Fundamentos de Rust:
     - Introdução: 1-fundamentos-rust/index.md
     - Básicos de rust: 1-fundamentos-rust/basics.md
-    - Ownership e Borrowing: 1-fundamentos-rust/ownership.md
-    - Traits e Lifetimes: 1-fundamentos-rust/traits.md
+    - Ownership: 1-fundamentos-rust/ownership.md
+    - Borrowing: 1-fundamentos-rust/borrowing.md
+    - Lifetimes: 1-fundamentos-rust/traits.md
+    - Smart Pointers: 1-fundamentos-rust/smart-pointers.md
   - Matemática para Gráficos:
     - Introdução: 2-matematica-graficos/index.md
     - Transformações Lineares: 2-matematica-graficos/transformacoes.md

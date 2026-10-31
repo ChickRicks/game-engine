@@ -1,12 +1,13 @@
 
 ---
 status: pendente
-criado: 2026/10/26
-atualizado: 2026/10/26
+criado: 2026/10/31
+atualizado: 2026/10/31
 autor: ChickRicks
 ---
 
-# {{title}}
+# Traits
+
 
 ## Resumo
 <!-- Descreva brevemente o objetivo deste tópico -->
