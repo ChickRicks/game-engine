@@ -1,7 +1,8 @@
 fn main() {
-    let x = 10;
-    let y = 15;
-    let x = 20;
+    let x = 'a';
+    let y = false;
+    let z = if x == 'a' {'b'} else {'d'};
     println!("Hello, world {}!",x);
-    print!("Hello, world! 2: Electric boogaloo {}",y);
+    println!("Hello, world! 2: Electric boogaloo {}",y);
+    if x == 'a' {println!("Hello, world! 3: The problem is another {}",z)};
 }
