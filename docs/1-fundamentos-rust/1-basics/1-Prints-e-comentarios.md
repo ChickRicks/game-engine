@@ -12,7 +12,7 @@ autor: ChickRicks
 Formato de print e comentários, nenhum comando técnico muito aprofundado, com inclusão de testes aleatórios.
 ## Conteúdo
 
-- `Println!("Conteúdo");`: print com quebra de linha.
+- `Println!("Conteúdo");` : print com quebra de linha.
 - `Print!("Conteúdo");` : print sem quebra de linha.
 - Parênteses obrigatórios (`println!(Conteúdo);` funciona, `println!Conteúdo;` não).
 - Mais de um print possível, incluindo intercalado.
