@@ -2,98 +2,98 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://ChickRicks.github.io/game-engine/</loc>
-         <lastmod>2026-10-31</lastmod>
+         <lastmod>2026-11-01</lastmod>
     </url>
     <url>
-         <loc>https://ChickRicks.github.io/game-engine/1-fundamentos-rust/</loc>
-         <lastmod>2026-10-31</lastmod>
+         <loc>https://ChickRicks.github.io/game-engine/1-fundamentos-rust/0-index/</loc>
+         <lastmod>2026-11-01</lastmod>
     </url>
     <url>
-         <loc>https://ChickRicks.github.io/game-engine/1-fundamentos-rust/basics/</loc>
-         <lastmod>2026-10-31</lastmod>
+         <loc>https://ChickRicks.github.io/game-engine/1-fundamentos-rust/1-basics/</loc>
+         <lastmod>2026-11-01</lastmod>
     </url>
     <url>
-         <loc>https://ChickRicks.github.io/game-engine/1-fundamentos-rust/borrowing/</loc>
-         <lastmod>2026-10-31</lastmod>
+         <loc>https://ChickRicks.github.io/game-engine/1-fundamentos-rust/2-ownership/</loc>
+         <lastmod>2026-11-01</lastmod>
     </url>
     <url>
-         <loc>https://ChickRicks.github.io/game-engine/1-fundamentos-rust/lifetimes/</loc>
-         <lastmod>2026-10-31</lastmod>
+         <loc>https://ChickRicks.github.io/game-engine/1-fundamentos-rust/3-borrowing/</loc>
+         <lastmod>2026-11-01</lastmod>
     </url>
     <url>
-         <loc>https://ChickRicks.github.io/game-engine/1-fundamentos-rust/ownership/</loc>
-         <lastmod>2026-10-31</lastmod>
+         <loc>https://ChickRicks.github.io/game-engine/1-fundamentos-rust/4-lifetimes/</loc>
+         <lastmod>2026-11-01</lastmod>
     </url>
     <url>
-         <loc>https://ChickRicks.github.io/game-engine/1-fundamentos-rust/smart-pointers/</loc>
-         <lastmod>2026-10-31</lastmod>
+         <loc>https://ChickRicks.github.io/game-engine/1-fundamentos-rust/5-traits/</loc>
+         <lastmod>2026-11-01</lastmod>
     </url>
     <url>
-         <loc>https://ChickRicks.github.io/game-engine/1-fundamentos-rust/traits/</loc>
-         <lastmod>2026-10-31</lastmod>
+         <loc>https://ChickRicks.github.io/game-engine/1-fundamentos-rust/6-smart-pointers/</loc>
+         <lastmod>2026-11-01</lastmod>
     </url>
     <url>
          <loc>https://ChickRicks.github.io/game-engine/2-matematica-graficos/</loc>
-         <lastmod>2026-10-31</lastmod>
+         <lastmod>2026-11-01</lastmod>
     </url>
     <url>
          <loc>https://ChickRicks.github.io/game-engine/2-matematica-graficos/coordenadas-homogeneas/</loc>
-         <lastmod>2026-10-31</lastmod>
+         <lastmod>2026-11-01</lastmod>
     </url>
     <url>
          <loc>https://ChickRicks.github.io/game-engine/2-matematica-graficos/quaternions/</loc>
-         <lastmod>2026-10-31</lastmod>
+         <lastmod>2026-11-01</lastmod>
     </url>
     <url>
          <loc>https://ChickRicks.github.io/game-engine/2-matematica-graficos/transformacoes/</loc>
-         <lastmod>2026-10-31</lastmod>
+         <lastmod>2026-11-01</lastmod>
     </url>
     <url>
          <loc>https://ChickRicks.github.io/game-engine/3-fundamentos-graficos/</loc>
-         <lastmod>2026-10-31</lastmod>
+         <lastmod>2026-11-01</lastmod>
     </url>
     <url>
          <loc>https://ChickRicks.github.io/game-engine/3-fundamentos-graficos/pipeline/</loc>
-         <lastmod>2026-10-31</lastmod>
+         <lastmod>2026-11-01</lastmod>
     </url>
     <url>
          <loc>https://ChickRicks.github.io/game-engine/4-gpu-wgpu/</loc>
-         <lastmod>2026-10-31</lastmod>
+         <lastmod>2026-11-01</lastmod>
     </url>
     <url>
          <loc>https://ChickRicks.github.io/game-engine/4-gpu-wgpu/primeiro-triangulo/</loc>
-         <lastmod>2026-10-31</lastmod>
+         <lastmod>2026-11-01</lastmod>
     </url>
     <url>
          <loc>https://ChickRicks.github.io/game-engine/4-gpu-wgpu/shaders-wgsl/</loc>
-         <lastmod>2026-10-31</lastmod>
+         <lastmod>2026-11-01</lastmod>
     </url>
     <url>
          <loc>https://ChickRicks.github.io/game-engine/4-gpu-wgpu/texturas/</loc>
-         <lastmod>2026-10-31</lastmod>
+         <lastmod>2026-11-01</lastmod>
     </url>
     <url>
          <loc>https://ChickRicks.github.io/game-engine/5-arquitetura-motor/</loc>
-         <lastmod>2026-10-31</lastmod>
+         <lastmod>2026-11-01</lastmod>
     </url>
     <url>
          <loc>https://ChickRicks.github.io/game-engine/5-arquitetura-motor/ecs/</loc>
-         <lastmod>2026-10-31</lastmod>
+         <lastmod>2026-11-01</lastmod>
     </url>
     <url>
          <loc>https://ChickRicks.github.io/game-engine/6-subsistemas/</loc>
-         <lastmod>2026-10-31</lastmod>
+         <lastmod>2026-11-01</lastmod>
     </url>
     <url>
          <loc>https://ChickRicks.github.io/game-engine/6-subsistemas/audio/</loc>
-         <lastmod>2026-10-31</lastmod>
+         <lastmod>2026-11-01</lastmod>
     </url>
     <url>
          <loc>https://ChickRicks.github.io/game-engine/6-subsistemas/entrada/</loc>
-         <lastmod>2026-10-31</lastmod>
+         <lastmod>2026-11-01</lastmod>
     </url>
     <url>
          <loc>https://ChickRicks.github.io/game-engine/6-subsistemas/fisica/</loc>
-         <lastmod>2026-10-31</lastmod>
+         <lastmod>2026-11-01</lastmod>
     </url>
 </urlset>

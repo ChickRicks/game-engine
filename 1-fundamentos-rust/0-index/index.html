@@ -12,13 +12,13 @@
         <meta name="author" content="ChickRicks">
       
       
-        <link rel="canonical" href="https://ChickRicks.github.io/game-engine/1-fundamentos-rust/basics/">
+        <link rel="canonical" href="https://ChickRicks.github.io/game-engine/1-fundamentos-rust/0-index/">
       
       
-        <link rel="prev" href="../">
+        <link rel="prev" href="../..">
       
       
-        <link rel="next" href="../ownership/">
+        <link rel="next" href="../1-basics/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>Básicos de rust - Motor Gráfico em Rust</title>
+        <title>Introdução - Motor Gráfico em Rust</title>
       
     
     
@@ -79,11 +79,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#basics" class="md-skip">
-          Pular para conteúdo
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -116,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Básicos de rust
+              Introdução
             
           </span>
         </div>
@@ -296,7 +291,7 @@
     
       
         
-          
+      
         
       
         
@@ -325,9 +320,8 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
   
   
   <span class="md-ellipsis">
@@ -341,14 +335,8 @@
   
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
@@ -360,8 +348,6 @@
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
             
               
                 
@@ -376,17 +362,15 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
   
   
   <span class="md-ellipsis">
     
   
-    Básicos de rust
+    Introdução
   
 
     
@@ -394,10 +378,21 @@
   
   
 
-          <span class="md-nav__icon md-icon"></span>
-        </label>
+      </a>
       
-      <a href="./" class="md-nav__link md-nav__link--active">
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1-basics/" class="md-nav__link">
         
   
   
@@ -413,70 +408,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Índice">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Índice
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#resumo" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Resumo
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conteudo" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Conteúdo
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#links-relacionados" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Links relacionados
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#status" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Status
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -489,7 +420,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ownership/" class="md-nav__link">
+      <a href="../2-ownership/" class="md-nav__link">
         
   
   
@@ -517,7 +448,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../borrowing/" class="md-nav__link">
+      <a href="../3-borrowing/" class="md-nav__link">
         
   
   
@@ -545,7 +476,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../traits/" class="md-nav__link">
+      <a href="../4-lifetimes" class="md-nav__link">
         
   
   
@@ -573,7 +504,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../smart-pointers/" class="md-nav__link">
+      <a href="../5-traits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    traits
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../6smart-pointers.md" class="md-nav__link">
         
   
   
@@ -1328,60 +1287,6 @@
   
   
   
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Índice
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#resumo" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Resumo
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conteudo" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Conteúdo
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#links-relacionados" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Links relacionados
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#status" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Status
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -1401,31 +1306,12 @@
   
 
 
-<hr />
-<p>status: pendente
-criado: 2026/10/31
-atualizado: 2026/10/31
-autor: ChickRicks</p>
-<hr />
-<h1 id="basics">Basics<a class="headerlink" href="#basics" title="Permanent link">&para;</a></h1>
-<h2 id="resumo">Resumo<a class="headerlink" href="#resumo" title="Permanent link">&para;</a></h2>
-<!-- Descreva brevemente o objetivo deste tópico -->
+  <h1>Introdução</h1>
 
-<h2 id="conteudo">Conteúdo<a class="headerlink" href="#conteudo" title="Permanent link">&para;</a></h2>
-<!-- Preencha conforme avança o estudo -->
-
-<h2 id="links-relacionados">Links relacionados<a class="headerlink" href="#links-relacionados" title="Permanent link">&para;</a></h2>
-<ul>
-<li></li>
-</ul>
-<h2 id="status">Status<a class="headerlink" href="#status" title="Permanent link">&para;</a></h2>
-<blockquote>
-<p>[!NOTE] Progresso
-- [x] Estrutura criada
-- [ ] Conteúdo preenchido
-- [ ] Revisado</p>
-</blockquote>
-<hr />
+<p>Página central para acesso de cada parte dos processos de fundamentos, desde o básico do básico, até especialidades necessárias para o entendimento de um motor de jogos.</p>
+<p><a href="../1-basics/">Básicos:</a> Básicos gerais de uma linguagem de programação, incluindo atribuições básicas de variável, condicionais, lastros de repetição e outras funções básicas.</p>
+<p><a href="../2-ownership/">Ownership:</a></p>
+<p><a href="../3-borrowing/">Borrowing:</a></p>
 
 
 
