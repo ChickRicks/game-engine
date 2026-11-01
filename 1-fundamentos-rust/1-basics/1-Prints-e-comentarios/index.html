@@ -12,31 +12,27 @@
         <meta name="author" content="ChickRicks">
       
       
-        <link rel="canonical" href="https://ChickRicks.github.io/game-engine/1-fundamentos-rust/1-basics/">
+        <link rel="canonical" href="https://ChickRicks.github.io/game-engine/1-fundamentos-rust/1-basics/1-Prints-e-comentarios/">
       
       
-        <link rel="prev" href="../0-index/">
-      
-      
-        <link rel="next" href="../2-ownership/">
       
       
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
     
     
       
-        <title>Básicos de rust - Motor Gráfico em Rust</title>
+        <title>1 Prints e comentarios - Motor Gráfico em Rust</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -55,7 +51,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -96,7 +92,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
-    <a href="../.." title="Motor Gráfico em Rust" class="md-header__button md-logo" aria-label="Motor Gráfico em Rust" data-md-component="logo">
+    <a href="../../.." title="Motor Gráfico em Rust" class="md-header__button md-logo" aria-label="Motor Gráfico em Rust" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -116,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Básicos de rust
+              1 Prints e comentarios
             
           </span>
         </div>
@@ -234,7 +230,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Motor Gráfico em Rust" class="md-nav__button md-logo" aria-label="Motor Gráfico em Rust" data-md-component="logo">
+    <a href="../../.." title="Motor Gráfico em Rust" class="md-nav__button md-logo" aria-label="Motor Gráfico em Rust" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -264,7 +260,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -288,10 +284,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -318,11 +312,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -343,7 +339,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -361,7 +357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../0-index/" class="md-nav__link">
+      <a href="../../0-index/" class="md-nav__link">
         
   
   
@@ -386,20 +382,36 @@
                 
   
   
+  
+  
     
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
+    
       
         
       
+        
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
           
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -413,17 +425,35 @@
   
   
 
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Básicos de rust
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="." class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Básicos de rust
+    Prints e comentários
   
 
     
@@ -432,69 +462,97 @@
   
 
       </a>
-      
-        
+    </li>
+  
 
-<nav class="md-nav md-nav--secondary" aria-label="Índice">
+              
+            
+              
+                
   
   
   
+  
+    <li class="md-nav__item">
+      <a href="../2-Variaveis-e-constantes" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
     
   
+    Variáveis e constantes
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Índice
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#resumo" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Resumo
-      
-    </span>
-  </a>
+
+    
+  </span>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conteudo" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Conteúdo
-      
-    </span>
-  </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#links-relacionados" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Links relacionados
-      
-    </span>
-  </a>
+
+      </a>
+    </li>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#status" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Status
-      
-    </span>
-  </a>
+
+              
+            
+              
+                
   
-</li>
-      
-    </ul>
   
-</nav>
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-Operadores" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operadores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4-Condicionais" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Condicionais
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -508,7 +566,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2-ownership/" class="md-nav__link">
+      <a href="../../2-ownership/" class="md-nav__link">
         
   
   
@@ -536,7 +594,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../3-borrowing/" class="md-nav__link">
+      <a href="../../3-borrowing/" class="md-nav__link">
         
   
   
@@ -564,7 +622,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../4-lifetimes" class="md-nav__link">
+      <a href="../../4-lifetimes" class="md-nav__link">
         
   
   
@@ -592,7 +650,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../5-traits/" class="md-nav__link">
+      <a href="../../5-traits/" class="md-nav__link">
         
   
   
@@ -620,7 +678,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../6smart-pointers.md" class="md-nav__link">
+      <a href="../../6smart-pointers.md" class="md-nav__link">
         
   
   
@@ -686,7 +744,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../2-matematica-graficos/" class="md-nav__link ">
+            <a href="../../../2-matematica-graficos/" class="md-nav__link ">
               
   
   
@@ -730,7 +788,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../2-matematica-graficos/transformacoes/" class="md-nav__link">
+      <a href="../../../2-matematica-graficos/transformacoes/" class="md-nav__link">
         
   
   
@@ -758,7 +816,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../2-matematica-graficos/coordenadas-homogeneas/" class="md-nav__link">
+      <a href="../../../2-matematica-graficos/coordenadas-homogeneas/" class="md-nav__link">
         
   
   
@@ -786,7 +844,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../2-matematica-graficos/quaternions/" class="md-nav__link">
+      <a href="../../../2-matematica-graficos/quaternions/" class="md-nav__link">
         
   
   
@@ -848,7 +906,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../3-fundamentos-graficos/" class="md-nav__link ">
+            <a href="../../../3-fundamentos-graficos/" class="md-nav__link ">
               
   
   
@@ -892,7 +950,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3-fundamentos-graficos/pipeline/" class="md-nav__link">
+      <a href="../../../3-fundamentos-graficos/pipeline/" class="md-nav__link">
         
   
   
@@ -958,7 +1016,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../4-gpu-wgpu/" class="md-nav__link ">
+            <a href="../../../4-gpu-wgpu/" class="md-nav__link ">
               
   
   
@@ -1002,7 +1060,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../4-gpu-wgpu/primeiro-triangulo/" class="md-nav__link">
+      <a href="../../../4-gpu-wgpu/primeiro-triangulo/" class="md-nav__link">
         
   
   
@@ -1030,7 +1088,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../4-gpu-wgpu/shaders-wgsl/" class="md-nav__link">
+      <a href="../../../4-gpu-wgpu/shaders-wgsl/" class="md-nav__link">
         
   
   
@@ -1058,7 +1116,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../4-gpu-wgpu/texturas/" class="md-nav__link">
+      <a href="../../../4-gpu-wgpu/texturas/" class="md-nav__link">
         
   
   
@@ -1120,7 +1178,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../5-arquitetura-motor/" class="md-nav__link ">
+            <a href="../../../5-arquitetura-motor/" class="md-nav__link ">
               
   
   
@@ -1164,7 +1222,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../5-arquitetura-motor/ecs/" class="md-nav__link">
+      <a href="../../../5-arquitetura-motor/ecs/" class="md-nav__link">
         
   
   
@@ -1230,7 +1288,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../6-subsistemas/" class="md-nav__link ">
+            <a href="../../../6-subsistemas/" class="md-nav__link ">
               
   
   
@@ -1274,7 +1332,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../6-subsistemas/entrada/" class="md-nav__link">
+      <a href="../../../6-subsistemas/entrada/" class="md-nav__link">
         
   
   
@@ -1302,7 +1360,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../6-subsistemas/audio/" class="md-nav__link">
+      <a href="../../../6-subsistemas/audio/" class="md-nav__link">
         
   
   
@@ -1330,7 +1388,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../6-subsistemas/fisica/" class="md-nav__link">
+      <a href="../../../6-subsistemas/fisica/" class="md-nav__link">
         
   
   
@@ -1418,10 +1476,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#status" class="md-nav__link">
+  <a href="#-httpswwww3schoolscomrustrust_syntaxphp-ate-httpswwww3schoolscomrustrust_commentsphp" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Status
+        - https://www.w3schools.com/rust/rust_syntax.php até https://www.w3schools.com/rust/rust_comments.php .
       
     </span>
   </a>
@@ -1449,121 +1507,29 @@
 
 
 <hr />
-<p>status: pendente
+<p>status: Em andamento
 criado: 2026/10/31
 atualizado: 2026/11/01
 autor: ChickRicks</p>
 <hr />
 <h1 id="basics">Basics<a class="headerlink" href="#basics" title="Permanent link">&para;</a></h1>
 <h2 id="resumo">Resumo<a class="headerlink" href="#resumo" title="Permanent link">&para;</a></h2>
+<p>Formato de print e comentários, nenhum comando técnico muito aprofundado, com inclusão de testes aleatórios.</p>
 <h2 id="conteudo">Conteúdo<a class="headerlink" href="#conteudo" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Println!("Conteúdo"); -&gt; print com quebra de linha.</li>
-<li>Print!("Conteúdo"); -&gt; print sem quebra de linha.</li>
-<li>Parênteses obrigatórios (println(Conteúdo); funciona, printlnConteúdo; não).</li>
+<li><code>Println!("Conteúdo");</code>: print com quebra de linha.</li>
+<li><code>Print!("Conteúdo");</code> : print sem quebra de linha.</li>
+<li>Parênteses obrigatórios (<code>println!(Conteúdo);</code> funciona, <code>println!Conteúdo;</code> não).</li>
 <li>Mais de um print possível, incluindo intercalado.</li>
-<li>Print!\n("Conteúdo"); funciona normalmente (espaços branco ignorados).</li>
-<li>Não serão ignorados espaços brancos dentro da palavra chave, mas dentro de conteúdo de string funciona (Cont\neúdo funciona).</li>
+<li><code>Print!\n("Conteúdo");</code> funciona normalmente (espaços branco ignorados).</li>
+<li>Não serão ignorados espaços brancos dentro da palavra chave, mas dentro de conteúdo de string funciona (<code>Cont\neúdo</code> funciona, e ele considera o texto com uma quebra de linha).</li>
 <li>Ter uma "!" dentro de print! e println! demonstram ser macros.</li>
-<li>String do rust entende caractéres funcionais (\n para quebra de linha, \0 para vazio, etc).</li>
+<li>String do rust entende carácteres funcionais (\n para quebra de linha, \0 para vazio, etc).</li>
 <li>Comentários de linha única tem "//".</li>
 <li>Comentários de muitas linhas tem '/ * ' de começo e ' * /' no final.</li>
-<li>Declaração de variável:" "let foo = foo"</li>
-<li>Para chamar a variável em uma string (para um print, por exemplo), usa-se "{}"</li>
-<li>Naturalmente, "let foo = foo" criam variáveis que não mudam.</li>
-<li>Quebras de linha nos espaços continuam ignorados (dado que não corte palavras chaves ou valores)</li>
-<li>Para variáveis que podem mudar facilmente, monta-se "let mut foo = foo;"</li>
-<li>lex x = foo; -&gt; let x = foo2 é válido;</li>
-<li>Rust aceita inteiros, pontos flutuantes, caracteres, booleana, strings, entre outras estruturas.</li>
-<li>Tem como deixar explícito o chamado de tipo de variável usando: let foo: foo = foo</li>
-<li>Tipos de variável:<ul>
-<li>i32: Números inteiros (-inf,+inf);</li>
-<li>u32: Números naturais + 0 (0,+inf);</li>
-<li>f64: números de ponto flutuante;</li>
-<li>char: um carácter único;</li>
-<li>&amp;str: uma string;</li>
-<li>bool: booleana (V ou F);</li>
-</ul>
-</li>
-<li>Print aceita os dados mostrados</li>
-<li>Constantes possuem estrutura const foo: foo = foo;</li>
-<li>A estrutura é obrigatória incluir o tipo da constante.</li>
-<li>Ideal usar letras maiúsculas para constantes, facilitam a diferenciação.</li>
-<li>Operadores aritméticos:<ul>
-<li>
-<ul>
-<li>-&gt; Soma (foo + foo);</li>
-</ul>
-</li>
-<li>
-<ul>
-<li>-&gt; Subtração (foo - foo);</li>
-</ul>
-</li>
-<li>
-<ul>
-<li>-&gt; Multiplicação (foo * foo);</li>
-</ul>
-</li>
-<li>/ -&gt; Divisão (foo / foo);</li>
-<li>% -&gt; Resto da divisão/módulo (foo%foo);</li>
-</ul>
-</li>
-<li>Operadores definidores de variável:<ul>
-<li>= -&gt; Coloque o valor da direita a esquerda (foo = foo);</li>
-<li>+= -&gt; Some o valor da esquerda ao da direita, e depois salva o valor (foo += foo);</li>
-<li>-= -&gt; Subtraia o valor da esquerda ao da direita, e depois salva o valor (foo -= foo);</li>
-<li>
-<ul>
-<li>= -&gt; Multiplique o valor da esquerda ao da direita, e depois salva o valor (foo * = foo);</li>
-</ul>
-</li>
-<li>/= -&gt; Divida o valor da esquerda ao da direita, e depois salva o valor (foo /= foo);</li>
-<li>%= -&gt; Faça o módulo da esquerda ao da direita, e depois salva o valor (foo %= foo);</li>
-</ul>
-</li>
-<li>Operadores Comparadores:<ul>
-<li>== -&gt; Igualdade entre os 2 (foo == foo);</li>
-<li>!= -&gt; Diferenças entre os 2 (foo != foo);</li>
-<li>
-<blockquote>
-<p>-&gt; Esquerda é maior que a direita (foo &gt; foo);</p>
-</blockquote>
-</li>
-<li>&lt; -&gt; Esquerda é menor que a direita (foo &lt; foo);</li>
-<li>
-<blockquote>
-<p>= Esquerda é maior ou igual que a direita (foo &gt;= foo);</p>
-</blockquote>
-</li>
-<li>&lt;= Esquerda é menor ou igual que a direita (foo &lt;= foo);</li>
-</ul>
-</li>
-<li>Operadores Lógicos:<ul>
-<li>&amp;&amp; -&gt; E lógico (foo &amp;&amp; foo);</li>
-<li>|| -&gt; OU lógico (foo || foo);</li>
-<li>! -&gt; NÃO lógico (!foo);</li>
-</ul>
-</li>
-<li>Ao criar variáveis, ela pode receber uma "função" para resolver, e receber o resultado dela. Ex: let x = 10; let y = x * 7</li>
-<li>ifs possuem estrutura: if foo {foo} (else if {foo})* else {foo}</li>
-<li>Ifs também podem ser usados como "função" de uma variável, porém, em caso de if else, eles devem retornar o mesmo valor</li>
-<li>Match possui estrutura match foo { foo =&gt; foo, _ =&gt; foo}, sendo _ valor caso não esteja dentro dos outros.</li>
-<li>Match aceita uso de | caso alguns valores devam retornar o mesmo resultado.</li>
-<li>Similar ao if, também pode ser uma "função", com as mesmas regras do if (os valores que retornam tem que ser do mesmo tipo).</li>
 </ul>
 <h2 id="links-relacionados">Links relacionados<a class="headerlink" href="#links-relacionados" title="Permanent link">&para;</a></h2>
-<ul>
-<li></li>
-</ul>
-<h2 id="status">Status<a class="headerlink" href="#status" title="Permanent link">&para;</a></h2>
-<blockquote>
-<p>[!NOTE] Progresso
-- [x] Estrutura criada
-- [ ] Conteúdo preenchido
-- [ ] Revisado</p>
-</blockquote>
-<hr />
+<h2 id="-httpswwww3schoolscomrustrust_syntaxphp-ate-httpswwww3schoolscomrustrust_commentsphp">- https://www.w3schools.com/rust/rust_syntax.php até https://www.w3schools.com/rust/rust_comments.php .<a class="headerlink" href="#-httpswwww3schoolscomrustrust_syntaxphp-ate-httpswwww3schoolscomrustrust_commentsphp" title="Permanent link">&para;</a></h2>
 
 
 
@@ -1619,12 +1585,12 @@ autor: ChickRicks</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.top", "navigation.indexes", "navigation.expand", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.sections", "navigation.top", "navigation.indexes", "navigation.expand", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.c21346df.min.js"></script>
       
-        <script src="../../javascripts/mathjax.js"></script>
+        <script src="../../../javascripts/mathjax.js"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
