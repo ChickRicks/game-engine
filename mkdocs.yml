@@ -64,6 +64,7 @@ nav:
   - Fundamentos de Rust:
     - Introdução: 1-fundamentos-rust/0-index.md
     - Básicos de rust:
+      - Index: 1-fundamentos-rust/1-basics/0-index.md
       - Prints e comentários: 1-fundamentos-rust/1-basics/1-Prints-e-comentarios
       - Variáveis e constantes: 1-fundamentos-rust/1-basics/2-Variaveis-e-constantes
       - Operadores: 1-fundamentos-rust/1-basics/3-Operadores  
