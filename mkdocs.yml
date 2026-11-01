@@ -63,7 +63,11 @@ nav:
   - Início: index.md
   - Fundamentos de Rust:
     - Introdução: 1-fundamentos-rust/0-index.md
-    - Básicos de rust: 1-fundamentos-rust/1-basics.md
+    - Básicos de rust:
+      - Prints e comentários: 1-fundamentos-rust/1-basics/1-Prints-e-comentarios
+      - Variáveis e constantes: 1-fundamentos-rust/1-basics/2-Variaveis-e-constantes
+      - Operadores: 1-fundamentos-rust/1-basics/3-Operadores  
+      - Condicionais: 1-fundamentos-rust/1-basics/4-Condicionais
     - Ownership: 1-fundamentos-rust/2-ownership.md
     - Borrowing: 1-fundamentos-rust/3-borrowing.md
     - Lifetimes: 1-fundamentos-rust/4-lifetimes
