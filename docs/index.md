@@ -14,7 +14,7 @@ implementado.
 
 ## Navegação rápida
 
-- **[Fundamentos de Rust](1-fundamentos-rust/index.md)** — ownership, borrowing,
+- **[Fundamentos de Rust](0-index.md)** — ownership, borrowing,
   lifetimes e traits, a base necessária antes de encostar em gráficos.
 
 - **[Matemática para Gráficos](2-matematica-graficos/index.md)** — revisão

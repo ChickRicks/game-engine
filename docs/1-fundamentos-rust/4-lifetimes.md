@@ -1,12 +1,10 @@
-
 ---
 status: pendente
 criado: 2026/10/31
 atualizado: 2026/10/31
 autor: ChickRicks
 ---
-
-# Basics
+# Lifetimes
 
 ## Resumo
 <!-- Descreva brevemente o objetivo deste tópico -->
