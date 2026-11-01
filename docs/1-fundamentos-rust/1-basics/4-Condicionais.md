@@ -21,6 +21,6 @@ match: `match foo { (foo1 => bar1)* _ => bar2}`.
 ## Descoberta de testes
 - Ifs aceitam apenas valores que retornam true ou false, números não tem tradução de true ou false
 ## Links relacionados
--  https://www.w3schools.com/rust/rust_if_else.php e https://www.w3schools.com/rust/rust_match.php
+-  [w3school if.else](https://www.w3schools.com/rust/rust_if_else.php) e [w3school match](https://www.w3schools.com/rust/rust_match.php).
 
 ---

@@ -37,5 +37,5 @@ Constante: `const foo1: foo2 = bar;`, sendo foo2 o tipo da constante.
 -  Quebras de linha nos espaços continuam ignorados (dado que não corte palavras chaves ou valores).
 - `let x = foo; -> let x = foo2;` é válido.
 ## Links relacionados
-- https://www.w3schools.com/rust/rust_variables.php até https://www.w3schools.com/rust/rust_constants.php
+- [w3schools rust variables](https://www.w3schools.com/rust/rust_variables.php) até [w3schools constants](https://www.w3schools.com/rust/rust_constants.php).
 ---
