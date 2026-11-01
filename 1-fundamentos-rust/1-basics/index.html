@@ -1473,6 +1473,84 @@ autor: ChickRicks</p>
 <li>Naturalmente, "let foo = foo" criam variáveis que não mudam.</li>
 <li>Quebras de linha nos espaços continuam ignorados (dado que não corte palavras chaves ou valores)</li>
 <li>Para variáveis que podem mudar facilmente, monta-se "let mut foo = foo;"</li>
+<li>lex x = foo; -&gt; let x = foo2 é válido;</li>
+<li>Rust aceita inteiros, pontos flutuantes, caracteres, booleana, strings, entre outras estruturas.</li>
+<li>Tem como deixar explícito o chamado de tipo de variável usando: let foo: foo = foo</li>
+<li>Tipos de variável:<ul>
+<li>i32: Números inteiros (-inf,+inf);</li>
+<li>u32: Números naturais + 0 (0,+inf);</li>
+<li>f64: números de ponto flutuante;</li>
+<li>char: um carácter único;</li>
+<li>&amp;str: uma string;</li>
+<li>bool: booleana (V ou F);</li>
+</ul>
+</li>
+<li>Print aceita os dados mostrados</li>
+<li>Constantes possuem estrutura const foo: foo = foo;</li>
+<li>A estrutura é obrigatória incluir o tipo da constante.</li>
+<li>Ideal usar letras maiúsculas para constantes, facilitam a diferenciação.</li>
+<li>Operadores aritméticos:<ul>
+<li>
+<ul>
+<li>-&gt; Soma (foo + foo);</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>-&gt; Subtração (foo - foo);</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>-&gt; Multiplicação (foo * foo);</li>
+</ul>
+</li>
+<li>/ -&gt; Divisão (foo / foo);</li>
+<li>% -&gt; Resto da divisão/módulo (foo%foo);</li>
+</ul>
+</li>
+<li>Operadores definidores de variável:<ul>
+<li>= -&gt; Coloque o valor da direita a esquerda (foo = foo);</li>
+<li>+= -&gt; Some o valor da esquerda ao da direita, e depois salva o valor (foo += foo);</li>
+<li>-= -&gt; Subtraia o valor da esquerda ao da direita, e depois salva o valor (foo -= foo);</li>
+<li>
+<ul>
+<li>= -&gt; Multiplique o valor da esquerda ao da direita, e depois salva o valor (foo * = foo);</li>
+</ul>
+</li>
+<li>/= -&gt; Divida o valor da esquerda ao da direita, e depois salva o valor (foo /= foo);</li>
+<li>%= -&gt; Faça o módulo da esquerda ao da direita, e depois salva o valor (foo %= foo);</li>
+</ul>
+</li>
+<li>Operadores Comparadores:<ul>
+<li>== -&gt; Igualdade entre os 2 (foo == foo);</li>
+<li>!= -&gt; Diferenças entre os 2 (foo != foo);</li>
+<li>
+<blockquote>
+<p>-&gt; Esquerda é maior que a direita (foo &gt; foo);</p>
+</blockquote>
+</li>
+<li>&lt; -&gt; Esquerda é menor que a direita (foo &lt; foo);</li>
+<li>
+<blockquote>
+<p>= Esquerda é maior ou igual que a direita (foo &gt;= foo);</p>
+</blockquote>
+</li>
+<li>&lt;= Esquerda é menor ou igual que a direita (foo &lt;= foo);</li>
+</ul>
+</li>
+<li>Operadores Lógicos:<ul>
+<li>&amp;&amp; -&gt; E lógico (foo &amp;&amp; foo);</li>
+<li>|| -&gt; OU lógico (foo || foo);</li>
+<li>! -&gt; NÃO lógico (!foo);</li>
+</ul>
+</li>
+<li>Ao criar variáveis, ela pode receber uma "função" para resolver, e receber o resultado dela. Ex: let x = 10; let y = x * 7</li>
+<li>ifs possuem estrutura: if foo {foo} (else if {foo})* else {foo}</li>
+<li>Ifs também podem ser usados como "função" de uma variável, porém, em caso de if else, eles devem retornar o mesmo valor</li>
+<li>Match possui estrutura match foo { foo =&gt; foo, _ =&gt; foo}, sendo _ valor caso não esteja dentro dos outros.</li>
+<li>Match aceita uso de | caso alguns valores devam retornar o mesmo resultado.</li>
+<li>Similar ao if, também pode ser uma "função", com as mesmas regras do if (os valores que retornam tem que ser do mesmo tipo).</li>
 </ul>
 <h2 id="links-relacionados">Links relacionados<a class="headerlink" href="#links-relacionados" title="Permanent link">&para;</a></h2>
 <ul>
