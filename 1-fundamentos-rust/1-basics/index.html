@@ -1451,16 +1451,29 @@
 <hr />
 <p>status: pendente
 criado: 2026/10/31
-atualizado: 2026/10/31
+atualizado: 2026/11/01
 autor: ChickRicks</p>
 <hr />
 <h1 id="basics">Basics<a class="headerlink" href="#basics" title="Permanent link">&para;</a></h1>
 <h2 id="resumo">Resumo<a class="headerlink" href="#resumo" title="Permanent link">&para;</a></h2>
-<!-- Descreva brevemente o objetivo deste tópico -->
-
 <h2 id="conteudo">Conteúdo<a class="headerlink" href="#conteudo" title="Permanent link">&para;</a></h2>
-<!-- Preencha conforme avança o estudo -->
-
+<ul>
+<li>Println!("Conteúdo"); -&gt; print com quebra de linha.</li>
+<li>Print!("Conteúdo"); -&gt; print sem quebra de linha.</li>
+<li>Parênteses obrigatórios (println(Conteúdo); funciona, printlnConteúdo; não).</li>
+<li>Mais de um print possível, incluindo intercalado.</li>
+<li>Print!\n("Conteúdo"); funciona normalmente (espaços branco ignorados).</li>
+<li>Não serão ignorados espaços brancos dentro da palavra chave, mas dentro de conteúdo de string funciona (Cont\neúdo funciona).</li>
+<li>Ter uma "!" dentro de print! e println! demonstram ser macros.</li>
+<li>String do rust entende caractéres funcionais (\n para quebra de linha, \0 para vazio, etc).</li>
+<li>Comentários de linha única tem "//".</li>
+<li>Comentários de muitas linhas tem '/ * ' de começo e ' * /' no final.</li>
+<li>Declaração de variável:" "let foo = foo"</li>
+<li>Para chamar a variável em uma string (para um print, por exemplo), usa-se "{}"</li>
+<li>Naturalmente, "let foo = foo" criam variáveis que não mudam.</li>
+<li>Quebras de linha nos espaços continuam ignorados (dado que não corte palavras chaves ou valores)</li>
+<li>Para variáveis que podem mudar facilmente, monta-se "let mut foo = foo;"</li>
+</ul>
 <h2 id="links-relacionados">Links relacionados<a class="headerlink" href="#links-relacionados" title="Permanent link">&para;</a></h2>
 <ul>
 <li></li>
