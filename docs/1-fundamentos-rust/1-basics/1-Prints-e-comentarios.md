@@ -23,5 +23,5 @@ Formato de print e comentários, nenhum comando técnico muito aprofundado, com 
 - Comentários de linha única tem "//".
 - Comentários de muitas linhas tem '/ * ' de começo e ' * /' no final.
 ## Links relacionados
-- https://www.w3schools.com/rust/rust_syntax.php até https://www.w3schools.com/rust/rust_comments.php .
+- [w3schools síntaxe](https://www.w3schools.com/rust/rust_syntax.php) até [w3schools commets](https://www.w3schools.com/rust/rust_comments.php ).
 ---
