@@ -12,31 +12,31 @@
         <meta name="author" content="ChickRicks">
       
       
-        <link rel="canonical" href="https://ChickRicks.github.io/game-engine/1-fundamentos-rust/1-basics/3-Operadores/">
+        <link rel="canonical" href="https://ChickRicks.github.io/game-engine/1-fundamentos-rust/999-ownership/">
       
       
-        <link rel="prev" href="../2-Variaveis-e-constantes/">
+        <link rel="prev" href="../7-Escopo/">
       
       
-        <link rel="next" href="../4-Condicionais/">
+        <link rel="next" href="../999-borrowing/">
       
       
         
       
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
     
     
       
-        <title>Operadores - Motor Gráfico em Rust</title>
+        <title>Ownership - Motor Gráfico em Rust</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.57a0d79d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.fb2fffe2.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -55,7 +55,7 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#operadores" class="md-skip">
+        <a href="#ownership" class="md-skip">
           Pular para conteúdo
         </a>
       
@@ -96,7 +96,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
-    <a href="../../.." title="Motor Gráfico em Rust" class="md-header__button md-logo" aria-label="Motor Gráfico em Rust" data-md-component="logo">
+    <a href="../.." title="Motor Gráfico em Rust" class="md-header__button md-logo" aria-label="Motor Gráfico em Rust" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Operadores
+              Ownership
             
           </span>
         </div>
@@ -234,7 +234,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Motor Gráfico em Rust" class="md-nav__button md-logo" aria-label="Motor Gráfico em Rust" data-md-component="logo">
+    <a href="../.." title="Motor Gráfico em Rust" class="md-nav__button md-logo" aria-label="Motor Gráfico em Rust" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -264,7 +264,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -294,6 +294,20 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
       
         
       
@@ -361,7 +375,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../0-index/" class="md-nav__link">
+      <a href="../0-index/" class="md-nav__link">
         
   
   
@@ -386,73 +400,6 @@
                 
   
   
-    
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Básicos de rust
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2_2">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Básicos de rust
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
   
   
     <li class="md-nav__item">
@@ -463,7 +410,7 @@
   <span class="md-ellipsis">
     
   
-    Index
+    Introdução
   
 
     
@@ -551,44 +498,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Operadores
-  
-
-    
-  </span>
-  
-  
-    
-  
-  
-    <span class="md-status md-status--Em andamento"></span>
-  
-
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../3-Operadores/" class="md-nav__link">
         
   
   
@@ -611,81 +524,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Índice">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Índice
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#resumo" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Resumo
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conteudo" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Conteúdo
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#descoberta-de-testes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Descoberta de testes
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#links-externos-relacionados" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Links externos relacionados
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#links" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Links
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -796,9 +634,36 @@
 
               
             
-          </ul>
-        </nav>
-      
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../7-Escopo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Escopos
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--pendente"></span>
+  
+
+  
+
+      </a>
     </li>
   
 
@@ -808,10 +673,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../2-ownership/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ownership
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -827,6 +719,70 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#resumo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conteudo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conteúdo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links-relacionados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Links relacionados
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Status
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -839,7 +795,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3-borrowing/" class="md-nav__link">
+      <a href="../999-borrowing/" class="md-nav__link">
         
   
   
@@ -867,7 +823,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../4-lifetimes" class="md-nav__link">
+      <a href="../999-lifetimes/" class="md-nav__link">
         
   
   
@@ -880,6 +836,13 @@
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--Em andamento"></span>
+  
+
   
 
       </a>
@@ -895,7 +858,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../5-traits/" class="md-nav__link">
+      <a href="../999-traits/" class="md-nav__link">
         
   
   
@@ -923,7 +886,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../6smart-pointers.md" class="md-nav__link">
+      <a href="../999-smart-pointers/" class="md-nav__link">
         
   
   
@@ -989,7 +952,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../2-matematica-graficos/" class="md-nav__link ">
+            <a href="../../2-matematica-graficos/" class="md-nav__link ">
               
   
   
@@ -1033,7 +996,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2-matematica-graficos/transformacoes/" class="md-nav__link">
+      <a href="../../2-matematica-graficos/transformacoes/" class="md-nav__link">
         
   
   
@@ -1061,7 +1024,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2-matematica-graficos/coordenadas-homogeneas/" class="md-nav__link">
+      <a href="../../2-matematica-graficos/coordenadas-homogeneas/" class="md-nav__link">
         
   
   
@@ -1089,7 +1052,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2-matematica-graficos/quaternions/" class="md-nav__link">
+      <a href="../../2-matematica-graficos/quaternions/" class="md-nav__link">
         
   
   
@@ -1151,7 +1114,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../3-fundamentos-graficos/" class="md-nav__link ">
+            <a href="../../3-fundamentos-graficos/" class="md-nav__link ">
               
   
   
@@ -1195,7 +1158,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3-fundamentos-graficos/pipeline/" class="md-nav__link">
+      <a href="../../3-fundamentos-graficos/pipeline/" class="md-nav__link">
         
   
   
@@ -1261,7 +1224,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../4-gpu-wgpu/" class="md-nav__link ">
+            <a href="../../4-gpu-wgpu/" class="md-nav__link ">
               
   
   
@@ -1305,7 +1268,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../4-gpu-wgpu/primeiro-triangulo/" class="md-nav__link">
+      <a href="../../4-gpu-wgpu/primeiro-triangulo/" class="md-nav__link">
         
   
   
@@ -1333,7 +1296,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../4-gpu-wgpu/shaders-wgsl/" class="md-nav__link">
+      <a href="../../4-gpu-wgpu/shaders-wgsl/" class="md-nav__link">
         
   
   
@@ -1361,7 +1324,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../4-gpu-wgpu/texturas/" class="md-nav__link">
+      <a href="../../4-gpu-wgpu/texturas/" class="md-nav__link">
         
   
   
@@ -1423,7 +1386,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../5-arquitetura-motor/" class="md-nav__link ">
+            <a href="../../5-arquitetura-motor/" class="md-nav__link ">
               
   
   
@@ -1467,7 +1430,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../5-arquitetura-motor/ecs/" class="md-nav__link">
+      <a href="../../5-arquitetura-motor/ecs/" class="md-nav__link">
         
   
   
@@ -1533,7 +1496,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../6-subsistemas/" class="md-nav__link ">
+            <a href="../../6-subsistemas/" class="md-nav__link ">
               
   
   
@@ -1577,7 +1540,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../6-subsistemas/entrada/" class="md-nav__link">
+      <a href="../../6-subsistemas/entrada/" class="md-nav__link">
         
   
   
@@ -1605,7 +1568,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../6-subsistemas/audio/" class="md-nav__link">
+      <a href="../../6-subsistemas/audio/" class="md-nav__link">
         
   
   
@@ -1633,7 +1596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../6-subsistemas/fisica/" class="md-nav__link">
+      <a href="../../6-subsistemas/fisica/" class="md-nav__link">
         
   
   
@@ -1710,10 +1673,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#descoberta-de-testes" class="md-nav__link">
+  <a href="#links-relacionados" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Descoberta de testes
+        Links relacionados
       
     </span>
   </a>
@@ -1721,21 +1684,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#links-externos-relacionados" class="md-nav__link">
+  <a href="#status" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Links externos relacionados
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#links" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Links
+        Status
       
     </span>
   </a>
@@ -1762,78 +1714,30 @@
   
 
 
-<h1 id="operadores">Operadores<a class="headerlink" href="#operadores" title="Permanent link">&para;</a></h1>
+<hr />
+<p>status: pendente
+criado: 2026/10/31
+atualizado: 2026/10/31
+autor: ChickRicks</p>
+<hr />
+<h1 id="ownership">Ownership<a class="headerlink" href="#ownership" title="Permanent link">&para;</a></h1>
 <h2 id="resumo">Resumo<a class="headerlink" href="#resumo" title="Permanent link">&para;</a></h2>
-<p>Operadores válidos:
-     +
-     -
-     /
-     *
-     %
-     =
-     +=
-     -=
-     *=
-     /=
-     %=
-     \==
-     !=
-     &gt;
-     &lt;
-     &gt;=
-     &lt;=
-     &amp;&amp;
-     ||
-     !</p>
+<!-- Descreva brevemente o objetivo deste tópico -->
+
 <h2 id="conteudo">Conteúdo<a class="headerlink" href="#conteudo" title="Permanent link">&para;</a></h2>
+<!-- Preencha conforme avança o estudo -->
+
+<h2 id="links-relacionados">Links relacionados<a class="headerlink" href="#links-relacionados" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Operadores aritméticos:<ul>
-<li><code>+</code> : Soma (<code>foo + foo2</code>);</li>
-<li><code>-</code> : Subtração (<code>foo - foo2</code>);</li>
-<li><code>*</code> : Multiplicação (<code>foo * foo2</code>);</li>
-<li><code>/</code> : Divisão (<code>foo / foo2</code>);</li>
-<li><code>%</code> : Resto da divisão/módulo (<code>foo%foo2</code>);</li>
+<li></li>
 </ul>
-</li>
-<li>Operadores definidores de variável:<ul>
-<li><code>=</code> : Coloque o valor da direita a esquerda (<code>foo = bar</code>);</li>
-<li><code>+=</code> : Some o valor da esquerda ao da direita, e depois salva o valor (<code>foo += bar</code>);</li>
-<li><code>-=</code> : Subtraia o valor da esquerda ao da direita, e depois salva o valor (<code>foo -= bar</code>);</li>
-<li><code>*=</code> : Multiplique o valor da esquerda ao da direita, e depois salva o valor (<code>foo * = bar</code>);</li>
-<li><code>/=</code> : Divida o valor da esquerda ao da direita, e depois salva o valor (<code>foo /= foo</code>);</li>
-<li><code>%=</code> : Faça o módulo da esquerda ao da direita, e depois salva o valor (<code>foo %= foo</code>);</li>
-</ul>
-</li>
-<li>Operadores Comparadores:<ul>
-<li><code>==</code> : Igualdade entre os 2 (<code>foo == foo</code>);</li>
-<li><code>!=</code> : Diferenças entre os 2 (<code>foo != foo</code>);</li>
-<li><code>&gt;</code> : Esquerda é maior que a direita (<code>foo &gt; foo</code>);</li>
-<li><code>&lt;</code> : Esquerda é menor que a direita (<code>foo &lt; foo</code>);</li>
-<li><code>&gt;=</code> : Esquerda é maior ou igual que a direita (<code>foo &gt;= foo</code>);</li>
-<li><code>&lt;=</code> : Esquerda é menor ou igual que a direita (<code>foo &lt;= foo</code>);</li>
-</ul>
-</li>
-<li>Operadores Lógicos:<ul>
-<li><code>&amp;&amp;</code> -&gt; E lógico (<code>foo &amp;&amp; foo</code>);</li>
-<li><code>||</code> -&gt; OU lógico (<code>foo || foo</code>);</li>
-<li><code>!</code> -&gt; NÃO lógico (<code>!foo</code>);</li>
-</ul>
-</li>
-<li>Ao criar variáveis, ela pode receber uma "função" para resolver, e receber o resultado dela. Ex: <code>let x = 10; let y = x * 7</code>.</li>
-</ul>
-<h2 id="descoberta-de-testes">Descoberta de testes<a class="headerlink" href="#descoberta-de-testes" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Divisão inteira não aproxima, retorna o valor cheio.</li>
-</ul>
-<h2 id="links-externos-relacionados">Links externos relacionados<a class="headerlink" href="#links-externos-relacionados" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="https://www.w3schools.com/rust/rust_operators.php">w3schools operators</a> e <a href="https://www.w3schools.com/rust/rust_booleans.php">w3schools booleans</a>.</li>
-</ul>
-<h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
-<ul>
-<li>👈 <strong>Anterior:</strong> <a href="2-Variaveis-e-constantes">Variáveis e Constantes</a></li>
-<li>➡️ <strong>Próximo:</strong> <a href="4-Condicionais">Condicionais</a></li>
-</ul>
+<h2 id="status">Status<a class="headerlink" href="#status" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>[!NOTE] Progresso
+- [x] Estrutura criada
+- [ ] Conteúdo preenchido
+- [ ] Revisado</p>
+</blockquote>
 <hr />
 
 
@@ -1841,9 +1745,6 @@
 
 
 
-
-  
-  
 
 
 
@@ -1893,12 +1794,12 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.sections", "navigation.top", "navigation.indexes", "navigation.expand", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.top", "navigation.indexes", "navigation.expand", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.c21346df.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
       
-        <script src="../../../javascripts/mathjax.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       

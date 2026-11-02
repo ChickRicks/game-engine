@@ -12,13 +12,13 @@
         <meta name="author" content="ChickRicks">
       
       
-        <link rel="canonical" href="https://ChickRicks.github.io/game-engine/1-fundamentos-rust/2-ownership/">
+        <link rel="canonical" href="https://ChickRicks.github.io/game-engine/1-fundamentos-rust/999-lifetimes/">
       
       
-        <link rel="prev" href="../1-basics/6-Funcoes/">
+        <link rel="prev" href="../999-borrowing/">
       
       
-        <link rel="next" href="../3-borrowing/">
+        <link rel="next" href="../999-traits/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>Ownership - Motor Gráfico em Rust</title>
+        <title>Lifetimes - Motor Gráfico em Rust</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ownership" class="md-skip">
+        <a href="#lifetimes" class="md-skip">
           Pular para conteúdo
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Ownership
+              Lifetimes
             
           </span>
         </div>
@@ -309,6 +309,20 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -388,82 +402,15 @@
   
   
   
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Básicos de rust
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_2">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Básicos de rust
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
     <li class="md-nav__item">
-      <a href="../1-basics/0-index/" class="md-nav__link">
+      <a href="../0-index/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Index
+    Introdução
   
 
     
@@ -484,7 +431,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../1-basics/1-Prints-e-comentarios/" class="md-nav__link">
+      <a href="../1-Prints-e-comentarios/" class="md-nav__link">
         
   
   
@@ -519,7 +466,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../1-basics/2-Variaveis-e-constantes/" class="md-nav__link">
+      <a href="../2-Variaveis-e-constantes/" class="md-nav__link">
         
   
   
@@ -554,7 +501,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../1-basics/3-Operadores/" class="md-nav__link">
+      <a href="../3-Operadores/" class="md-nav__link">
         
   
   
@@ -589,7 +536,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../1-basics/4-Condicionais/" class="md-nav__link">
+      <a href="../4-Condicionais/" class="md-nav__link">
         
   
   
@@ -624,7 +571,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../1-basics/5-Lastros-de-repeticao/" class="md-nav__link">
+      <a href="../5-Lastros-de-repeticao/" class="md-nav__link">
         
   
   
@@ -659,7 +606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../1-basics/6-Funcoes/" class="md-nav__link">
+      <a href="../6-Funcoes/" class="md-nav__link">
         
   
   
@@ -687,9 +634,92 @@
 
               
             
-          </ul>
-        </nav>
-      
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../7-Escopo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Escopos
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--pendente"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../999-ownership/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ownership
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../999-borrowing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Borrowing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -718,12 +748,19 @@
   <span class="md-ellipsis">
     
   
-    Ownership
+    Lifetimes
   
 
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--Em andamento"></span>
+  
+
   
 
           <span class="md-nav__icon md-icon"></span>
@@ -736,12 +773,19 @@
   <span class="md-ellipsis">
     
   
-    Ownership
+    Lifetimes
   
 
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--Em andamento"></span>
+  
+
   
 
       </a>
@@ -821,63 +865,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../3-borrowing/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Borrowing
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../4-lifetimes" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Lifetimes
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../5-traits/" class="md-nav__link">
+      <a href="../999-traits/" class="md-nav__link">
         
   
   
@@ -905,7 +893,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../6smart-pointers.md" class="md-nav__link">
+      <a href="../999-smart-pointers/" class="md-nav__link">
         
   
   
@@ -1733,13 +1721,7 @@
   
 
 
-<hr />
-<p>status: pendente
-criado: 2026/10/31
-atualizado: 2026/10/31
-autor: ChickRicks</p>
-<hr />
-<h1 id="ownership">Ownership<a class="headerlink" href="#ownership" title="Permanent link">&para;</a></h1>
+<h1 id="lifetimes">Lifetimes<a class="headerlink" href="#lifetimes" title="Permanent link">&para;</a></h1>
 <h2 id="resumo">Resumo<a class="headerlink" href="#resumo" title="Permanent link">&para;</a></h2>
 <!-- Descreva brevemente o objetivo deste tópico -->
 
@@ -1764,6 +1746,9 @@ autor: ChickRicks</p>
 
 
 
+
+  
+  
 
 
 
