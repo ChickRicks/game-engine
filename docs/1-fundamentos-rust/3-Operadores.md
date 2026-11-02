@@ -8,27 +8,7 @@ autor: ChickRicks
 # Operadores
 
 ## Resumo
- Operadores válidos:
-	 +
-	 -
-	 /
-	 *
-	 %
-	 =
-	 +=
-	 -=
-	 \*=
-	 /=
-	 %=
-	 \==
-	 !=
-	 \>
-	 <
-	 \>=
-	 <=
-	 &&
-	 ||
-	 !
+ Operadores válidos: `+`, `-`, `/`, `*`, `%`, ` =`, `+=`, `-=`, `*=`, `/=`, `%=` ` ==`, `!=`, `>`, `<`, `>=`, `<=`, `&&`, `||`,`!`.
 
 ## Conteúdo
 - Operadores aritméticos:
@@ -38,12 +18,12 @@ autor: ChickRicks
 	- `/` : Divisão (`foo / foo2`);
 	- `%` : Resto da divisão/módulo (`foo%foo2`);
 - Operadores definidores de variável:
-	- ` = ` : Coloque o valor da direita a esquerda (`foo = bar`);
-	- `+=` : Some o valor da esquerda ao da direita, e depois salva o valor (`foo += bar`);
-	- `-=` : Subtraia o valor da esquerda ao da direita, e depois salva o valor (`foo -= bar`);
-	- `*=` : Multiplique o valor da esquerda ao da direita, e depois salva o valor (`foo * = bar`);
-	- `/=` : Divida o valor da esquerda ao da direita, e depois salva o valor (`foo /= foo`);
-	- `%=` : Faça o módulo da esquerda ao da direita, e depois salva o valor (`foo %= foo`);
+	- ` = ` : Move o valor da direita a esquerda em casos de variáveis complexas, ou copia em caso de variáveis simples (`foo = bar`);
+	- `+=` : Some o valor da esquerda ao da direita, e depois salva o valor (`foo += bar` = `foo = foo + bar`);
+	- `-=` : Subtraia o valor da esquerda ao da direita, e depois salva o valor (`foo -= bar` = `foo = foo - bar`);
+	- `*=` : Multiplique o valor da esquerda ao da direita, e depois salva o valor (`foo *= bar` = ` foo = foo * bar`);
+	- `/=` : Divida o valor da esquerda ao da direita, e depois salva o valor (`foo /= foo` = `foo = foo/bar`);
+	- `%=` : Faça o módulo da esquerda ao da direita, e depois salva o valor (`foo %= foo` = `foo = foo % bar`);
 - Operadores Comparadores:
 	-  ` == ` : Igualdade entre os 2 (`foo == foo`);
 	- `!=` : Diferenças entre os 2 (`foo != foo`);
@@ -55,6 +35,8 @@ autor: ChickRicks
 	- `&&` -> E lógico (`foo && foo`);
 	- `||` -> OU lógico (`foo || foo`);
 	- `!` -> NÃO lógico (`!foo`);
+- Se a parte esquerda de `&&` for falsa, ela retorna falso, sem avaliação da direita.
+- Se a parte esquerda de `||` for verdadeira, ela retorna verdadeiro, sem avaliação da direita.
 - Ao criar variáveis, ela pode receber uma "função" para resolver, e receber o resultado dela. Ex: `let x = 10; let y = x * 7`.
 
 ## Descoberta de testes

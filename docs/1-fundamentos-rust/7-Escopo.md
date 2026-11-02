@@ -11,9 +11,9 @@ Variáveis ficam no escopo definido, que é definido pela quantidade de {} que e
 
 ## Conteúdo
 - Blocos são separados por {} ou por funções.
-- Variáveis existem apenas na função criada.
-- Variáveis podem ser criadas dentro de escopos internos, se mantendo dentro deles.
-- [Pode-se repetir as variáveis no mesmo escopo](2-Variaveis-e-constantes.md#descoberta-de-testes)
+- Variáveis existem apenas no seu bloco. Funções, `if`,`for`,`while` e `match` criam blocos. 
+- [Pode-se repetir as variáveis no mesmo escopo.](2-Variaveis-e-constantes.md#descoberta-de-testes)
+- Ao sair do bloco no qual está, a variável é destruída e sua memória é limpa.
 - Pode também repetir o nome de variáveis em escopos diferentes, e ela é tratada como uma nova.
 
 ## Descoberta de testes

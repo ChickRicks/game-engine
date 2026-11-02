@@ -6,7 +6,7 @@
 
 [Condicionais](4-Condicionais.md)
 
-[Lastros de repetição](5-Lastros-de-repeticao.md)
+[Lastros de repetição](5-Lacos-de-repeticao.md)
 
 [Funções](6-Funcoes.md)
 

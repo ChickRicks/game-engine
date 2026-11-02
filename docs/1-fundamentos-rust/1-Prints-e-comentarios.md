@@ -23,7 +23,7 @@ autor: ChickRicks
 - `Print!\n("Conteúdo");` funciona normalmente (espaços branco ignorados).
 - Parênteses obrigatórios (`println!(Conteúdo);` funciona, `println!Conteúdo;` não).
 ## Links externos relacionados
-- [w3schools síntaxe](https://www.w3schools.com/rust/rust_syntax.php) até [w3schools comments](https://www.w3schools.com/rust/rust_comments.php ).
+- [w3schools síntaxe](https://www.w3schools.com/rust/rust_syntax.php) até [w3schools comments](https://www.w3schools.com/rust/rust_comments.php).
 
 ## Links
 - 👈 **Anterior:** [index](0-index.md)

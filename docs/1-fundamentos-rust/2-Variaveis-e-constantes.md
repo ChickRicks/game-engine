@@ -15,7 +15,7 @@ Constante: `const foo1: foo2 = bar;`, sendo foo2 o tipo da constante.
 
 ## Conteúdo
 -  Declaração de variável: `let foo = bar;`
--  Para chamar a variável em uma string (para um print, por exemplo), usa-se "{}"
+-  Para chamar a variável em um print, usa-se `{}`.
 - Naturalmente, `let foo = bar;` criam variáveis que não mudam.
 - Para variáveis que podem mudar facilmente, monta-se `let mut foo = bar;`
 - Rust aceita inteiros, pontos flutuantes, caracteres, booleana, strings, entre outras estruturas.
