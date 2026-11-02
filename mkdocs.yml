@@ -65,10 +65,12 @@ nav:
     - Introdução: 1-fundamentos-rust/0-index.md
     - Básicos de rust:
       - Index: 1-fundamentos-rust/1-basics/0-index.md
-      - Prints e comentários: 1-fundamentos-rust/1-basics/1-Prints-e-comentarios
-      - Variáveis e constantes: 1-fundamentos-rust/1-basics/2-Variaveis-e-constantes
-      - Operadores: 1-fundamentos-rust/1-basics/3-Operadores  
-      - Condicionais: 1-fundamentos-rust/1-basics/4-Condicionais
+      - Prints e comentários: 1-fundamentos-rust/1-basics/1-Prints-e-comentarios.md
+      - Variáveis e constantes: 1-fundamentos-rust/1-basics/2-Variaveis-e-constantes.md
+      - Operadores: 1-fundamentos-rust/1-basics/3-Operadores.md
+      - Condicionais: 1-fundamentos-rust/1-basics/4-Condicionais.md
+      - Lastros de repetição: 1-fundamentos-rust/1-basics/5-Lastros-de-repeticao.md
+      - Funções: 1-fundamentos-rust/1-basics/6-Funcoes.md
     - Ownership: 1-fundamentos-rust/2-ownership.md
     - Borrowing: 1-fundamentos-rust/3-borrowing.md
     - Lifetimes: 1-fundamentos-rust/4-lifetimes
