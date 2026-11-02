@@ -18,7 +18,7 @@
         <link rel="prev" href="../3-Operadores/">
       
       
-        <link rel="next" href="../5-Lastros-de-repeticao/">
+        <link rel="next" href="../6-Funcoes/">
       
       
         
@@ -650,7 +650,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../5-Lastros-de-repeticao/" class="md-nav__link">
+      <a href="../5-Lastros-de-repeticao.md" class="md-nav__link">
         
   
   
@@ -663,13 +663,6 @@
     
   </span>
   
-  
-    
-  
-  
-    <span class="md-status md-status--Em andamento"></span>
-  
-
   
 
       </a>
@@ -1716,19 +1709,20 @@
 <h1 id="condicionais">Condicionais<a class="headerlink" href="#condicionais" title="Permanent link">&para;</a></h1>
 <h2 id="resumo">Resumo<a class="headerlink" href="#resumo" title="Permanent link">&para;</a></h2>
 <p>Estrutura do ifs, if_else, else if e match
-if (completo): <code>if (foo) {bar} else if (foo2) {bar2} else {bar3}</code>.
-match: <code>match foo { (foo1 =&gt; bar1)* _ =&gt; bar2}</code>.</p>
+if (completo): <code>if foo {bar} else if foo2 {bar2} else {bar3}</code>.
+match: <code>match foo { foo1 =&gt; bar1,* _ =&gt; bar2}</code>.</p>
 <h2 id="conteudo">Conteúdo<a class="headerlink" href="#conteudo" title="Permanent link">&para;</a></h2>
 <ul>
 <li>ifs possuem estrutura: <code>if foo {foo} (else if {foo})* else {foo}</code>.</li>
 <li>Ifs também podem ser usados como "função" de uma variável, porém, em caso de if else, eles devem retornar o mesmo valor</li>
-<li>Match possui estrutura <code>match foo { (foo =&gt; bar)* , _ =&gt; bar}</code>, sendo _ valor caso não esteja dentro dos outros.</li>
+<li>Match possui estrutura <code>match foo { foo =&gt; bar,*  _ =&gt; bar}</code>, sendo _ valor caso não esteja dentro dos outros.</li>
 <li>Match aceita uso de | caso alguns valores devam retornar o mesmo resultado.</li>
 <li>Similar ao if, também pode ser uma "função", com as mesmas regras do if (os valores que retornam tem que ser do mesmo tipo).</li>
+<li>Para borrowing e Ownership: o bloco interno do <code>if</code> pode trocar o ownership de variáveis de escopos externos.</li>
 </ul>
 <h2 id="descoberta-de-testes">Descoberta de testes<a class="headerlink" href="#descoberta-de-testes" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>If</code> aceita apenas valores que retornam true ou false, números não tem tradução de true ou false</li>
+<li><code>If</code> aceita apenas valores booleanos, números não tem tradução de true ou false.</li>
 </ul>
 <h2 id="links-externos-relacionados">Links externos relacionados<a class="headerlink" href="#links-externos-relacionados" title="Permanent link">&para;</a></h2>
 <ul>
@@ -1737,7 +1731,7 @@ match: <code>match foo { (foo1 =&gt; bar1)* _ =&gt; bar2}</code>.</p>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
 <ul>
 <li>👈 <strong>Anterior:</strong> <a href="../3-Operadores/">Operadores</a></li>
-<li>➡️ <strong>Próximo:</strong> <a href="../5-Lastros-de-repeticao/">Lastro de Repetição</a></li>
+<li>➡️ <strong>Próximo:</strong> <a href="../5-Lacos-de-repeticao/">Lastro de Repetição</a></li>
 </ul>
 
 

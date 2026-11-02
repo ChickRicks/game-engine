@@ -537,7 +537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../5-Lastros-de-repeticao/" class="md-nav__link">
+      <a href="../5-Lastros-de-repeticao.md" class="md-nav__link">
         
   
   
@@ -550,13 +550,6 @@
     
   </span>
   
-  
-    
-  
-  
-    <span class="md-status md-status--Em andamento"></span>
-  
-
   
 
       </a>
@@ -1602,23 +1595,29 @@
 
 <h1 id="strings">Strings<a class="headerlink" href="#strings" title="Permanent link">&para;</a></h1>
 <h2 id="resumo">Resumo<a class="headerlink" href="#resumo" title="Permanent link">&para;</a></h2>
-<p>String de literais: <code>foo.to_string</code> ou <code>String::from(foo)</code>; <code>push</code> e <code>push_str</code> para adicionar pedaços de texto definidos, <code>format!</code> para concatenar strings, <code>.len()</code> para o tamanho de stringx</p>
+<p>String de literais: <code>foo.to_string()</code> ou <code>String::from("foo")</code> para copiar uma string; <code>push</code> e <code>push_str</code> para adicionar pedaços de texto definidos, <code>format!</code> para concatenar strings, <code>.len()</code> para o tamanho de string em bytes, e <code>chars().count()</code> em carácteres</p>
 <h2 id="conteudo">Conteúdo<a class="headerlink" href="#conteudo" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="../2-Variaveis-e-constantes/#conteudo">Formatos de String:</a></li>
+<li><a href="../2-Variaveis-e-constantes/#conteudo">Formatos de String:</a><ul>
+<li>&amp;str ,imutável, em geral, literal, é uma referência;</li>
+<li>String é mutável, tem ownership e tem uma heap, sempre dona;</li>
+</ul>
+</li>
 <li>Duas formas de criar string de um literal: <ul>
-<li>Usando <code>to_string()</code> logo após da variável (<code>let foo = bar.to_string()</code>);</li>
-<li>Usando <code>String::from()</code> com o texto resultante dentro do <code>from</code>  (<code>let foo = String::from(bar)</code>);</li>
+<li>Usando <code>to_string()</code> logo após da variável (<code>let foo = bar.to_string()</code> para &amp;str, e <code>let foo = "bar".to_string()</code> para literais);</li>
+<li>Usando <code>String::from()</code> com o texto resultante dentro do <code>from</code>  <code>let foo = String::from("bar")</code>;</li>
 </ul>
 </li>
-<li><code>push_str</code> para adicionar textos a uma variável string (<code>foo.push_str(bar)</code>).</li>
-<li><code>push</code> para um carácter único (<code>foo.push(bar)</code>).</li>
+<li><code>push_str</code> para adicionar textos a uma variável string (<code>foo.push_str("bar")</code>).</li>
+<li><code>push</code> para um carácter único (<code>foo.push('b')</code>).</li>
+<li>Para <code>push</code> e <code>push_str</code> funcionarem, a variável que está sendo afetada precisa ser mutável.</li>
 <li>Duas formas de concatenar strings:<ul>
-<li>Macro <code>format!</code> com os textos a serem concatenados (foo = format!("foo {} {}",bar1,bar2));</li>
-<li>Usando o operador <code>+</code> , porém menos recomendado (foo = bar1 + bar2 + bar3);</li>
+<li>Macro <code>format!</code> com os textos a serem concatenados (<code>foo = format!("foo {} {}",bar1,bar2</code>) ), sem consumir as variáveis, apenas as copiando;</li>
+<li>Usando o operador <code>+</code> , porém menos recomendado (<code>foo = bar1 + bar2 + bar3</code>), já que usar <code>+</code> acaba consumindo a string a esquerda;</li>
 </ul>
 </li>
-<li><code>.len()</code> em uma string para retornar seu valor (foo.len()).</li>
+<li><code>.len()</code> em uma string para retornar seu valor em bytes (<code>foo.len()</code>) e <code>.chars().count()</code> para contagem de carácteres (`foo.chars().count()).</li>
+<li>Ao usar &amp;s a uma função pedindo uma string, ele retorna sua referência, não seu owning</li>
 </ul>
 <h2 id="descoberta-de-testes">Descoberta de testes<a class="headerlink" href="#descoberta-de-testes" title="Permanent link">&para;</a></h2>
 <ul>
@@ -1627,7 +1626,7 @@
 <h2 id="links-externos-relacionados">Links externos relacionados<a class="headerlink" href="#links-externos-relacionados" title="Permanent link">&para;</a></h2>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
 <ul>
-<li>👈 <strong>Anterior:</strong> <a href="XXX">XXX</a></li>
+<li>👈 <strong>Anterior:</strong> <a href="../7-Escopo/">Escopo</a></li>
 <li>➡️ <strong>Próximo:</strong> <a href="XXX">XXX</a></li>
 </ul>
 

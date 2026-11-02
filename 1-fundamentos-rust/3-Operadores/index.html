@@ -650,7 +650,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../5-Lastros-de-repeticao/" class="md-nav__link">
+      <a href="../5-Lastros-de-repeticao.md" class="md-nav__link">
         
   
   
@@ -663,13 +663,6 @@
     
   </span>
   
-  
-    
-  
-  
-    <span class="md-status md-status--Em andamento"></span>
-  
-
   
 
       </a>
@@ -1715,27 +1708,7 @@
 
 <h1 id="operadores">Operadores<a class="headerlink" href="#operadores" title="Permanent link">&para;</a></h1>
 <h2 id="resumo">Resumo<a class="headerlink" href="#resumo" title="Permanent link">&para;</a></h2>
-<p>Operadores válidos:
-     +
-     -
-     /
-     *
-     %
-     =
-     +=
-     -=
-     *=
-     /=
-     %=
-     \==
-     !=
-     &gt;
-     &lt;
-     &gt;=
-     &lt;=
-     &amp;&amp;
-     ||
-     !</p>
+<p>Operadores válidos: <code>+</code>, <code>-</code>, <code>/</code>, <code>*</code>, <code>%</code>, <code>=</code>, <code>+=</code>, <code>-=</code>, <code>*=</code>, <code>/=</code>, <code>%=</code> <code>==</code>, <code>!=</code>, <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code>, <code>&amp;&amp;</code>, <code>||</code>,<code>!</code>.</p>
 <h2 id="conteudo">Conteúdo<a class="headerlink" href="#conteudo" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Operadores aritméticos:<ul>
@@ -1747,12 +1720,12 @@
 </ul>
 </li>
 <li>Operadores definidores de variável:<ul>
-<li><code>=</code> : Coloque o valor da direita a esquerda (<code>foo = bar</code>);</li>
-<li><code>+=</code> : Some o valor da esquerda ao da direita, e depois salva o valor (<code>foo += bar</code>);</li>
-<li><code>-=</code> : Subtraia o valor da esquerda ao da direita, e depois salva o valor (<code>foo -= bar</code>);</li>
-<li><code>*=</code> : Multiplique o valor da esquerda ao da direita, e depois salva o valor (<code>foo * = bar</code>);</li>
-<li><code>/=</code> : Divida o valor da esquerda ao da direita, e depois salva o valor (<code>foo /= foo</code>);</li>
-<li><code>%=</code> : Faça o módulo da esquerda ao da direita, e depois salva o valor (<code>foo %= foo</code>);</li>
+<li><code>=</code> : Move o valor da direita a esquerda em casos de variáveis complexas, ou copia em caso de variáveis simples (<code>foo = bar</code>);</li>
+<li><code>+=</code> : Some o valor da esquerda ao da direita, e depois salva o valor (<code>foo += bar</code> = <code>foo = foo + bar</code>);</li>
+<li><code>-=</code> : Subtraia o valor da esquerda ao da direita, e depois salva o valor (<code>foo -= bar</code> = <code>foo = foo - bar</code>);</li>
+<li><code>*=</code> : Multiplique o valor da esquerda ao da direita, e depois salva o valor (<code>foo *= bar</code> = <code>foo = foo * bar</code>);</li>
+<li><code>/=</code> : Divida o valor da esquerda ao da direita, e depois salva o valor (<code>foo /= foo</code> = <code>foo = foo/bar</code>);</li>
+<li><code>%=</code> : Faça o módulo da esquerda ao da direita, e depois salva o valor (<code>foo %= foo</code> = <code>foo = foo % bar</code>);</li>
 </ul>
 </li>
 <li>Operadores Comparadores:<ul>
@@ -1770,6 +1743,8 @@
 <li><code>!</code> -&gt; NÃO lógico (<code>!foo</code>);</li>
 </ul>
 </li>
+<li>Se a parte esquerda de <code>&amp;&amp;</code> for falsa, ela retorna falso, sem avaliação da direita.</li>
+<li>Se a parte esquerda de <code>||</code> for verdadeira, ela retorna verdadeiro, sem avaliação da direita.</li>
 <li>Ao criar variáveis, ela pode receber uma "função" para resolver, e receber o resultado dela. Ex: <code>let x = 10; let y = x * 7</code>.</li>
 </ul>
 <h2 id="descoberta-de-testes">Descoberta de testes<a class="headerlink" href="#descoberta-de-testes" title="Permanent link">&para;</a></h2>

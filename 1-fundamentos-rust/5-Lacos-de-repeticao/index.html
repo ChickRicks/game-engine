@@ -12,13 +12,9 @@
         <meta name="author" content="ChickRicks">
       
       
-        <link rel="canonical" href="https://ChickRicks.github.io/game-engine/1-fundamentos-rust/5-Lastros-de-repeticao/">
+        <link rel="canonical" href="https://ChickRicks.github.io/game-engine/1-fundamentos-rust/5-Lacos-de-repeticao/">
       
       
-        <link rel="prev" href="../4-Condicionais/">
-      
-      
-        <link rel="next" href="../6-Funcoes/">
       
       
         
@@ -29,7 +25,7 @@
     
     
       
-        <title>Lastros de repetição - Motor Gráfico em Rust</title>
+        <title>Laços de repetição - Motor Gráfico em Rust</title>
       
     
     
@@ -80,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#lastros-de-repeticao" class="md-skip">
+        <a href="#lacos-de-repeticao" class="md-skip">
           Pular para conteúdo
         </a>
       
@@ -116,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Lastros de repetição
+              Laços de repetição
             
           </span>
         </div>
@@ -288,10 +284,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -330,11 +324,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -355,7 +351,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -538,44 +534,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Lastros de repetição
-  
-
-    
-  </span>
-  
-  
-    
-  
-  
-    <span class="md-status md-status--Em andamento"></span>
-  
-
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../5-Lastros-de-repeticao.md" class="md-nav__link">
         
   
   
@@ -588,91 +550,9 @@
     
   </span>
   
-  
-    
-  
-  
-    <span class="md-status md-status--Em andamento"></span>
-  
-
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Índice">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Índice
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#resumo" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Resumo
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conteudo" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Conteúdo
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#descoberta-de-testes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Descoberta de testes
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#links-externos-relacionados" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Links externos relacionados
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#links" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Links
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1713,7 +1593,7 @@
   
 
 
-<h1 id="lastros-de-repeticao">Lastros de repetição<a class="headerlink" href="#lastros-de-repeticao" title="Permanent link">&para;</a></h1>
+<h1 id="lacos-de-repeticao">Laços de repetição<a class="headerlink" href="#lacos-de-repeticao" title="Permanent link">&para;</a></h1>
 <h2 id="resumo">Resumo<a class="headerlink" href="#resumo" title="Permanent link">&para;</a></h2>
 <p>Possuem 3:
     <code>loop{}</code> : loop infinito, parado apenas com break ou parando o código
@@ -1723,25 +1603,26 @@
 <code>continue</code> : pula para a próxima iteração do loop</p>
 <h2 id="conteudo">Conteúdo<a class="headerlink" href="#conteudo" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Existem 3 estruturas de lastro de repetição: loop, while e for.</li>
+<li>Existem 3 estruturas de laço de repetição: loop, while e for.</li>
 <li><code>loop{bar}</code> faz um loop infinito, sem nenhuma limitação de parar.</li>
-<li>Um <code>break</code> faz com que a função de lastro de repetição pare sua condição.</li>
+<li>Um <code>break</code> faz com que o laço seja interrompido.</li>
 <li>Caso não coloque uma condição de parada dentro com um <code>break</code>, ele precisa ser parado com ctrl + c.</li>
 <li><code>loop{bar}</code> pode ser usado como uma "função" de variável, usando o break como um return.</li>
 <li><code>while(foo) {bar}</code> faz o loop até a condição ser falsa.</li>
 <li>Caso a condição seja inicialmente falsa, ele não começa.</li>
 <li>Além da condição ser falsa, também pode ser parada por um break.</li>
 <li><code>continue</code> faz com que o resto do while seja ignorado, mas continua funcionando</li>
-<li><code>for foo in foo1..foo2{bar}</code> cria um lastro com restrições.</li>
+<li><code>for foo in foo1..foo2{bar}</code> cria um laço com restrições.</li>
 <li><code>foo2</code> é o limite, sem estar incluso.</li>
 <li>Para <code>foo2</code> ser incluso, deve ser <code>for foo in foo1..=foo2{bar}</code>.</li>
-<li>A variável incremental (<code>foo</code>) aumenta sozinha com +1 naturalmente.</li>
+<li>A variável incremental (<code>foo</code>) aumenta sozinha escolhendo o próximo valor válido naturalmente.</li>
 <li><code>break</code> e <code>continue</code> funcionam normalmente para o <code>for</code>.</li>
+<li><code>for</code> consome o iterador, arrays ficam vazias no fim.</li>
 </ul>
 <h2 id="descoberta-de-testes">Descoberta de testes<a class="headerlink" href="#descoberta-de-testes" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Possui prioridade linear (o que está acima acontece antes do que está abaixo). Breaks barram o que ia acontecer depois.</li>
-<li><code>continue</code> não traz aumento de condicional do while.</li>
+<li>Possui prioridade  de execução de cima pra baixo. Breaks barram o que ia acontecer depois.</li>
+<li><code>continue</code> pula o resto do corpo do while e re-verifica a condição.</li>
 <li>No <code>for</code>, <code>foo1</code> e <code>foo2</code> podem ser variáveis criadas anteriormente.</li>
 <li><code>foo1</code> e <code>foo2</code> do <code>for</code> é válido usar caracteres, e ele vai da letra inicial até a letra final (entre maiúculas para maiúsculas ou entre minúsculas para minúsculas, sem mistura).</li>
 <li><code>for</code> não é uma boa ideia se o incremento não for +1.</li>

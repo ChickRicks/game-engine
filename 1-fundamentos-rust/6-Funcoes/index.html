@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://ChickRicks.github.io/game-engine/1-fundamentos-rust/6-Funcoes/">
       
       
-        <link rel="prev" href="../5-Lastros-de-repeticao/">
+        <link rel="prev" href="../4-Condicionais/">
       
       
         <link rel="next" href="../7-Escopo/">
@@ -541,7 +541,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../5-Lastros-de-repeticao/" class="md-nav__link">
+      <a href="../5-Lastros-de-repeticao.md" class="md-nav__link">
         
   
   
@@ -554,13 +554,6 @@
     
   </span>
   
-  
-    
-  
-  
-    <span class="md-status md-status--Em andamento"></span>
-  
-
   
 
       </a>
@@ -1718,11 +1711,13 @@
 <p>Estrutura completa: <code>fn foo(foo1) -&gt; bar{bar}</code>. <code>return</code> para as funções que retornam algo.</p>
 <h2 id="conteudo">Conteúdo<a class="headerlink" href="#conteudo" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Função possui estrutura <code>fn foo(foo1) -&gt; bar{bar}</code>.</li>
+<li>Função possui estrutura <code>fn foo(foo1) -&gt; bar{bar}</code>, todos sendo necessários.</li>
+<li>Para funções que recebem mais de um valor, fica <code>fn foo(foo1: bar1, foo2: bar2){}</code>.</li>
 <li>Chamar uma função é <code>foo()</code>.</li>
 <li>O conteúdo de variáveis da função envolve <code>foo: tipo de var</code>.</li>
-<li>Para funções que retornam valores, usa-se <code>-&gt; tipo de var</code> na criação.</li>
+<li>Para funções que retornam valores, usa-se <code>-&gt; tipo de var</code> na criação. Todas retornam algo, caso não possua, retorna ()</li>
 <li>Para o retorno de funções, pode se usar <code>return</code> ou, na última linha, fazer a operação sem <code>;</code>.</li>
+<li>Pode passar ownership para as variáveis complexas caso não seja usado <code>&amp;</code> com a variável.</li>
 </ul>
 <h2 id="descoberta-de-testes">Descoberta de testes<a class="headerlink" href="#descoberta-de-testes" title="Permanent link">&para;</a></h2>
 <ul>
@@ -1733,7 +1728,7 @@
 <p><a href="https://www.w3schools.com/rust/rust_functions.php">w3school funcitons</a></p>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
 <ul>
-<li>👈 <strong>Anterior:</strong> <a href="../5-Lastros-de-repeticao/">Lastros de Repetição</a></li>
+<li>👈 <strong>Anterior:</strong> <a href="../5-Lacos-de-repeticao/">Lastros de Repetição</a></li>
 <li>➡️ <strong>Próximo:</strong> <a href="../7-Escopo/">Escopo</a></li>
 </ul>
 
