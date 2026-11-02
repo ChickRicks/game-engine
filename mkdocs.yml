@@ -62,7 +62,6 @@ markdown_extensions:
 nav:
   - Início: index.md
   - Fundamentos de Rust:
-    - Introdução: 1-fundamentos-rust/0-index.md
     - Index: 1-fundamentos-rust/0-index.md
     - Prints e comentários: 1-fundamentos-rust/1-Prints-e-comentarios.md
     - Variáveis e constantes: 1-fundamentos-rust/2-Variaveis-e-constantes.md
@@ -74,7 +73,7 @@ nav:
     - Ownership: 1-fundamentos-rust/999-ownership.md
     - Borrowing: 1-fundamentos-rust/999-borrowing.md
     - Lifetimes: 1-fundamentos-rust/999-lifetimes.md
-    - traits: 1-fundamentos-rust/999-traits.md
+    - Traits: 1-fundamentos-rust/999-traits.md
     - Smart Pointers: 1-fundamentos-rust/999-smart-pointers.md
   - Matemática para Gráficos:
     - Introdução: 2-matematica-graficos/index.md
