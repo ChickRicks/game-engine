@@ -47,9 +47,9 @@ autor: ChickRicks
 - Operadores Comparadores:
 	-  ` == ` : Igualdade entre os 2 (`foo == foo`);
 	- `!=` : Diferenças entre os 2 (`foo != foo`);
-	- `>` : Esquerda é maior que a direita (`foo \> foo`);
+	- `>` : Esquerda é maior que a direita (`foo > foo`);
 	- `<` : Esquerda é menor que a direita (`foo < foo`);
-	- `>=` : Esquerda é maior ou igual que a direita (`foo \>= foo`);
+	- `>=` : Esquerda é maior ou igual que a direita (`foo >= foo`);
 	- `<=` : Esquerda é menor ou igual que a direita (`foo <= foo`);
 - Operadores Lógicos:
 	- `&&` -> E lógico (`foo && foo`);

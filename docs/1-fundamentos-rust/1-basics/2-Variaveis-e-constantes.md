@@ -25,7 +25,8 @@ Constante: `const foo1: foo2 = bar;`, sendo foo2 o tipo da constante.
 	- u32: Números naturais + 0 (0,+inf);
 	- f64: números de ponto flutuante;
 	- char: um carácter único;
-	- &str: uma string;
+	- &str: uma string fixa;
+	- String: uma string que pode mudar;
 	- bool: booleana (V ou F);
 - Print aceita os dados mostrados
 - Constantes possuem estrutura `const foo: foo2 = bar;`, sendo que foo2 é o tipo de variável

@@ -1,7 +1,7 @@
 ---
-status: pendente
-criado: "2026-11-01"
-modificado: "2026-11-01"
+status: Em andamento
+criado: 2026-11-01
+modificado: 2026-11-01
 autor: ChickRicks
 ---
 # Lastros de repetição
