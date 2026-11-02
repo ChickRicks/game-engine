@@ -1,4 +1,5 @@
 fn main() {
+    const T: i32 = 24;
     let x = 'A';
     let y = false;
     let b = true
