@@ -1,4 +1,3 @@
-
 ---
 status: Em andamento
 criado: 2026/11/01
@@ -60,7 +59,11 @@ autor: ChickRicks
 
 ## Descoberta de testes
 - Divisão inteira não aproxima, retorna o valor cheio.
-## Links relacionados
+## Links externos relacionados
 - [w3schools operators](https://www.w3schools.com/rust/rust_operators.php) e [w3schools booleans](https://www.w3schools.com/rust/rust_booleans.php).
+
+##Links
+- 👈 **Anterior:** [Variáveis e Constantes](2-Variaveis-e-constantes)
+- ➡️ **Próximo:** [Condicionais](4-Condicionais)
 
 ---

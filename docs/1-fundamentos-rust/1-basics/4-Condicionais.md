@@ -1,4 +1,3 @@
-
 ---
 status: Em andamento
 criado: 2026/11/01
@@ -19,8 +18,10 @@ match: `match foo { (foo1 => bar1)* _ => bar2}`.
 - Match aceita uso de | caso alguns valores devam retornar o mesmo resultado.
 - Similar ao if, também pode ser uma "função", com as mesmas regras do if (os valores que retornam tem que ser do mesmo tipo).
 ## Descoberta de testes
-- Ifs aceitam apenas valores que retornam true ou false, números não tem tradução de true ou false
-## Links relacionados
+- `If` aceita apenas valores que retornam true ou false, números não tem tradução de true ou false
+## Links externos relacionados
 -  [w3school if.else](https://www.w3schools.com/rust/rust_if_else.php) e [w3school match](https://www.w3schools.com/rust/rust_match.php).
+## Links
+- 👈 **Anterior:** [Operadores](3-Operadores.md)
+- ➡️ **Próximo:** [Lastro de Repetição](5-Lastros-de-repeticao.md)
 
----

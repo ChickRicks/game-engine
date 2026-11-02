@@ -1,4 +1,3 @@
-
 ---
 status: Em andamento
 criado: 2026/10/31
@@ -22,6 +21,10 @@ Formato de print e comentários, nenhum comando técnico muito aprofundado, com 
 - String do rust entende carácteres funcionais (\n para quebra de linha, \0 para vazio, etc).
 - Comentários de linha única tem "//".
 - Comentários de muitas linhas tem '/ * ' de começo e ' * /' no final.
-## Links relacionados
+## Links externos relacionados
 - [w3schools síntaxe](https://www.w3schools.com/rust/rust_syntax.php) até [w3schools comments](https://www.w3schools.com/rust/rust_comments.php ).
+
+## Links
+- 👈 **Anterior:** [index](0-index.md)
+- ➡️ **Próximo:** [Variaveis e Constantes](2-Variaveis-e-constantes.md)
 ---

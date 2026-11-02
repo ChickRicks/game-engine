@@ -1,4 +1,3 @@
-
 ---
 status: Em andamento
 criado: 2026/11/01
@@ -36,6 +35,11 @@ Constante: `const foo1: foo2 = bar;`, sendo foo2 o tipo da constante.
 ## Descoberta de testes
 -  Quebras de linha nos espaços continuam ignorados (dado que não corte palavras chaves ou valores).
 - `let x = foo; -> let x = foo2;` é válido.
-## Links relacionados
+## Links externos relacionados
 - [w3schools rust variables](https://www.w3schools.com/rust/rust_variables.php) até [w3schools constants](https://www.w3schools.com/rust/rust_constants.php).
+
+## Links
+- 👈 **Anterior:** [Prints e comentários](1-Prints-e-comentarios.md)
+- ➡️ **Próximo:** [Operadores](3-Operadores.md)
+
 ---
