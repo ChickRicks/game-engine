@@ -12,13 +12,13 @@
         <meta name="author" content="ChickRicks">
       
       
-        <link rel="canonical" href="https://ChickRicks.github.io/game-engine/1-fundamentos-rust/999-borrowing/">
+        <link rel="canonical" href="https://ChickRicks.github.io/game-engine/1-fundamentos-rust/9-Ownership/">
       
       
-        <link rel="prev" href="../999-ownership/">
+        <link rel="prev" href="../8-Strings/">
       
       
-        <link rel="next" href="../999-lifetimes/">
+        <link rel="next" href="../10-Borrowing/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>Borrowing - Motor Gráfico em Rust</title>
+        <title>Ownership - Motor Gráfico em Rust</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#borrowing" class="md-skip">
+        <a href="#ownership" class="md-skip">
           Pular para conteúdo
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Borrowing
+              Ownership
             
           </span>
         </div>
@@ -294,6 +294,8 @@
   
     
     
+      
+        
       
         
       
@@ -621,7 +623,7 @@
     
   
   
-    <span class="md-status md-status--pendente"></span>
+    <span class="md-status md-status--Em andamento"></span>
   
 
   
@@ -639,19 +641,26 @@
   
   
     <li class="md-nav__item">
-      <a href="../999-ownership/" class="md-nav__link">
+      <a href="../8-Strings/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Ownership
+    Strings
   
 
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--Em andamento"></span>
+  
+
   
 
       </a>
@@ -683,12 +692,19 @@
   <span class="md-ellipsis">
     
   
-    Borrowing
+    Ownership
   
 
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--Em andamento"></span>
+  
+
   
 
           <span class="md-nav__icon md-icon"></span>
@@ -701,12 +717,19 @@
   <span class="md-ellipsis">
     
   
-    Borrowing
+    Ownership
   
 
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--Em andamento"></span>
+  
+
   
 
       </a>
@@ -749,10 +772,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#links-relacionados" class="md-nav__link">
+  <a href="#descoberta-de-testes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Links relacionados
+        Descoberta de testes
       
     </span>
   </a>
@@ -760,10 +783,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#status" class="md-nav__link">
+  <a href="#links-externos-relacionados" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Status
+        Links externos relacionados
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Links
       
     </span>
   </a>
@@ -774,6 +808,41 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-Borrowing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Borrowing
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--Em andamento"></span>
+  
+
+  
+
+      </a>
     </li>
   
 
@@ -1636,10 +1705,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#links-relacionados" class="md-nav__link">
+  <a href="#descoberta-de-testes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Links relacionados
+        Descoberta de testes
       
     </span>
   </a>
@@ -1647,10 +1716,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#status" class="md-nav__link">
+  <a href="#links-externos-relacionados" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Status
+        Links externos relacionados
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Links
       
     </span>
   </a>
@@ -1677,37 +1757,34 @@
   
 
 
-<hr />
-<p>status: pendente
-criado: 2026/10/31
-atualizado: 2026/10/31
-autor: ChickRicks</p>
-<hr />
-<h1 id="borrowing">Borrowing<a class="headerlink" href="#borrowing" title="Permanent link">&para;</a></h1>
+<h1 id="ownership">Ownership<a class="headerlink" href="#ownership" title="Permanent link">&para;</a></h1>
 <h2 id="resumo">Resumo<a class="headerlink" href="#resumo" title="Permanent link">&para;</a></h2>
-<!-- Descreva brevemente o objetivo deste tópico -->
-
+<p>Em geral, um valor possui apenas um dono, exceto se ela for emprestada.</p>
 <h2 id="conteudo">Conteúdo<a class="headerlink" href="#conteudo" title="Permanent link">&para;</a></h2>
-<!-- Preencha conforme avança o estudo -->
-
-<h2 id="links-relacionados">Links relacionados<a class="headerlink" href="#links-relacionados" title="Permanent link">&para;</a></h2>
 <ul>
-<li></li>
+<li>Montada planejada para manter o uso de memória segura.</li>
+<li>Um valor possui um único dono</li>
+<li>Quando o dono sai de escopo, ele é removido da memória</li>
+<li><a href="../10-Borrowing/#conteudo">Existem formas de "emprestar" o valor</a>, mas em geral só existe um dono do valor</li>
+<li>Variáveis complexas trocam de dono, variáveis simples copiam seu valor para frente.</li>
+<li><code>.clone()</code> pode ser usado para copiar valores para outra variável, sem trocar o dono do valor.</li>
 </ul>
-<h2 id="status">Status<a class="headerlink" href="#status" title="Permanent link">&para;</a></h2>
-<blockquote>
-<p>[!NOTE] Progresso
-- [x] Estrutura criada
-- [ ] Conteúdo preenchido
-- [ ] Revisado</p>
-</blockquote>
-<hr />
+<h2 id="descoberta-de-testes">Descoberta de testes<a class="headerlink" href="#descoberta-de-testes" title="Permanent link">&para;</a></h2>
+<h2 id="links-externos-relacionados">Links externos relacionados<a class="headerlink" href="#links-externos-relacionados" title="Permanent link">&para;</a></h2>
+<h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
+<ul>
+<li>👈 <strong>Anterior:</strong> <a href="../8-Strings/">Strings</a></li>
+<li>➡️ <strong>Próximo:</strong> <a href="../10-Borrowing/">Borrowing</a></li>
+</ul>
 
 
 
 
 
 
+
+  
+  
 
 
 
