@@ -1715,11 +1715,11 @@
 
 <h1 id="basics">Basics<a class="headerlink" href="#basics" title="Permanent link">&para;</a></h1>
 <h2 id="resumo">Resumo<a class="headerlink" href="#resumo" title="Permanent link">&para;</a></h2>
-<p>Formato de print e comentários, nenhum comando técnico muito aprofundado, com inclusão de testes aleatórios.</p>
+<p><code>println!(foo)</code> para print com quebra de linha, <code>print!(foo)</code> para prints sem a quebra, <code>//</code> para comentários de uma linha, <code>/* comentário */</code> para comentários de mais de uma linha.</p>
 <h2 id="conteudo">Conteúdo<a class="headerlink" href="#conteudo" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>Println!("Conteúdo");</code> : print com quebra de linha.</li>
-<li><code>Print!("Conteúdo");</code> : print sem quebra de linha.</li>
+<li><code>println!("Conteúdo");</code> : print com quebra de linha.</li>
+<li><code>print!("Conteúdo");</code> : print sem quebra de linha.</li>
 <li>Mais de um print possível, incluindo intercalado.</li>
 <li>Não serão ignorados espaços brancos dentro da palavra chave, mas dentro de conteúdo de string funciona (<code>Cont\neúdo</code> funciona, e ele considera o texto com uma quebra de linha).</li>
 <li>Ter uma "!" dentro de print! e println! demonstram ser macros.</li>

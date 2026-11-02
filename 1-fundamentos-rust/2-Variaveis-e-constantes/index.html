@@ -1716,8 +1716,8 @@
 <h1 id="variaveis-e-constantes">Variaveis e constantes<a class="headerlink" href="#variaveis-e-constantes" title="Permanent link">&para;</a></h1>
 <h2 id="resumo">Resumo<a class="headerlink" href="#resumo" title="Permanent link">&para;</a></h2>
 <p>Estrutura de Variáveis e constantes.
-Variável não modificável: <code>let foo = bar;</code>
-Variável modificável: <code>let mut foo = bar;</code>
+Variável imutável: <code>let foo = bar;</code>
+Variável mutável: <code>let mut foo = bar;</code>
 Constante: <code>const foo1: foo2 = bar;</code>, sendo foo2 o tipo da constante.</p>
 <h2 id="conteudo">Conteúdo<a class="headerlink" href="#conteudo" title="Permanent link">&para;</a></h2>
 <ul>
@@ -1745,7 +1745,7 @@ Constante: <code>const foo1: foo2 = bar;</code>, sendo foo2 o tipo da constante.
 <h2 id="descoberta-de-testes">Descoberta de testes<a class="headerlink" href="#descoberta-de-testes" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Quebras de linha nos espaços continuam ignorados (dado que não corte palavras chaves ou valores).</li>
-<li><code>let x = foo; -&gt; let x = foo2;</code> é válido.</li>
+<li><code>let x = foo; let x = foo2;</code> é válido (shadowing).</li>
 </ul>
 <h2 id="links-externos-relacionados">Links externos relacionados<a class="headerlink" href="#links-externos-relacionados" title="Permanent link">&para;</a></h2>
 <ul>
