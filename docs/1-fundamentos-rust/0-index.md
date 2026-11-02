@@ -11,3 +11,7 @@
 [Funções](6-Funcoes.md)
 
 [Escopo](7-Escopo.md)
+
+[Strings](8-Strings.md)
+
+[Ownership](9-Ownership.md)

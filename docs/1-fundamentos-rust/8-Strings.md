@@ -1,7 +1,7 @@
 ---
-status: pendente
-criado: "2026-11-02"
-modificado: "2026-11-02"
+status: Em andamento
+criado: 2026-11-02
+modificado: 2026-11-02
 autor: ChickRicks
 ---
 # Strings
@@ -32,4 +32,4 @@ String de literais: `foo.to_string()` ou `String::from("foo")` para copiar uma s
 
 ## Links
 - 👈 **Anterior:** [Escopo](7-Escopo.md)
-- ➡️ **Próximo:** [XXX](XXX)
+- ➡️ **Próximo:** [Ownership](9-Ownership.md)

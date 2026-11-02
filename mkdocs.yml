@@ -70,13 +70,14 @@ nav:
     - Lastros de repetição: 1-fundamentos-rust/5-Lastros-de-repeticao.md
     - Funções: 1-fundamentos-rust/6-Funcoes.md
     - Escopos: 1-fundamentos-rust/7-Escopo.md
-    - Ownership: 1-fundamentos-rust/999-ownership.md
-    - Borrowing: 1-fundamentos-rust/999-borrowing.md
+    - Strings: 1-fundamentos-rust/8-Strings.md
+    - Ownership: 1-fundamentos-rust/9-Ownership.md
+    - Borrowing: 1-fundamentos-rust/10-Borrowing.md
     - Lifetimes: 1-fundamentos-rust/999-lifetimes.md
     - Traits: 1-fundamentos-rust/999-traits.md
     - Smart Pointers: 1-fundamentos-rust/999-smart-pointers.md
   - Matemática para Gráficos:
-    - Introdução: 2-matematica-graficos/index.md
+    - Index: 2-matematica-graficos/index.md
     - Transformações Lineares: 2-matematica-graficos/transformacoes.md
     - Coordenadas Homogêneas: 2-matematica-graficos/coordenadas-homogeneas.md
     - Quaternions: 2-matematica-graficos/quaternions.md
