@@ -23,4 +23,4 @@ Variáveis ficam no escopo definido, que é definido pela quantidade de {} que e
 
 ## Links
 - 👈 **Anterior:** [Funções](6-Funcoes.md)
-- ➡️ **Próximo:** [XXX](XXX)
+- ➡️ **Próximo:** [Strings](8-String.md)

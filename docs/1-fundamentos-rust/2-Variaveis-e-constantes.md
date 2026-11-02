@@ -9,8 +9,8 @@ autor: ChickRicks
 ## Resumo
 
 Estrutura de Variáveis e constantes.
-Variável não modificável: `let foo = bar;`
-Variável modificável: `let mut foo = bar;`
+Variável imutável: `let foo = bar;`
+Variável mutável: `let mut foo = bar;`
 Constante: `const foo1: foo2 = bar;`, sendo foo2 o tipo da constante.
 
 ## Conteúdo
@@ -35,7 +35,7 @@ Constante: `const foo1: foo2 = bar;`, sendo foo2 o tipo da constante.
 
 ## Descoberta de testes
 -  Quebras de linha nos espaços continuam ignorados (dado que não corte palavras chaves ou valores).
-- `let x = foo; -> let x = foo2;` é válido.
+- `let x = foo; let x = foo2;` é válido (shadowing).
 ## Links externos relacionados
 - [w3schools rust variables](https://www.w3schools.com/rust/rust_variables.php) até [w3schools constants](https://www.w3schools.com/rust/rust_constants.php).
 

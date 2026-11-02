@@ -3,7 +3,7 @@ fn main() {
     let y = false;
     let _b = true;
     let z = if x == 'A' {'Z'} else {'d'};
-    let _o = "teste1";
+    let o = "teste1";
     let _p = "teste2";
     let f = 5;
     let g = 3;
@@ -16,7 +16,8 @@ fn main() {
     for i in x..=z{
         println!("{}",i);
     }
-    println!("{}",teste())
+    println!("{}",teste());
+    println!("{}", format!("{} {}",o,f));
 }
 fn teste() -> i32{
     32
