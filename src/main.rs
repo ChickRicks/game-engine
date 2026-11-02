@@ -1,10 +1,18 @@
 fn main() {
+    const T: i32 = 24;
     let x = 'A';
     let y = false;
+<<<<<<< HEAD
     let _b = true;
     let z = if x == 'A' {'Z'} else {'d'};
     let _o = "teste1";
     let _p = "teste2";
+=======
+    let b = true;
+    let z = if x == 'A' {'Z'} else {'d'};
+    let o = "teste1";
+    let p = "teste2";
+>>>>>>> origin/main
     let f = 5;
     let g = 3;
 
