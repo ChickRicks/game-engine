@@ -1762,15 +1762,20 @@
 <p>Em geral, um valor possui apenas um dono, exceto se ela for emprestada.</p>
 <h2 id="conteudo">Conteúdo<a class="headerlink" href="#conteudo" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Montada planejada para manter o uso de memória segura.</li>
-<li>Um valor possui um único dono</li>
-<li>Quando o dono sai de escopo, ele é removido da memória</li>
-<li><a href="../10-Borrowing/#conteudo">Existem formas de "emprestar" o valor</a>, mas em geral só existe um dono do valor</li>
-<li>Variáveis complexas trocam de dono, variáveis simples copiam seu valor para frente.</li>
+<li>Montada planejada para manter o uso de memória segura, sem uso de garbage collector de memória.</li>
+<li>Um valor possui um único dono.</li>
+<li>Quando o dono sai de escopo, ele é removido da memória.</li>
+<li><a href="../10-Borrowing/#conteudo">Existem formas de "emprestar" o valor</a>, mas em geral só existe um dono do valor.</li>
+<li>Variáveis complexas trocam de dono, variáveis simples copiam seu valor para frente.<ul>
+<li>Variáveis simples: i32,bool,char;</li>
+<li>Variáveis complexas: String, Vec;</li>
+</ul>
+</li>
 <li><code>.clone()</code> pode ser usado para copiar valores para outra variável, sem trocar o dono do valor.</li>
 </ul>
 <h2 id="descoberta-de-testes">Descoberta de testes<a class="headerlink" href="#descoberta-de-testes" title="Permanent link">&para;</a></h2>
 <h2 id="links-externos-relacionados">Links externos relacionados<a class="headerlink" href="#links-externos-relacionados" title="Permanent link">&para;</a></h2>
+<p><a href="https://www.w3schools.com/rust/rust_ownership.php">w3school Ownership</a></p>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
 <ul>
 <li>👈 <strong>Anterior:</strong> <a href="../8-Strings/">Strings</a></li>
