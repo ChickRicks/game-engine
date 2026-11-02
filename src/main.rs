@@ -21,4 +21,3 @@ fn main() {
 fn teste() -> i32{
     32
 }
-

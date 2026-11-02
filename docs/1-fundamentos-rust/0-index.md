@@ -1,8 +1,13 @@
-Página central para acesso de cada parte dos processos de fundamentos, desde o básico do básico, até especialidades necessárias para o entendimento de um motor de jogos.
+[Prints e Comentários](1-Prints-e-comentarios.md)
 
-[Básicos:](1-basics/0-index.md) Básicos gerais de uma linguagem de programação, incluindo atribuições básicas de variável, condicionais, lastros de repetição e outras funções básicas.
+[Variáveis e Constantes](2-Variaveis-e-constantes.md)
 
-[Ownership:](2-ownership.md)
+[Operadores](3-Operadores.md)
 
-[Borrowing:](3-borrowing.md)
+[Condicionais](4-Condicionais.md)
 
+[Lastros de repetição](5-Lastros-de-repeticao.md)
+
+[Funções](6-Funcoes.md)
+
+[Escopo](7-Escopo.md)
