@@ -25,4 +25,4 @@ Ao usar domínio, traduza para ownership.
 
 ## Links
 - 👈 **Anterior:** [Ownership](9-Ownership.md)
-- ➡️ **Próximo:** [XXX](XXX)
+- ➡️ **Próximo:** [Array](Estruturas-de-dados/Array.md)

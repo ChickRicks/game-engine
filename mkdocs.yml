@@ -73,6 +73,13 @@ nav:
     - Strings: 1-fundamentos-rust/8-Strings.md
     - Ownership: 1-fundamentos-rust/9-Ownership.md
     - Borrowing: 1-fundamentos-rust/10-Borrowing.md
+    - Tipos de estruturas de dados:
+      - Array: 1-fundamentos-rust/Estruturas-de-dados/Array.md
+      - Vector: 1-fundamentos-rust/Estruturas-de-dados/Vector.md
+      - Tuple: 1-fundamentos-rust/Estruturas-de-dados/Tuple.md
+      - Hashmap: 1-fundamentos-rust/Estruturas-de-dados/Hashmap.md
+      - Structs: 1-fundamentos-rust/Estruturas-de-dados/Structs.md
+      - Enums: 1-fundamentos-rust/Estruturas-de-dados/Enums.md
     - Lifetimes: 1-fundamentos-rust/999-lifetimes.md
     - Traits: 1-fundamentos-rust/999-traits.md
     - Smart Pointers: 1-fundamentos-rust/999-smart-pointers.md
