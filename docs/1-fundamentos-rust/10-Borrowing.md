@@ -19,6 +19,8 @@ Ao usar domínio, traduza para ownership.
 - Podem existir múltiplas referências imutáveis, porém 1 única referência mutável, e nenhum pode acontecer ao mesmo tempo.
 
 ## Descoberta de testes
+- Referências podem vir de referências também.
+- Se a variável dona trocar, as referências mantém a cópia que possuem da dona original.
 
 ## Links externos relacionados
 [w3school Borrowing](https://www.w3schools.com/rust/rust_borrowing_references.php)
