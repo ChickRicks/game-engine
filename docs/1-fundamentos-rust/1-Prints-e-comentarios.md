@@ -20,7 +20,7 @@ autor: ChickRicks
 - Comentários de linha única tem "//" (Veja código 2).
 - Comentários de muitas linhas tem '/ * ' de começo e ' \*/' no final (veja código 2).
 ## Descobertas de teste
-- `Print!\n("Conteúdo");` funciona normalmente (espaços branco ignorados) (veja código 3.
+- `Print!\n("Conteúdo");` funciona normalmente (espaços branco ignorados) (veja código 3).
 - Parênteses obrigatórios (`println!(Conteúdo);` funciona, `println!Conteúdo;` não) (veja código 4).
 ## Códigos relacionados
 Código 1:
@@ -31,13 +31,13 @@ fn main(){
 }
 ```
 Código 2:
-``` rust linenums="1"
+```rust linenums="1"
 // Isso é um comentário de uma única linha
 /* E isso é um comentário de múltiplas linhas
 para fechar, é necessário colocar */
 ```
 Código 3:
-```rust hl_lines="2-4" linenums="1"
+```rust hl_lines="2-5" linenums="1"
 fn main(){
 	print!
 	("Funciona normalmente");
@@ -55,6 +55,7 @@ fn main(){
 	// Esse código não vai compilar, vide linhas 4 e 5
 }
 ```
+
 ## Links externos relacionados
 - [w3schools síntaxe](https://www.w3schools.com/rust/rust_syntax.php) até [w3schools comments](https://www.w3schools.com/rust/rust_comments.php).
 
