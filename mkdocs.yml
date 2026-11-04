@@ -2,9 +2,22 @@ site_name: Motor Gráfico em Rust
 site_description: Trilha de estudos e documentação do desenvolvimento
 site_author: ChickRicks
 markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - toc:
+      permalink: true
   - pymdownx.arithmatex:
       generic: true
-
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
 extra_javascript:
   - javascripts/mathjax.js
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
@@ -42,22 +55,6 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Mudar para modo claro
-
-markdown_extensions:
-  - admonition
-  - attr_list
-  - md_in_html
-  - tables
-  - footnotes
-  - toc:
-      permalink: true
-  - pymdownx.details
-  - pymdownx.highlight:
-      anchor_linenums: true
-  - pymdownx.inlinehilite
-  - pymdownx.superfences
-  - pymdownx.tabbed:
-      alternate_style: true
 
 nav:
   - Início: index.md

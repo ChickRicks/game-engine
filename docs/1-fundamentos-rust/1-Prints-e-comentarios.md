@@ -11,17 +11,50 @@ autor: ChickRicks
 `println!(foo)` para print com quebra de linha, `print!(foo)` para prints sem a quebra, `//` para comentários de uma linha, `/* comentário */` para comentários de mais de uma linha.
 ## Conteúdo
 
-- `println!("Conteúdo");` : print com quebra de linha.
-- `print!("Conteúdo");` : print sem quebra de linha.
+- `println!("Conteúdo");` : print com quebra de linha (veja código 1).
+- `print!("Conteúdo");` : print sem quebra de linha (veja código 1).
 - Mais de um print possível, incluindo intercalado.
 - Não serão ignorados espaços brancos dentro da palavra chave, mas dentro de conteúdo de string funciona (`Cont\neúdo` funciona, e ele considera o texto com uma quebra de linha).
 - Ter uma "!" dentro de print! e println! demonstram ser macros.
 - String do rust entende carácteres funcionais (\n para quebra de linha, \0 para vazio, etc).
-- Comentários de linha única tem "//".
-- Comentários de muitas linhas tem '/ * ' de começo e ' \*/' no final.
+- Comentários de linha única tem "//" (Veja código 2).
+- Comentários de muitas linhas tem '/ * ' de começo e ' \*/' no final (veja código 2).
 ## Descobertas de teste
-- `Print!\n("Conteúdo");` funciona normalmente (espaços branco ignorados).
-- Parênteses obrigatórios (`println!(Conteúdo);` funciona, `println!Conteúdo;` não).
+- `Print!\n("Conteúdo");` funciona normalmente (espaços branco ignorados) (veja código 3.
+- Parênteses obrigatórios (`println!(Conteúdo);` funciona, `println!Conteúdo;` não) (veja código 4).
+## Códigos relacionados
+Código 1:
+```rust hl_lines="2-3" linenums="1"
+fn main(){
+	println!("Hello world!"); // Retorna no terminal Hello world!\n
+	print!("Hello world 2: Electric boogaloo"); // Retorna no terminal Hello world 2: Electric boogaloo.
+}
+```
+Código 2:
+``` rust linenums="1"
+// Isso é um comentário de uma única linha
+/* E isso é um comentário de múltiplas linhas
+para fechar, é necessário colocar */
+```
+Código 3:
+```rust hl_lines="2-4" linenums="1"
+fn main(){
+	print!
+	("Funciona normalmente");
+	println!
+	("Também funciona :)");
+}
+```
+Código 4:
+```rust hl_lines="4-5" linenums="1"
+fn main(){
+	println!("Funcionamento normal");
+	print!("Normal até demais");
+	println!"Parece que algo está errado"; // não funciona
+	print!"Não sei dizer o quê"; // também não funciona
+	// Esse código não vai compilar, vide linhas 4 e 5
+}
+```
 ## Links externos relacionados
 - [w3schools síntaxe](https://www.w3schools.com/rust/rust_syntax.php) até [w3schools comments](https://www.w3schools.com/rust/rust_comments.php).
 
