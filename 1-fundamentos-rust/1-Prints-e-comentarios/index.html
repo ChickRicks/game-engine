@@ -512,6 +512,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#codigos-relacionados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Códigos relacionados
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#links-externos-relacionados" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1966,6 +1977,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#codigos-relacionados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Códigos relacionados
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#links-externos-relacionados" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2012,20 +2034,65 @@
 <p><code>println!(foo)</code> para print com quebra de linha, <code>print!(foo)</code> para prints sem a quebra, <code>//</code> para comentários de uma linha, <code>/* comentário */</code> para comentários de mais de uma linha.</p>
 <h2 id="conteudo">Conteúdo<a class="headerlink" href="#conteudo" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>println!("Conteúdo");</code> : print com quebra de linha.</li>
-<li><code>print!("Conteúdo");</code> : print sem quebra de linha.</li>
+<li><code>println!("Conteúdo");</code> : print com quebra de linha (veja código 1).</li>
+<li><code>print!("Conteúdo");</code> : print sem quebra de linha (veja código 1).</li>
 <li>Mais de um print possível, incluindo intercalado.</li>
 <li>Não serão ignorados espaços brancos dentro da palavra chave, mas dentro de conteúdo de string funciona (<code>Cont\neúdo</code> funciona, e ele considera o texto com uma quebra de linha).</li>
 <li>Ter uma "!" dentro de print! e println! demonstram ser macros.</li>
 <li>String do rust entende carácteres funcionais (\n para quebra de linha, \0 para vazio, etc).</li>
-<li>Comentários de linha única tem "//".</li>
-<li>Comentários de muitas linhas tem '/ * ' de começo e ' */' no final.</li>
+<li>Comentários de linha única tem "//" (Veja código 2).</li>
+<li>Comentários de muitas linhas tem '/ * ' de começo e ' */' no final (veja código 2).</li>
 </ul>
 <h2 id="descobertas-de-teste">Descobertas de teste<a class="headerlink" href="#descobertas-de-teste" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>Print!\n("Conteúdo");</code> funciona normalmente (espaços branco ignorados).</li>
-<li>Parênteses obrigatórios (<code>println!(Conteúdo);</code> funciona, <code>println!Conteúdo;</code> não).</li>
+<li><code>Print!\n("Conteúdo");</code> funciona normalmente (espaços branco ignorados) (veja código 3.</li>
+<li>Parênteses obrigatórios (<code>println!(Conteúdo);</code> funciona, <code>println!Conteúdo;</code> não) (veja código 4).</li>
 </ul>
+<h2 id="codigos-relacionados">Códigos relacionados<a class="headerlink" href="#codigos-relacionados" title="Permanent link">&para;</a></h2>
+<p>Código 1:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">fn</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="hll"><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">"Hello world!"</span><span class="p">);</span><span class="w"> </span><span class="c1">// Retorna no terminal Hello world!\n</span>
+</span><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="hll"><span class="w">    </span><span class="fm">print!</span><span class="p">(</span><span class="s">"Hello world 2: Electric boogaloo"</span><span class="p">);</span><span class="w"> </span><span class="c1">// Retorna no terminal Hello world 2: Electric boogaloo.</span>
+</span><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+Código 2:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1">// Isso é um comentário de uma única linha</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="cm">/* E isso é um comentário de múltiplas linhas</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="cm">para fechar, é necessário colocar */</span>
+</code></pre></div></td></tr></table></div>
+Código 3:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span>
+<span class="normal"><a href="#__codelineno-2-5">5</a></span>
+<span class="normal"><a href="#__codelineno-2-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">fn</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="hll"><span class="w">    </span><span class="fm">print!</span>
+</span><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="hll"><span class="w">    </span><span class="p">(</span><span class="s">"Funciona normalmente"</span><span class="p">);</span>
+</span><a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="hll"><span class="w">    </span><span class="fm">println!</span>
+</span><a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">    </span><span class="p">(</span><span class="s">"Também funciona :)"</span><span class="p">);</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+Código 4:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span>
+<span class="normal"><a href="#__codelineno-3-5">5</a></span>
+<span class="normal"><a href="#__codelineno-3-6">6</a></span>
+<span class="normal"><a href="#__codelineno-3-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">fn</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">"Funcionamento normal"</span><span class="p">);</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">    </span><span class="fm">print!</span><span class="p">(</span><span class="s">"Normal até demais"</span><span class="p">);</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="hll"><span class="w">    </span><span class="fm">println!</span><span class="s">"Parece que algo está errado"</span><span class="p">;</span><span class="w"> </span><span class="c1">// não funciona</span>
+</span><a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="hll"><span class="w">    </span><span class="fm">print!</span><span class="s">"Não sei dizer o quê"</span><span class="p">;</span><span class="w"> </span><span class="c1">// também não funciona</span>
+</span><a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">    </span><span class="c1">// Esse código não vai compilar, vide linhas 4 e 5</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
 <h2 id="links-externos-relacionados">Links externos relacionados<a class="headerlink" href="#links-externos-relacionados" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://www.w3schools.com/rust/rust_syntax.php">w3schools síntaxe</a> até <a href="https://www.w3schools.com/rust/rust_comments.php">w3schools comments</a>.</li>
