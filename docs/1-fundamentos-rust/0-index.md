@@ -15,3 +15,5 @@
 [Strings](8-Strings.md)
 
 [Ownership](9-Ownership.md)
+
+[Tipos de Estruturas](11-Tipos-de-estrutura.md)
