@@ -582,6 +582,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#codigos-relacionados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Códigos relacionados
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#links-externos-relacionados" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -654,19 +665,26 @@
   
   
     <li class="md-nav__item">
-      <a href="../5-Lastros-de-repeticao.md" class="md-nav__link">
+      <a href="../5-Lacos-de-repeticao/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Lastros de repetição
+    Laços de repetição
   
 
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--Em andamento"></span>
+  
+
   
 
       </a>
@@ -1966,6 +1984,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#codigos-relacionados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Códigos relacionados
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#links-externos-relacionados" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2009,10 +2038,10 @@
 
 <h1 id="operadores">Operadores<a class="headerlink" href="#operadores" title="Permanent link">&para;</a></h1>
 <h2 id="resumo">Resumo<a class="headerlink" href="#resumo" title="Permanent link">&para;</a></h2>
-<p>Operadores válidos: <code>+</code>, <code>-</code>, <code>/</code>, <code>*</code>, <code>%</code>, <code>=</code>, <code>+=</code>, <code>-=</code>, <code>*=</code>, <code>/=</code>, <code>%=</code> <code>==</code>, <code>!=</code>, <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code>, <code>&amp;&amp;</code>, <code>||</code>,<code>!</code>.</p>
+<p>Operadores válidos: <code>+</code>, <code>-</code>, <code>/</code>, <code>*</code>, <code>%</code>, <code>=</code>, <code>+=</code>, <code>-=</code>, <code>*=</code>, <code>/=</code>, <code>%=</code>, <code>==</code>, <code>!=</code>, <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code>, <code>&amp;&amp;</code>, <code>||</code>, <code>!</code>.</p>
 <h2 id="conteudo">Conteúdo<a class="headerlink" href="#conteudo" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Operadores aritméticos:<ul>
+<li>Operadores aritméticos (veja código 1):<ul>
 <li><code>+</code> : Soma (<code>foo + foo2</code>);</li>
 <li><code>-</code> : Subtração (<code>foo - foo2</code>);</li>
 <li><code>*</code> : Multiplicação (<code>foo * foo2</code>);</li>
@@ -2020,7 +2049,7 @@
 <li><code>%</code> : Resto da divisão/módulo (<code>foo%foo2</code>);</li>
 </ul>
 </li>
-<li>Operadores definidores de variável:<ul>
+<li>Operadores definidores de variável (veja código 2):<ul>
 <li><code>=</code> : Move o valor da direita a esquerda em casos de variáveis complexas, ou copia em caso de variáveis simples (<code>foo = bar</code>);</li>
 <li><code>+=</code> : Some o valor da esquerda ao da direita, e depois salva o valor (<code>foo += bar</code> = <code>foo = foo + bar</code>);</li>
 <li><code>-=</code> : Subtraia o valor da esquerda ao da direita, e depois salva o valor (<code>foo -= bar</code> = <code>foo = foo - bar</code>);</li>
@@ -2029,7 +2058,7 @@
 <li><code>%=</code> : Faça o módulo da esquerda ao da direita, e depois salva o valor (<code>foo %= foo</code> = <code>foo = foo % bar</code>);</li>
 </ul>
 </li>
-<li>Operadores Comparadores:<ul>
+<li>Operadores Comparadores (veja código 3):<ul>
 <li><code>==</code> : Igualdade entre os 2 (<code>foo == foo</code>);</li>
 <li><code>!=</code> : Diferenças entre os 2 (<code>foo != foo</code>);</li>
 <li><code>&gt;</code> : Esquerda é maior que a direita (<code>foo &gt; foo</code>);</li>
@@ -2038,20 +2067,140 @@
 <li><code>&lt;=</code> : Esquerda é menor ou igual que a direita (<code>foo &lt;= foo</code>);</li>
 </ul>
 </li>
-<li>Operadores Lógicos:<ul>
+<li>Operadores Lógicos (veja código 4):<ul>
 <li><code>&amp;&amp;</code> -&gt; E lógico (<code>foo &amp;&amp; foo</code>);</li>
 <li><code>||</code> -&gt; OU lógico (<code>foo || foo</code>);</li>
 <li><code>!</code> -&gt; NÃO lógico (<code>!foo</code>);</li>
 </ul>
 </li>
-<li>Se a parte esquerda de <code>&amp;&amp;</code> for falsa, ela retorna falso, sem avaliação da direita.</li>
-<li>Se a parte esquerda de <code>||</code> for verdadeira, ela retorna verdadeiro, sem avaliação da direita.</li>
-<li>Ao criar variáveis, ela pode receber uma "função" para resolver, e receber o resultado dela. Ex: <code>let x = 10; let y = x * 7</code>.</li>
+<li>Se a parte esquerda de <code>&amp;&amp;</code> for falsa, ela retorna falso, sem avaliação da direita (veja código 5).</li>
+<li>Se a parte esquerda de <code>||</code> for verdadeira, ela retorna verdadeiro, sem avaliação da direita (veja código 5).</li>
+<li>Ao criar variáveis, ela pode receber uma "função" para resolver, e receber o resultado dela (veja código 6).</li>
 </ul>
 <h2 id="descoberta-de-testes">Descoberta de testes<a class="headerlink" href="#descoberta-de-testes" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Divisão inteira não aproxima, retorna o valor cheio.</li>
+<li>Divisão inteira não aproxima, retorna o valor cheio (Veja código 7).</li>
 </ul>
+<h2 id="codigos-relacionados">Códigos relacionados<a class="headerlink" href="#codigos-relacionados" title="Permanent link">&para;</a></h2>
+<p>Código 1:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">fn</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="hll"><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">"{} {} {} {} {}"</span><span class="p">,</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">,</span><span class="n">y</span><span class="o">-</span><span class="n">x</span><span class="p">,</span><span class="n">x</span><span class="o">*</span><span class="n">y</span><span class="p">,</span><span class="n">y</span><span class="o">/</span><span class="n">x</span><span class="p">,</span><span class="n">x</span><span class="o">%</span><span class="n">y</span><span class="p">);</span><span class="w"> </span><span class="c1">// Retorna 30 10 200 0 10\n</span>
+</span><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+Código 2:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span>
+<span class="normal"><a href="#__codelineno-1-7">7</a></span>
+<span class="normal"><a href="#__codelineno-1-8">8</a></span>
+<span class="normal"><a href="#__codelineno-1-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">fn</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="hll"><span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// Coloca o valor de x para 2</span>
+</span><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="hll"><span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// Soma o valor de x em 1, e depois coloca de volta no x</span>
+</span><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="hll"><span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// Subtrai o valor de x em 2, e depois coloca de volta no x</span>
+</span><a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="hll"><span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="mi">12</span><span class="p">;</span><span class="w"> </span><span class="c1">// Multiplica o valor de x por 12, e depois coloca de volta no x</span>
+</span><a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="hll"><span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="c1">// Divide o valor de x por 3, e depois coloca de volta no x</span>
+</span><a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="hll"><span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">%=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="c1">// Faz o módulo de x na base 3, e depois coloca de volta no x</span>
+</span><a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+Código 3:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span>
+<span class="normal"><a href="#__codelineno-2-12">12</a></span>
+<span class="normal"><a href="#__codelineno-2-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">fn</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="hll"><span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">y</span><span class="p">;</span><span class="w"> </span><span class="c1">// Retorna false, ambos são diferentes</span>
+</span><a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="hll"><span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">y</span><span class="p">;</span><span class="w"> </span><span class="c1">// Retorna true, ambos são diferentes</span>
+</span><a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="hll"><span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">y</span><span class="p">;</span><span class="w"> </span><span class="c1">// Retorna false, x não é maior que y</span>
+</span><a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="hll"><span class="w">    </span><span class="n">y</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="c1">// Retorna true, y é maior que x</span>
+</span><a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="hll"><span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">y</span><span class="p">;</span><span class="w"> </span><span class="c1">// Retorna true, x é menor que y</span>
+</span><a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="hll"><span class="w">    </span><span class="n">y</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="c1">// Retorna false, y não é menor que x</span>
+</span><a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="hll"><span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">y</span><span class="p">;</span><span class="w"> </span><span class="c1">// Retorna false, x não é maior ou igual a y</span>
+</span><a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="hll"><span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">y</span><span class="p">;</span><span class="w"> </span><span class="c1">// Retorna true, x é menor ou igual a y</span>
+</span><a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="w">    </span><span class="c1">// Como o resultado das comparações não está sendo aplicada, ele retorna um warning ao compilar esse código</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+Código 4:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">fn</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="hll"><span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">y</span><span class="p">;</span><span class="w"> </span><span class="c1">// Retorna false, y é falso</span>
+</span><a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="hll"><span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="c1">// Retorna true, ambos são verdadeiros</span>
+</span><a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="hll"><span class="w">    </span><span class="n">y</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">y</span><span class="p">;</span><span class="w"> </span><span class="c1">// Retorna false, y é falso</span>
+</span><a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="hll"><span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">y</span><span class="p">;</span><span class="w"> </span><span class="c1">// Retorna true, x é verdadeiro</span>
+</span><a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="hll"><span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="c1">// Retorna true, x é verdadeiro</span>
+</span><a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="hll"><span class="w">    </span><span class="n">y</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">y</span><span class="p">;</span><span class="w"> </span><span class="c1">// Retorna false, y é falso</span>
+</span><a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="hll"><span class="w">    </span><span class="o">!</span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="c1">// Retorna false, x é verdadeiro</span>
+</span><a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="hll"><span class="w">    </span><span class="o">!</span><span class="n">y</span><span class="p">;</span><span class="w"> </span><span class="c1">// Retorna true, y é falso</span>
+</span><a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+Código 5:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span>
+<span class="normal"><a href="#__codelineno-4-4">4</a></span>
+<span class="normal"><a href="#__codelineno-4-5">5</a></span>
+<span class="normal"><a href="#__codelineno-4-6">6</a></span>
+<span class="normal"><a href="#__codelineno-4-7">7</a></span>
+<span class="normal"><a href="#__codelineno-4-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">fn</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="hll"><span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">y</span><span class="p">;</span><span class="w"> </span><span class="c1">// Pede investigação do lado direito, x é verdadeiro</span>
+</span><a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="hll"><span class="w">    </span><span class="n">y</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="c1">// Não pede investigação, y já é falso</span>
+</span><a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="hll"><span class="w">    </span><span class="n">y</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="c1">// Pede investigação do lado direito, y é falso</span>
+</span><a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="hll"><span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">y</span><span class="p">;</span><span class="w"> </span><span class="c1">// Não pede investigação, x já é verdadeiro</span>
+</span><a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+Código 6:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span>
+<span class="normal"><a href="#__codelineno-5-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="k">fn</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="c1">// Recebe 10</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="hll"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span><span class="w"> </span><span class="c1">// Recebe 70, o resultado de x * 7</span>
+</span><a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="hll"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// Recebe 35, o resultado de y / 2</span>
+</span><a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+Código 7:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span>
+<span class="normal"><a href="#__codelineno-6-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="k">fn</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">x</span><span class="p">:</span><span class="w"> </span><span class="kt">u32</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="hll"><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">"{}"</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="o">/</span><span class="mi">3</span><span class="p">);</span><span class="w"> </span><span class="c1">// Printa 3, resultado de divisão inteira</span>
+</span><a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
 <h2 id="links-externos-relacionados">Links externos relacionados<a class="headerlink" href="#links-externos-relacionados" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://www.w3schools.com/rust/rust_operators.php">w3schools operators</a> e <a href="https://www.w3schools.com/rust/rust_booleans.php">w3schools booleans</a>.</li>
