@@ -4,7 +4,7 @@ criado: "2026-11-02"
 modificado: "2026-11-02"
 autor: ChickRicks
 ---
-# Array
+/# Array
 
 ## Resumo
 <!-- Descreva brevemente o objetivo deste tópico -->

@@ -8,5 +8,5 @@
 
 [Structs](Estruturas-de-dados/Struct.md): Guarda valores com nomes e tipos específicos.
 
-[Enums](Estruturas-de-dados/Enum.md): Guarda "templates" de valor qualquer
+[Enums](Estruturas-de-dados/Enum.md): Guarda "templates" de valor qualquer.
 
