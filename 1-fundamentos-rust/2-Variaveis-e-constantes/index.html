@@ -2070,6 +2070,7 @@ Constante: <code>const foo1: foo2 = bar;</code>, sendo foo2 o tipo da constante.
 <li>Quebras de linha nos espaços continuam ignorados (dado que não corte palavras chaves ou valores) (veja código 4).</li>
 <li><code>let x = foo; let x = foo2;</code> é válido (shadowing) (veja código 5).</li>
 <li><code>let foo = bar</code> fora de funções não funciona (sem variáveis globais), mas constantes podem (veja código 6).</li>
+<li>Não pode declarar variável sem atribuir valor nela (veja código 7);</li>
 </ul>
 <h2 id="links-externos-relacionados">Links externos relacionados<a class="headerlink" href="#links-externos-relacionados" title="Permanent link">&para;</a></h2>
 <ul>
@@ -2108,7 +2109,7 @@ Código 2:
 </span><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="hll"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">c</span><span class="p">:</span><span class="w"> </span><span class="kt">f64</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">57.98</span><span class="p">;</span><span class="w"> </span><span class="c1">// Número com precisão double</span>
 </span><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="hll"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">d</span><span class="p">:</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">'g'</span><span class="p">;</span><span class="w"> </span><span class="c1">// Caracter único</span>
 </span><a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="hll"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">e</span><span class="p">:</span><span class="w"> </span><span class="kp">&amp;</span><span class="kt">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"String Fixa"</span><span class="p">;</span>
-</span><a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="hll"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">f</span><span class="p">:</span><span class="w"> </span><span class="nb">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"String Mutável"</span><span class="p">.</span><span class="n">to_string</span><span class="p">();</span><span class="w"> </span><span class="c1">// precisa de alguma forma para converter a string, veja em strings.</span>
+</span><a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="hll"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">f</span><span class="p">:</span><span class="w"> </span><span class="nb">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"String Mutável"</span><span class="p">.</span><span class="n">to_string</span><span class="p">();</span><span class="w"> </span><span class="c1">// Precisa de alguma forma para converter a string, veja em strings.</span>
 </span><a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="hll"><span class="w">    </span><span class="c1">//let g: String = "Não funciona"; - Uma string mutável recebe uma string fixa</span>
 </span><a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="hll"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">h</span><span class="p">:</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span><span class="w"> </span><span class="c1">// Booleano</span>
 </span><a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">"{} {} {} {} {} {} {}"</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">e</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="n">h</span><span class="p">);</span><span class="w"> </span><span class="c1">// Printa -1 2 57.98 g String Fixa String Mutável false\n</span>
@@ -2171,6 +2172,15 @@ Código 6:
 <a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="k">fn</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
 <a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
 <a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+Código x
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span>
+<span class="normal"><a href="#__codelineno-6-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="k">fn</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="hll"><span class="w">    </span><span class="c1">//let b; - Inválido, declaração sem atribuição</span>
+</span><a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div></p>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
 <ul>

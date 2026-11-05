@@ -2151,7 +2151,8 @@ Código 4:
 <span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-3-10">10</a></span>
 <span class="normal"><a href="#__codelineno-3-11">11</a></span>
-<span class="normal"><a href="#__codelineno-3-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">fn</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span>
+<span class="normal"><a href="#__codelineno-3-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">fn</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
 <a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
 <a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="hll"><span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">y</span><span class="p">;</span><span class="w"> </span><span class="c1">// Retorna false, y é falso</span>
@@ -2162,7 +2163,8 @@ Código 4:
 </span><a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="hll"><span class="w">    </span><span class="n">y</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">y</span><span class="p">;</span><span class="w"> </span><span class="c1">// Retorna false, y é falso</span>
 </span><a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="hll"><span class="w">    </span><span class="o">!</span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="c1">// Retorna false, x é verdadeiro</span>
 </span><a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="hll"><span class="w">    </span><span class="o">!</span><span class="n">y</span><span class="p">;</span><span class="w"> </span><span class="c1">// Retorna true, y é falso</span>
-</span><a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="p">}</span>
+</span><a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="w">    </span><span class="c1">// Como o resultado das operações não está sendo aplicada, ele retorna um warning ao compilar esse código</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 Código 5:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
@@ -2172,14 +2174,16 @@ Código 5:
 <span class="normal"><a href="#__codelineno-4-5">5</a></span>
 <span class="normal"><a href="#__codelineno-4-6">6</a></span>
 <span class="normal"><a href="#__codelineno-4-7">7</a></span>
-<span class="normal"><a href="#__codelineno-4-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">fn</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
+<span class="normal"><a href="#__codelineno-4-8">8</a></span>
+<span class="normal"><a href="#__codelineno-4-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">fn</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
 <a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
 <a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="hll"><span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">y</span><span class="p">;</span><span class="w"> </span><span class="c1">// Pede investigação do lado direito, x é verdadeiro</span>
 </span><a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="hll"><span class="w">    </span><span class="n">y</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="c1">// Não pede investigação, y já é falso</span>
 </span><a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="hll"><span class="w">    </span><span class="n">y</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="c1">// Pede investigação do lado direito, y é falso</span>
 </span><a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="hll"><span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">y</span><span class="p">;</span><span class="w"> </span><span class="c1">// Não pede investigação, x já é verdadeiro</span>
-</span><a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="p">}</span>
+</span><a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">    </span><span class="c1">// Como o resultado das operações não está sendo aplicada, ele retorna um warning ao compilar esse código</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 Código 6:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
