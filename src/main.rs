@@ -3,7 +3,7 @@ const test: u32 = 10;
 fn main() {
     let x = 'A';
     let y = false;
-    let _b = true;
+    let b = true;
     let z = if x == 'A' {"zs"} else {"zs"};
     let o = "teste1";
     let _p = "teste2";
@@ -15,7 +15,7 @@ fn main() {
 	=
 	10;
 	let
-	b:
+	c:
 	i32
 	=
 	90;
@@ -31,7 +31,10 @@ fn main() {
     let ij = &ih;
     let mut zo = z.to_string();
     zo.push('b');
-    println!("{} {} {}",zo,ih,ij)
+    println!("{} {} {}",zo,ih,ij);
+    println!("{}",f + g);
+    y == b;
+    g & f;
 }
 fn teste() -> i32{
     32
