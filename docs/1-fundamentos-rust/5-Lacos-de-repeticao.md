@@ -1,7 +1,7 @@
 ---
 status: Em andamento
 criado: 2026-11-01
-modificado: 2026-11-01
+modificado: 2026-11-05
 autor: ChickRicks
 ---
 # Laços de repetição
@@ -9,7 +9,7 @@ autor: ChickRicks
 ## Resumo
 Possuem 3:
 	`loop{}` : loop infinito, parado apenas com break ou parando o código
-	`While(foo){}` : loop acontece enquanto a condição estiver correta
+	`while(foo){}` : loop acontece enquanto a condição estiver correta
 	`for foo in foo..foo{}` : loop dentro de um alcance definido
 `break` : para a função loop em questão
 `continue` : pula para a próxima iteração do loop

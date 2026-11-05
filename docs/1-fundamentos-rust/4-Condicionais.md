@@ -1,7 +1,7 @@
 ---
 status: Em andamento
 criado: 2026/11/01
-atualizado: 2026/11/01
+modificado: 2026-11-04
 autor: ChickRicks
 ---
 # Condicionais
@@ -11,7 +11,7 @@ Estrutura do ifs, if_else, else if e match
 if (completo): `if foo {bar} else if foo2 {bar2} else {bar3}`.
 match: `match foo { foo1 => bar1, ... _ => bar2}`.
 ## Conteúdo
-- ifs possuem estrutura: `if foo {foo} else if {foo} ... else {foo}` (veja código 1). 
+- ifs possuem estrutura: `if foo {foo} else if foo2 {foo2} ... else {foo3}` (veja código 1). 
 - Ifs também podem ser usados como "função" de uma variável, porém, em caso de if else, eles devem retornar o mesmo valor (veja código 2).
 - Match possui estrutura `match foo { foo => bar, ...  _ => bar}`, sendo _ valor caso não esteja dentro dos outros (veja código 3).
 - Match aceita uso de | caso alguns valores devam retornar o mesmo resultado (veja código 4).
@@ -23,9 +23,9 @@ match: `match foo { foo1 => bar1, ... _ => bar2}`.
 Código 1:
 ```rust hl_lines="2-4" linenums="1"
 fn main(){
-	if (false){} // Toma prioridade
-	else if (false){} // Caso o if seja falso
-	else{} // Caso todas as condições anteriores sejam falsas
+	if (false){} // É analisado primeiro.
+	else if (false){} // Depois esse, caso o if seja falso.
+	else{} // Por fim esse, caso todos sejam falsos.
 }
 ```
 Código 2:
@@ -33,7 +33,7 @@ Código 2:
 fn main(){
 	let x = 10;
 	let y = if x > 10 {20} else {30};
-	// let z = if x > 10 {20} else {'b'} - Tipos diferentes de resultado, não compila
+	// let z = if x > 10 {20} else {'b'} - Tipos diferentes de resultado, não compila.
 }
 ```
 Código 3:
@@ -44,7 +44,7 @@ fn main(){
 	1 => println!("1"),
 	2 => println!("2"),
 	_ => println!("3"),
-	} // Printa 3, x não é 1 ou 2
+	} // Printa 3, x não é 1 ou 2.
 }
 ```
 Código 4:
@@ -54,8 +54,8 @@ fn main(){
 	match x {
 	1 | 2 | 3 => println!("1"),
 	4 | 5 | 6 => println!("2"),
-	_ => println!("3");
-	} // Printa 2, x é 4 ou 5 ou 6;
+	_ => println!("3"),
+	} // Printa 2, x é 4 ou 5 ou 6.
 }
 ```
 Código 5:
@@ -71,14 +71,14 @@ fn main(){
 		1 | 2 | 3 => 2,
 		4 | 5 | 6 => '1',
 		_ => false,
-	} // z não funcionaria, retorna valores variados*/
+	} // z não funcionaria, retorna valores variados.*/
 }
 ```
 Código 6:
 ```rust hl_lines="2-3" linenums="1"
 fn main(){
 	if (true) {println!("Aqui funciona");}
-	// if (9) {println!("Aqui não funciona);}
+	// if (9) {println!("Aqui não funciona");}.
 }
 ```
 ## Links externos relacionados

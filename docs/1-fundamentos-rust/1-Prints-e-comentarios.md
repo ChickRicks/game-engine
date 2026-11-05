@@ -1,10 +1,10 @@
 ---
 status: Em andamento
 criado: 2026/10/31
-atualizado: 2026/11/01
+modificado: 2026-11-04
 autor: ChickRicks
 ---
-# Basics
+# Prints e Comentários
 
 ## Resumo
 
@@ -19,8 +19,8 @@ autor: ChickRicks
 - String do rust entende carácteres funcionais (\n para quebra de linha, \0 para vazio, etc).
 - Comentários de linha única tem "//" (Veja código 2).
 - Comentários de muitas linhas tem '/ * ' de começo e ' \*/' no final (veja código 2).
-## Descobertas de teste
-- `Print!\n("Conteúdo");` funciona normalmente (espaços branco ignorados) (veja código 3).
+## Descoberta de teste
+- `print!\n("Conteúdo");` funciona normalmente (espaços branco ignorados) (veja código 3).
 - Parênteses obrigatórios (`println!(Conteúdo);` funciona, `println!Conteúdo;` não) (veja código 4).
 ## Códigos relacionados
 Código 1:

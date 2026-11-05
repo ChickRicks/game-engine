@@ -1,7 +1,7 @@
 ---
 status: Em andamento
 criado: 2026/11/01
-atualizado: 2026/11/01
+modificado: 2026-11-04
 autor: ChickRicks
 ---
 # Variaveis e constantes
@@ -106,7 +106,7 @@ fn main(){
 	let z = 20;
 }
 ```
-Código x
+Código 7:
 ```rust hl_lines="3" linenums="1"
 fn main(){
 	let a = 0;

@@ -1,7 +1,7 @@
 ---
 status: Em andamento
 criado: 2026/11/01
-atualizado: 2026/11/01
+modificado: 2026-11-04
 autor: ChickRicks
 ---
 
@@ -18,12 +18,12 @@ autor: ChickRicks
 	- `/` : Divisão (`foo / foo2`);
 	- `%` : Resto da divisão/módulo (`foo%foo2`);
 - Operadores definidores de variável (veja código 2):
-	- ` = ` : Move o valor da direita a esquerda em casos de variáveis complexas, ou copia em caso de variáveis simples (`foo = bar`);
+	- ` = ` : Move o valor da direita para a esquerda em casos de variáveis complexas, ou copia em caso de variáveis simples (`foo = bar`);
 	- `+=` : Some o valor da esquerda ao da direita, e depois salva o valor (`foo += bar` = `foo = foo + bar`);
 	- `-=` : Subtraia o valor da esquerda ao da direita, e depois salva o valor (`foo -= bar` = `foo = foo - bar`);
 	- `*=` : Multiplique o valor da esquerda ao da direita, e depois salva o valor (`foo *= bar` = ` foo = foo * bar`);
-	- `/=` : Divida o valor da esquerda ao da direita, e depois salva o valor (`foo /= foo` = `foo = foo/bar`);
-	- `%=` : Faça o módulo da esquerda ao da direita, e depois salva o valor (`foo %= foo` = `foo = foo % bar`);
+	- `/=` : Divida o valor da esquerda ao da direita, e depois salva o valor (`foo /= bar` = `foo = foo/bar`);
+	- `%=` : Faça o módulo da esquerda ao da direita, e depois salva o valor (`foo %= bar` = `foo = foo % bar`);
 - Operadores Comparadores (veja código 3):
 	-  ` == ` : Igualdade entre os 2 (`foo == foo`);
 	- `!=` : Diferenças entre os 2 (`foo != foo`);
@@ -40,7 +40,7 @@ autor: ChickRicks
 - Ao criar variáveis, ela pode receber uma "função" para resolver, e receber o resultado dela (veja código 6).
 
 ## Descoberta de testes
-- Divisão inteira não aproxima, retorna o valor cheio (Veja código 7).
+- Divisão inteira não aproxima, retorna o valor inteiro sem arredondar (Veja código 7).
 
 ## Códigos relacionados
 Código 1:
@@ -48,7 +48,7 @@ Código 1:
 fn main(){
 	let x = 10;
 	let y = 20;
-	println!("{} {} {} {} {}",x+y,y-x,x*y,y/x,x%y);	// Retorna 30 10 200 0 10\n
+	println!("{} {} {} {} {}",x+y,y-x,x*y,y/x,x%y);	// Retorna 30 10 200 2 10\n
 	}
 ```
 Código 2:
@@ -100,10 +100,10 @@ Código 5:
 fn main(){
 	let x = true;
 	let y = false;
-	x && y; // Pede investigação do lado direito, x é verdadeiro
-	y && x; // Não pede investigação, y já é falso
-	y || x; // Pede investigação do lado direito, y é falso
-	x || y; // Não pede investigação, x já é verdadeiro
+	x && y; // Pede investigação do lado direito, x é verdadeiro e retorna false
+	y && x; // Não pede investigação, y já é falso e retorna false
+	y || x; // Pede investigação do lado direito, y é falso e retorna true
+	x || y; // Não pede investigação, x já é verdadeiro e retorna true
 	// Como o resultado das operações não está sendo aplicada, ele retorna um warning ao compilar esse código
 }
 ```
@@ -129,5 +129,3 @@ fn main(){
 ## Links
 - 👈 **Anterior:** [Variáveis e Constantes](2-Variaveis-e-constantes.md)
 - ➡️ **Próximo:** [Condicionais](4-Condicionais.md)
-
----
