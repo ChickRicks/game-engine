@@ -21,7 +21,7 @@ autor: ChickRicks
 - Comentários de muitas linhas tem '/ * ' de começo e ' \*/' no final (veja código 2).
 ## Descoberta de teste
 - `print!\n("Conteúdo");` funciona normalmente (espaços branco ignorados) (veja código 3).
-- Parênteses obrigatórios (`println!(Conteúdo);` funciona, `println!Conteúdo;` não) (veja código 4).
+- Parênteses obrigatórios (`println!("Conteúdo");` funciona, `println!"Conteúdo";` não, nem `println!) (veja código 4).
 ## Códigos relacionados
 Código 1:
 ```rust hl_lines="2-3" linenums="1"
@@ -50,9 +50,11 @@ Código 4:
 fn main(){
 	println!("Funcionamento normal");
 	print!("Normal até demais");
-	//println!"Parece que algo está errado"; // não funciona
-	//print!"Não sei dizer o quê"; // também não funciona
-	// Esse código não vai compilar, vide linhas 4 e 5
+	//println!"Parece que algo está errado"; - não funciona por não ter parênteses
+	//print!"Não sei dizer o quê"; - também não funciona
+	//println!(Acho que não deveria me preocupar); // não funciona por não ter aspas
+	//print!(Afinal, tudo está certo, né?); // também não funciona
+	// Esse código não vai compilar, vide linhas 4 a 7
 }
 ```
 

@@ -39,6 +39,7 @@ fn main() {
     for x in 'A'..='a'{
         println!("{}",x);
     }
+    println!(o);
 }
 fn teste() -> i32{
     32
