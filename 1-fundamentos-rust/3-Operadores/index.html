@@ -2050,12 +2050,12 @@
 </ul>
 </li>
 <li>Operadores definidores de variável (veja código 2):<ul>
-<li><code>=</code> : Move o valor da direita a esquerda em casos de variáveis complexas, ou copia em caso de variáveis simples (<code>foo = bar</code>);</li>
+<li><code>=</code> : Move o valor da direita para a esquerda em casos de variáveis complexas, ou copia em caso de variáveis simples (<code>foo = bar</code>);</li>
 <li><code>+=</code> : Some o valor da esquerda ao da direita, e depois salva o valor (<code>foo += bar</code> = <code>foo = foo + bar</code>);</li>
 <li><code>-=</code> : Subtraia o valor da esquerda ao da direita, e depois salva o valor (<code>foo -= bar</code> = <code>foo = foo - bar</code>);</li>
 <li><code>*=</code> : Multiplique o valor da esquerda ao da direita, e depois salva o valor (<code>foo *= bar</code> = <code>foo = foo * bar</code>);</li>
-<li><code>/=</code> : Divida o valor da esquerda ao da direita, e depois salva o valor (<code>foo /= foo</code> = <code>foo = foo/bar</code>);</li>
-<li><code>%=</code> : Faça o módulo da esquerda ao da direita, e depois salva o valor (<code>foo %= foo</code> = <code>foo = foo % bar</code>);</li>
+<li><code>/=</code> : Divida o valor da esquerda ao da direita, e depois salva o valor (<code>foo /= bar</code> = <code>foo = foo/bar</code>);</li>
+<li><code>%=</code> : Faça o módulo da esquerda ao da direita, e depois salva o valor (<code>foo %= bar</code> = <code>foo = foo % bar</code>);</li>
 </ul>
 </li>
 <li>Operadores Comparadores (veja código 3):<ul>
@@ -2079,7 +2079,7 @@
 </ul>
 <h2 id="descoberta-de-testes">Descoberta de testes<a class="headerlink" href="#descoberta-de-testes" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Divisão inteira não aproxima, retorna o valor cheio (Veja código 7).</li>
+<li>Divisão inteira não aproxima, retorna o valor inteiro sem arredondar (Veja código 7).</li>
 </ul>
 <h2 id="codigos-relacionados">Códigos relacionados<a class="headerlink" href="#codigos-relacionados" title="Permanent link">&para;</a></h2>
 <p>Código 1:
@@ -2090,7 +2090,7 @@
 <span class="normal"><a href="#__codelineno-0-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">fn</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="hll"><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">"{} {} {} {} {}"</span><span class="p">,</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">,</span><span class="n">y</span><span class="o">-</span><span class="n">x</span><span class="p">,</span><span class="n">x</span><span class="o">*</span><span class="n">y</span><span class="p">,</span><span class="n">y</span><span class="o">/</span><span class="n">x</span><span class="p">,</span><span class="n">x</span><span class="o">%</span><span class="n">y</span><span class="p">);</span><span class="w"> </span><span class="c1">// Retorna 30 10 200 0 10\n</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="hll"><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">"{} {} {} {} {}"</span><span class="p">,</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">,</span><span class="n">y</span><span class="o">-</span><span class="n">x</span><span class="p">,</span><span class="n">x</span><span class="o">*</span><span class="n">y</span><span class="p">,</span><span class="n">y</span><span class="o">/</span><span class="n">x</span><span class="p">,</span><span class="n">x</span><span class="o">%</span><span class="n">y</span><span class="p">);</span><span class="w"> </span><span class="c1">// Retorna 30 10 200 2 10\n</span>
 </span><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 Código 2:
@@ -2178,10 +2178,10 @@ Código 5:
 <span class="normal"><a href="#__codelineno-4-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">fn</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
 <a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="hll"><span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">y</span><span class="p">;</span><span class="w"> </span><span class="c1">// Pede investigação do lado direito, x é verdadeiro</span>
-</span><a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="hll"><span class="w">    </span><span class="n">y</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="c1">// Não pede investigação, y já é falso</span>
-</span><a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="hll"><span class="w">    </span><span class="n">y</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="c1">// Pede investigação do lado direito, y é falso</span>
-</span><a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="hll"><span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">y</span><span class="p">;</span><span class="w"> </span><span class="c1">// Não pede investigação, x já é verdadeiro</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="hll"><span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">y</span><span class="p">;</span><span class="w"> </span><span class="c1">// Pede investigação do lado direito, x é verdadeiro e retorna false</span>
+</span><a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="hll"><span class="w">    </span><span class="n">y</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="c1">// Não pede investigação, y já é falso e retorna false</span>
+</span><a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="hll"><span class="w">    </span><span class="n">y</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="c1">// Pede investigação do lado direito, y é falso e retorna true</span>
+</span><a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="hll"><span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">y</span><span class="p">;</span><span class="w"> </span><span class="c1">// Não pede investigação, x já é verdadeiro e retorna true</span>
 </span><a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">    </span><span class="c1">// Como o resultado das operações não está sendo aplicada, ele retorna um warning ao compilar esse código</span>
 <a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
@@ -2214,7 +2214,6 @@ Código 7:
 <li>👈 <strong>Anterior:</strong> <a href="../2-Variaveis-e-constantes/">Variáveis e Constantes</a></li>
 <li>➡️ <strong>Próximo:</strong> <a href="../4-Condicionais/">Condicionais</a></li>
 </ul>
-<hr />
 
 
 

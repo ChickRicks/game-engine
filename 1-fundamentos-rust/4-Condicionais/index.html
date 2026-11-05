@@ -2043,7 +2043,7 @@ if (completo): <code>if foo {bar} else if foo2 {bar2} else {bar3}</code>.
 match: <code>match foo { foo1 =&gt; bar1, ... _ =&gt; bar2}</code>.</p>
 <h2 id="conteudo">Conteúdo<a class="headerlink" href="#conteudo" title="Permanent link">&para;</a></h2>
 <ul>
-<li>ifs possuem estrutura: <code>if foo {foo} else if {foo} ... else {foo}</code> (veja código 1). </li>
+<li>ifs possuem estrutura: <code>if foo {foo} else if foo2 {foo2} ... else {foo3}</code> (veja código 1). </li>
 <li>Ifs também podem ser usados como "função" de uma variável, porém, em caso de if else, eles devem retornar o mesmo valor (veja código 2).</li>
 <li>Match possui estrutura <code>match foo { foo =&gt; bar, ...  _ =&gt; bar}</code>, sendo _ valor caso não esteja dentro dos outros (veja código 3).</li>
 <li>Match aceita uso de | caso alguns valores devam retornar o mesmo resultado (veja código 4).</li>
@@ -2061,9 +2061,9 @@ match: <code>match foo { foo1 =&gt; bar1, ... _ =&gt; bar2}</code>.</p>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span>
 <span class="normal"><a href="#__codelineno-0-4">4</a></span>
 <span class="normal"><a href="#__codelineno-0-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">fn</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="hll"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="kc">false</span><span class="p">){}</span><span class="w"> </span><span class="c1">// Toma prioridade</span>
-</span><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="hll"><span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="kc">false</span><span class="p">){}</span><span class="w"> </span><span class="c1">// Caso o if seja falso</span>
-</span><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="hll"><span class="w">    </span><span class="k">else</span><span class="p">{}</span><span class="w"> </span><span class="c1">// Caso todas as condições anteriores sejam falsas</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="hll"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="kc">false</span><span class="p">){}</span><span class="w"> </span><span class="c1">// É analisado primeiro.</span>
+</span><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="hll"><span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="kc">false</span><span class="p">){}</span><span class="w"> </span><span class="c1">// Depois esse, caso o if seja falso.</span>
+</span><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="hll"><span class="w">    </span><span class="k">else</span><span class="p">{}</span><span class="w"> </span><span class="c1">// Por fim esse, caso todos sejam falsos.</span>
 </span><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 Código 2:
@@ -2074,7 +2074,7 @@ Código 2:
 <span class="normal"><a href="#__codelineno-1-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">fn</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="hll"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="p">{</span><span class="mi">20</span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="mi">30</span><span class="p">};</span>
-</span><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="hll"><span class="w">    </span><span class="c1">// let z = if x &gt; 10 {20} else {'b'} - Tipos diferentes de resultado, não compila</span>
+</span><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="hll"><span class="w">    </span><span class="c1">// let z = if x &gt; 10 {20} else {'b'} - Tipos diferentes de resultado, não compila.</span>
 </span><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 Código 3:
@@ -2091,7 +2091,7 @@ Código 3:
 </span><a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="hll"><span class="w">    </span><span class="mi">1</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="fm">println!</span><span class="p">(</span><span class="s">"1"</span><span class="p">),</span>
 </span><a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="hll"><span class="w">    </span><span class="mi">2</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="fm">println!</span><span class="p">(</span><span class="s">"2"</span><span class="p">),</span>
 </span><a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="hll"><span class="w">    </span><span class="n">_</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="fm">println!</span><span class="p">(</span><span class="s">"3"</span><span class="p">),</span>
-</span><a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="c1">// Printa 3, x não é 1 ou 2</span>
+</span><a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="c1">// Printa 3, x não é 1 ou 2.</span>
 <a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 Código 4:
@@ -2107,8 +2107,8 @@ Código 4:
 <a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="hll"><span class="w">    </span><span class="k">match</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">{</span>
 </span><a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">    </span><span class="mi">1</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="fm">println!</span><span class="p">(</span><span class="s">"1"</span><span class="p">),</span>
 <a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="hll"><span class="w">    </span><span class="mi">4</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="fm">println!</span><span class="p">(</span><span class="s">"2"</span><span class="p">),</span>
-</span><a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">    </span><span class="n">_</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="fm">println!</span><span class="p">(</span><span class="s">"3"</span><span class="p">);</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="c1">// Printa 2, x é 4 ou 5 ou 6;</span>
+</span><a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">    </span><span class="n">_</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="fm">println!</span><span class="p">(</span><span class="s">"3"</span><span class="p">),</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="c1">// Printa 2, x é 4 ou 5 ou 6.</span>
 <a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 Código 5:
@@ -2135,7 +2135,7 @@ Código 5:
 </span><a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="cm">        1 | 2 | 3 =&gt; 2,</span>
 <a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="cm">        4 | 5 | 6 =&gt; '1',</span>
 <a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="cm">        _ =&gt; false,</span>
-<a id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="cm">    } // z não funcionaria, retorna valores variados*/</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="cm">    } // z não funcionaria, retorna valores variados.*/</span>
 <a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 Código 6:
@@ -2144,7 +2144,7 @@ Código 6:
 <span class="normal"><a href="#__codelineno-5-3">3</a></span>
 <span class="normal"><a href="#__codelineno-5-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="k">fn</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="hll"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="kc">true</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="fm">println!</span><span class="p">(</span><span class="s">"Aqui funciona"</span><span class="p">);}</span>
-</span><a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="hll"><span class="w">    </span><span class="c1">// if (9) {println!("Aqui não funciona);}</span>
+</span><a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="hll"><span class="w">    </span><span class="c1">// if (9) {println!("Aqui não funciona");}.</span>
 </span><a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div></p>
 <h2 id="links-externos-relacionados">Links externos relacionados<a class="headerlink" href="#links-externos-relacionados" title="Permanent link">&para;</a></h2>
