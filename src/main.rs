@@ -1,3 +1,5 @@
+const test: u32 = 10;
+
 fn main() {
     let x = 'A';
     let y = false;
@@ -8,6 +10,15 @@ fn main() {
     let f = 5;
     let g = 3;
     let p: &str = "ab";
+    let
+	a
+	=
+	10;
+	let
+	b:
+	i32
+	=
+	90;
 
     println!("Hello, world {}!",x);
     println!("Hello, world! 2: Electric boogaloo {}",y);
