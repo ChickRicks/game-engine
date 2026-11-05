@@ -166,7 +166,7 @@ fn main(){
 }
 ```
 Código 9:
-```rust hl_lines="" linenums="1"
+```rust hl_lines="3 6 9" linenums="1"
 fn main(){
 	let mut x: char = 'a';
 	for x in 'a'..'d'{
