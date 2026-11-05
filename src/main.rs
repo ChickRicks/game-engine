@@ -1,7 +1,7 @@
 const test: u32 = 10;
 
 fn main() {
-    let x = 'A';
+    let mut x = 'A';
     let y = false;
     let b = true;
     let z = if x == 'A' {"zs"} else {"zs"};
@@ -19,6 +19,7 @@ fn main() {
 	i32
 	=
 	90;
+    let mut op = '7';
 
     println!("Hello, world {}!",x);
     println!("Hello, world! 2: Electric boogaloo {}",y);
@@ -33,8 +34,11 @@ fn main() {
     zo.push('b');
     println!("{} {} {}",zo,ih,ij);
     println!("{}",f + g);
-    y == b;
-    g & f;
+    let _ = y == b;
+    let _ = g & f;
+    for x in 'A'..='a'{
+        println!("{}",x);
+    }
 }
 fn teste() -> i32{
     32

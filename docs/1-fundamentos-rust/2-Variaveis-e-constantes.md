@@ -37,6 +37,7 @@ Constante: `const foo1: foo2 = bar;`, sendo foo2 o tipo da constante.
 -  Quebras de linha nos espaços continuam ignorados (dado que não corte palavras chaves ou valores) (veja código 4).
 - `let x = foo; let x = foo2;` é válido (shadowing) (veja código 5).
 - `let foo = bar` fora de funções não funciona (sem variáveis globais), mas constantes podem (veja código 6).
+- Não pode declarar variável sem atribuir valor nela (veja código 7);
 ## Links externos relacionados
 - [w3schools rust variables](https://www.w3schools.com/rust/rust_variables.php) até [w3schools constants](https://www.w3schools.com/rust/rust_constants.php).
 
@@ -60,7 +61,7 @@ fn main(){
 	let c: f64 = 57.98; // Número com precisão double
 	let d: char = 'g'; // Caracter único
 	let e: &str = "String Fixa";
-	let f: String = "String Mutável".to_string(); // precisa de alguma forma para converter a string, veja em strings.
+	let f: String = "String Mutável".to_string(); // Precisa de alguma forma para converter a string, veja em strings.
 	//let g: String = "Não funciona"; - Uma string mutável recebe uma string fixa
 	let h: bool = false; // Booleano
 	println!("{} {} {} {} {} {} {}",a,b,c,d,e,f,h); // Printa -1 2 57.98 g String Fixa String Mutável false\n
@@ -103,6 +104,13 @@ Código 6:
 const Y: u32 = 10; // Permitido, constantes podem ser criadas em escopo público
 fn main(){
 	let z = 20;
+}
+```
+Código x
+```rust hl_lines="3" linenums="1"
+fn main(){
+	let a = 0;
+	//let b; - Inválido, declaração sem atribuição
 }
 ```
 ## Links

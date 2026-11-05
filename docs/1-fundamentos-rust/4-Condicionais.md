@@ -16,7 +16,7 @@ match: `match foo { foo1 => bar1, ... _ => bar2}`.
 - Match possui estrutura `match foo { foo => bar, ...  _ => bar}`, sendo _ valor caso não esteja dentro dos outros (veja código 3).
 - Match aceita uso de | caso alguns valores devam retornar o mesmo resultado (veja código 4).
 - Similar ao if, também pode ser uma "função", com as mesmas regras do if (os valores que retornam tem que ser do mesmo tipo) (veja código 5).
--  Para borrowing e Ownership: o bloco interno do `if` pode trocar o ownership de variáveis de escopos externos (Código em Ownership).
+-  Para borrowing e Ownership: o bloco interno do `if` pode trocar o ownership de variáveis de escopos externos (mais detalhes em ownership e borrowing).
 ## Descoberta de testes
 - `If` aceita apenas valores booleanos, números não tem tradução de true ou false (veja código 6).
 ## Códigos relacionados

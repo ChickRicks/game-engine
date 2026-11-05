@@ -50,8 +50,8 @@ Código 4:
 fn main(){
 	println!("Funcionamento normal");
 	print!("Normal até demais");
-	println!"Parece que algo está errado"; // não funciona
-	print!"Não sei dizer o quê"; // também não funciona
+	//println!"Parece que algo está errado"; // não funciona
+	//print!"Não sei dizer o quê"; // também não funciona
 	// Esse código não vai compilar, vide linhas 4 e 5
 }
 ```

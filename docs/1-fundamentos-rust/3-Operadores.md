@@ -92,6 +92,7 @@ fn main(){
 	y || y; // Retorna false, y é falso
 	!x; // Retorna false, x é verdadeiro
 	!y; // Retorna true, y é falso
+	// Como o resultado das operações não está sendo aplicada, ele retorna um warning ao compilar esse código
 }
 ```
 Código 5:
@@ -103,6 +104,7 @@ fn main(){
 	y && x; // Não pede investigação, y já é falso
 	y || x; // Pede investigação do lado direito, y é falso
 	x || y; // Não pede investigação, x já é verdadeiro
+	// Como o resultado das operações não está sendo aplicada, ele retorna um warning ao compilar esse código
 }
 ```
 Código 6:
