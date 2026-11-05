@@ -35,18 +35,19 @@ Possuem 3:
 - No `for`, `foo1` e `foo2` podem ser variáveis criadas anteriormente (veja código 8).
 - `foo1` e `foo2` do `for` é válido usar caracteres, e ele segue a ordem da tabela ASCII (veja código 9).
 - `for` pede previsibilidade, enquanto `while` se comporta melhor com condições finais incertas (como arrays de tamanho não conhecido).
+- `for` cria a variável que usará de incremento.
 ## Códigos relacionados
 Código 1:
 ```rust hl_lines="3-8" linenums="1"
 fn main(){
 	let mut x = 0;
-	loop(){
+	loop{
 		x += 1;
-		if x = 10{
+		if x == 10{
 			break;
 		}
 	}
-	loop(){
+	loop{
 	println!("Isso printa infinitamente"); // Tem que parar o programa para parar essa função
 	}
 }
@@ -66,14 +67,14 @@ fn main(){
 Código 3:
 ```rust hl_lines="3-5 7-9" linenums="1"
 fn main(){
-	let x = 0;
+	let mut x = 0;
 	while x < 10{
-	println!("{}"); // Vai printar de 0 a 9,com \n entre cada um	
-	x += 1
+	println!("{}",x); // Vai printar de 0 a 9,com \n entre cada um	
+	x += 1;
 	}
 	while x < 10{
-	println!("{}"); // Não chega a acontecer, x não é menor que 10
-	x += 1
+	println!("{}",x); // Não chega a acontecer, x não é menor que 10
+	x += 1;
 	}
 }
 ```
@@ -89,14 +90,14 @@ fn main(){
 		if x == 8 {
 		break;
 		}
-	println("{}"); //printa de 1 a 7, sem contar o 6
+	x += 1;
+	println!("{}", x); //printa de 1 a 7, sem contar o 6
 	}
 }
 ```
 Código 5:
 ```rust hl_lines="4-6 8-10" linenums="1"
 fn main(){
-	let mut x = 0;
 	let mut result = 0;
 	for x in 0..10{
 		result += 1;
@@ -112,7 +113,6 @@ fn main(){
 Código 6:
 ```rust hl_lines="5 7" linenums="1"
 fn main(){
-	let mut i = 0;
 	let mut x = 0;
 	for i in 0..10{
 		if i == 4 {continue;} // vai pular o x + 1 quando i for 4.
@@ -149,6 +149,7 @@ fn main(){
 		break;
 		println!("{}",x); // Esse nunca vai printar (depois do break).
 	}
+	// Código vai gerar warnings porque não alcança o que foi falado.
 }
 ```
 Código 8:
@@ -156,7 +157,6 @@ Código 8:
 fn main(){
 	let i = 0;
 	let f = 10;
-	let mut x = 0;
 	for x in i..f{
 		println!("{}",x); // Vai printar de 0 a 9
 	}
@@ -168,7 +168,6 @@ fn main(){
 Código 9:
 ```rust hl_lines="3 6 9" linenums="1"
 fn main(){
-	let mut x: char = 'a';
 	for x in 'a'..'d'{
 		println!("{}",x); // Vai printar as letras a b c com quebra de linha entre cada uma
 	}
@@ -178,7 +177,6 @@ fn main(){
 	for x in '7'..='D'{
 		println!("{}",x); // Vai printar os valores entre '7' e 'D' ('D' incluso) com quebra de linha entre cada uma
 	}
-
 }
 ```
 ## Links externos relacionados
