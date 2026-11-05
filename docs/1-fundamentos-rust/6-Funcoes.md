@@ -25,5 +25,5 @@ Estrutura completa: `fn foo(foo1) -> bar{bar}`. `return` para as funções que r
 ## Links externos relacionados
 [w3school funcitons](https://www.w3schools.com/rust/rust_functions.php)
 ## Links
-- 👈 **Anterior:** [Lastros de Repetição](5-Lacos-de-repeticao.md)
+- 👈 **Anterior:** [Laço de Repetição](5-Lacos-de-repeticao.md)
 - ➡️ **Próximo:** [Escopo](7-Escopo.md)

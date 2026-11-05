@@ -116,7 +116,7 @@ fn main(){
 Código 7:
 ```rust hl_lines="3" linenums="1"
 fn main(){
-	let x: u32 = 10;
+	let x: u32 = 10; // Declaração explícita para exemplo
 	println!("{}", x/3); // Printa 3, resultado de divisão inteira
 }
 ```
