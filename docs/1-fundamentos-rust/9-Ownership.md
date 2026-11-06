@@ -22,7 +22,7 @@ Em geral, um valor possui apenas um dono, exceto se ela for emprestada.
 ## Descoberta de testes
 
 ## Links externos relacionados
-[w3school Ownership](https://www.w3schools.com/rust/rust_ownership.php)
+- [w3school Ownership](https://www.w3schools.com/rust/rust_ownership.php)
 
 ## Links
 - 👈 **Anterior:** [Strings](8-Strings.md)

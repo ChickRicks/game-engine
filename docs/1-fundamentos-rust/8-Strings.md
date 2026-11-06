@@ -29,6 +29,7 @@ String de literais: `foo.to_string()` ou `String::from("foo")` para copiar uma s
 - `format!` também concatena valores não string;
 
 ## Links externos relacionados
+- [w3school strings](https://www.w3schools.com/rust/rust_strings.php)
 
 ## Links
 - 👈 **Anterior:** [Escopo](7-Escopo.md)

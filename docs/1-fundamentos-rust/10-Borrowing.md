@@ -23,7 +23,7 @@ Ao usar domínio, traduza para ownership.
 - Se a variável dona trocar, as referências mantém a cópia que possuem da dona original.
 
 ## Links externos relacionados
-[w3school Borrowing](https://www.w3schools.com/rust/rust_borrowing_references.php)
+- [w3school Borrowing](https://www.w3schools.com/rust/rust_borrowing_references.php)
 
 ## Links
 - 👈 **Anterior:** [Ownership](9-Ownership.md)

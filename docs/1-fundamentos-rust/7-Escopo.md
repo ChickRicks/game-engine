@@ -19,7 +19,7 @@ Variáveis ficam no escopo definido, que é definido pela quantidade de {} que e
 ## Descoberta de testes
 
 ## Links externos relacionados
-[w3school scope](https://www.w3schools.com/rust/rust_scope.php)
+- [w3school scope](https://www.w3schools.com/rust/rust_scope.php)
 
 ## Links
 - 👈 **Anterior:** [Funções](6-Funcoes.md)

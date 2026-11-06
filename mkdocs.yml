@@ -70,7 +70,7 @@ nav:
     - Strings: 1-fundamentos-rust/8-Strings.md
     - Ownership: 1-fundamentos-rust/9-Ownership.md
     - Borrowing: 1-fundamentos-rust/10-Borrowing.md
-    - Tipos de dados: 1-fundamentos-rust/11-Tipos-de-estruturas-de-dados.md
+    - Tipos de dados: 1-fundamentos-rust/11-Tipos-de-estrutura-de-dados.md
     - Tipos de estruturas de dados:
       - Array: 1-fundamentos-rust/Estruturas-de-dados/Array.md
       - Vector: 1-fundamentos-rust/Estruturas-de-dados/Vector.md
