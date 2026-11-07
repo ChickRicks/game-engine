@@ -13,7 +13,7 @@ Em geral, um valor possui apenas um dono, exceto se ela for emprestada.
 - Montada planejada para manter o uso de memória segura, sem uso de garbage collector de memória.
 - Um valor possui um único dono (veja código 1).
 - Quando o dono sai de escopo, ele é removido da memória (veja código 1).
-- [Existem formas de "emprestar" o valor](10-Borrowing.md#conteudo), mas em geral só existe um dono do valor (veja código em borrowing).
+- [Existem formas de "emprestar" o valor](10-Borrowing.md#conteudo), mas em geral só existe um dono do valor.
 - Variáveis complexas trocam de dono, variáveis simples copiam seu valor para frente (veja código 2).
 	- Variáveis simples: i32,bool,char,&str;
 	- Variáveis complexas: String, Vec;
