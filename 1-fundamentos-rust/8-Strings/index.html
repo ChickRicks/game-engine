@@ -759,6 +759,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#codigos-relacionados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Códigos relacionados
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#links-externos-relacionados" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2003,6 +2014,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#codigos-relacionados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Códigos relacionados
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#links-externos-relacionados" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2046,34 +2068,129 @@
 
 <h1 id="strings">Strings<a class="headerlink" href="#strings" title="Permanent link">&para;</a></h1>
 <h2 id="resumo">Resumo<a class="headerlink" href="#resumo" title="Permanent link">&para;</a></h2>
-<p>String de literais: <code>foo.to_string()</code> ou <code>String::from("foo")</code> para copiar uma string; <code>push</code> e <code>push_str</code> para adicionar pedaços de texto definidos, <code>format!</code> para concatenar strings, <code>.len()</code> para o tamanho de string em bytes, e <code>chars().count()</code> em carácteres</p>
+<p>String de literais: <code>foo.to_string()</code> ou <code>String::from("foo")</code> para copiar uma string; <code>push</code> e <code>push_str</code> para adicionar pedaços de texto definidos, <code>format!</code> para concatenar strings, <code>.len()</code> para o tamanho de string em bytes, e <code>chars().count()</code> em caracteres</p>
 <h2 id="conteudo">Conteúdo<a class="headerlink" href="#conteudo" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="../2-Variaveis-e-constantes/#conteudo">Formatos de String:</a><ul>
-<li>&amp;str ,imutável, em geral, literal, é uma referência;</li>
+<li><a href="../2-Variaveis-e-constantes/#conteudo">Formatos de String</a>(veja código 2 no link):<ul>
+<li>&amp;str ,"imutável", em geral, literal, é uma referência;</li>
 <li>String é mutável, tem ownership e tem uma heap, sempre dona;</li>
 </ul>
 </li>
-<li>Duas formas de criar string de um literal: <ul>
-<li>Usando <code>to_string()</code> logo após da variável (<code>let foo = bar.to_string()</code> para &amp;str, e <code>let foo = "bar".to_string()</code> para literais);</li>
+<li>Duas formas de criar string de um literal (veja código 1): <ul>
+<li>Usando <code>to_string()</code> logo após da variável (<code>let foo = bar.to_string()</code> para <code>&amp;str</code>, e <code>let foo = "bar".to_string()</code> para literais);</li>
 <li>Usando <code>String::from()</code> com o texto resultante dentro do <code>from</code>  <code>let foo = String::from("bar")</code>;</li>
 </ul>
 </li>
-<li><code>push_str</code> para adicionar textos a uma variável string (<code>foo.push_str("bar")</code>).</li>
-<li><code>push</code> para um carácter único (<code>foo.push('b')</code>).</li>
-<li>Para <code>push</code> e <code>push_str</code> funcionarem, a variável que está sendo afetada precisa ser mutável.</li>
-<li>Duas formas de concatenar strings:<ul>
-<li>Macro <code>format!</code> com os textos a serem concatenados (<code>foo = format!("foo {} {}",bar1,bar2</code>) ), sem consumir as variáveis, apenas as copiando;</li>
-<li>Usando o operador <code>+</code> , porém menos recomendado (<code>foo = bar1 + bar2 + bar3</code>), já que usar <code>+</code> acaba consumindo a string a esquerda;</li>
+<li><code>push_str</code> para adicionar textos a uma variável string (<code>foo.push_str("bar")</code>) (veja código 2).</li>
+<li><code>push</code> para um caracter único (<code>foo.push('b')</code>) (veja código 2).</li>
+<li>Para <code>push</code> e <code>push_str</code> funcionarem, a variável que está sendo afetada precisa ser mutável (veja código 2).</li>
+<li>Duas formas de concatenar strings (veja código 3):<ul>
+<li>Macro <code>format!</code> com os textos a serem concatenados (<code>foo = format!("foo {} {}",bar1,bar2)</code>), sem consumir as variáveis, apenas as copiando;</li>
+<li>Usando o operador <code>+</code> , porém menos recomendado (<code>foo = bar1 + bar2 + bar3</code> + ...), já que usar <code>+</code> acaba consumindo a string a esquerda. <code>bar2</code>, <code>bar3</code> e os que vem depois tem que ser strings fixas <code>&amp;str</code>;</li>
 </ul>
 </li>
-<li><code>.len()</code> em uma string para retornar seu valor em bytes (<code>foo.len()</code>) e <code>.chars().count()</code> para contagem de carácteres (`foo.chars().count()).</li>
-<li>Ao usar &amp;s a uma função pedindo uma string, ele retorna sua referência, não seu owning</li>
+<li><code>.len()</code> em uma string para retornar seu valor em bytes (<code>foo.len()</code>) e <code>.chars().count()</code> para contagem de caracteres (<code>foo.chars().count()</code>) (veja código 4).</li>
+<li>Ao usar strings em uma função, ela perde o domínio, a não ser que use <code>.clone()</code> para passar uma cópia dela (veja código 5).</li>
 </ul>
 <h2 id="descoberta-de-testes">Descoberta de testes<a class="headerlink" href="#descoberta-de-testes" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>format!</code> também concatena valores não string;</li>
+<li><code>format!</code> também concatena valores não string (veja código  6).</li>
 </ul>
+<h2 id="codigos-relacionados">Códigos relacionados<a class="headerlink" href="#codigos-relacionados" title="Permanent link">&para;</a></h2>
+<p>Código 1:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span>
+<span class="normal"><a href="#__codelineno-0-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">fn</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="hll"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">x</span><span class="p">:</span><span class="w"> </span><span class="nb">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Caso 1"</span><span class="p">.</span><span class="n">to_string</span><span class="p">();</span>
+</span><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">y_s</span><span class="p">:</span><span class="w"> </span><span class="kp">&amp;</span><span class="kt">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Caso 2"</span><span class="p">;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="hll"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">y_S</span><span class="p">:</span><span class="w"> </span><span class="nb">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y_s</span><span class="p">.</span><span class="n">to_string</span><span class="p">();</span>
+</span><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="hll"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">z</span><span class="p">:</span><span class="w"> </span><span class="nb">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">String</span><span class="p">::</span><span class="n">from</span><span class="p">(</span><span class="s">"Caso 3"</span><span class="p">);</span>
+</span><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+Código 2:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span>
+<span class="normal"><a href="#__codelineno-1-7">7</a></span>
+<span class="normal"><a href="#__codelineno-1-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">fn</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">""</span><span class="p">.</span><span class="n">to_string</span><span class="p">();</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">""</span><span class="p">.</span><span class="n">to_string</span><span class="p">();</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="hll"><span class="w">    </span><span class="n">x</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="sc">'G'</span><span class="p">);</span>
+</span><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="hll"><span class="w">    </span><span class="n">x</span><span class="p">.</span><span class="n">push_str</span><span class="p">(</span><span class="s">"rande aumento."</span><span class="p">);</span>
+</span><a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="hll"><span class="w">    </span><span class="c1">// y.push('E'); - Inválido: y não é mutável</span>
+</span><a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="hll"><span class="w">    </span><span class="c1">// y.push_str("rro grotesco"); - Inválido: y não é mutável</span>
+</span><a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+Código 3:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span>
+<span class="normal"><a href="#__codelineno-2-5">5</a></span>
+<span class="normal"><a href="#__codelineno-2-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">fn</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"teste 1"</span><span class="p">.</span><span class="n">to_string</span><span class="p">();</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"teste 2"</span><span class="p">.</span><span class="n">to_string</span><span class="p">();</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="hll"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">result_1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="fm">format!</span><span class="p">(</span><span class="s">"{} {}"</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">);</span>
+</span><a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="hll"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">result_2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="o">&amp;</span><span class="n">y</span><span class="p">;</span><span class="w"> </span><span class="c1">// Para funcionar, y tem que ser referenciado, usando &amp;str ao invés de String.</span>
+</span><a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+Código 4:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span>
+<span class="normal"><a href="#__codelineno-3-5">5</a></span>
+<span class="normal"><a href="#__codelineno-3-6">6</a></span>
+<span class="normal"><a href="#__codelineno-3-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">fn</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Teste de tamanho"</span><span class="p">.</span><span class="n">to_string</span><span class="p">();</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="hll"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Testes com mudanças"</span><span class="p">.</span><span class="n">to_string</span><span class="p">();</span>
+</span><a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="hll"><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">"{} {}"</span><span class="p">,</span><span class="n">x</span><span class="p">.</span><span class="n">len</span><span class="p">(),</span><span class="n">x</span><span class="p">.</span><span class="n">chars</span><span class="p">().</span><span class="n">count</span><span class="p">());</span><span class="w"> </span><span class="c1">// Retorna 16 16\n</span>
+</span><a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">"{} {}"</span><span class="p">,</span><span class="n">y</span><span class="p">.</span><span class="n">len</span><span class="p">(),</span><span class="n">y</span><span class="p">.</span><span class="n">chars</span><span class="p">().</span><span class="n">count</span><span class="p">());</span><span class="w"> </span><span class="c1">// Retorna 20 19\n</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">    </span><span class="c1">// len() usa a quantidade de bytes, enquanto chars().count() conta a quantidade de caracteres, importante caso usa a tabela ASCII expandida</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+Código 5
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-4-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">fn</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Teste"</span><span class="p">.</span><span class="n">to_string</span><span class="p">();</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="hll"><span class="w">    </span><span class="n">teste</span><span class="p">(</span><span class="n">x</span><span class="p">.</span><span class="n">clone</span><span class="p">());</span><span class="w"> </span><span class="c1">// .clone() vai ter mais detalhes quando chegar ownership.</span>
+</span><a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">"{}"</span><span class="p">,</span><span class="n">x</span><span class="p">);</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="hll"><span class="w">    </span><span class="n">teste</span><span class="p">(</span><span class="n">x</span><span class="p">);</span><span class="w"> </span><span class="c1">// Depois daqui x não pode ser chamado sem re-declarar.</span>
+</span><a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="p">}</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="k">fn</span><span class="w"> </span><span class="nf">teste</span><span class="p">(</span><span class="k">mut</span><span class="w"> </span><span class="n">var1</span><span class="p">:</span><span class="w"> </span><span class="nb">String</span><span class="p">){</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">    </span><span class="n">var1</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="sc">'1'</span><span class="p">);</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">"{}"</span><span class="p">,</span><span class="n">var1</span><span class="p">);</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+Código 6
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span>
+<span class="normal"><a href="#__codelineno-5-5">5</a></span>
+<span class="normal"><a href="#__codelineno-5-6">6</a></span>
+<span class="normal"><a href="#__codelineno-5-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="k">fn</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"teste"</span><span class="p">;</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">'a'</span><span class="p">;</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="hll"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="fm">format!</span><span class="p">(</span><span class="s">"{} {} {}"</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">);</span>
+</span><a id="__codelineno-5-6" name="__codelineno-5-6"></a>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
 <h2 id="links-externos-relacionados">Links externos relacionados<a class="headerlink" href="#links-externos-relacionados" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://www.w3schools.com/rust/rust_strings.php">w3school strings</a></li>

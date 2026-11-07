@@ -796,10 +796,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#resumo" class="md-nav__link">
+  <a href="#para-conveniencia" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Resumo
+        Para conveniência:
       
     </span>
   </a>
@@ -807,10 +807,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#para-conveniencia" class="md-nav__link">
+  <a href="#resumo" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Para conveniência:
+        Resumo
       
     </span>
   </a>
@@ -833,6 +833,17 @@
     <span class="md-ellipsis">
       
         Descoberta de testes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#codigos-relacionados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Códigos relacionados
       
     </span>
   </a>
@@ -1981,10 +1992,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#resumo" class="md-nav__link">
+  <a href="#para-conveniencia" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Resumo
+        Para conveniência:
       
     </span>
   </a>
@@ -1992,10 +2003,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#para-conveniencia" class="md-nav__link">
+  <a href="#resumo" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Para conveniência:
+        Resumo
       
     </span>
   </a>
@@ -2018,6 +2029,17 @@
     <span class="md-ellipsis">
       
         Descoberta de testes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#codigos-relacionados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Códigos relacionados
       
     </span>
   </a>
@@ -2067,24 +2089,120 @@
 
 
 <h1 id="borrowing">Borrowing<a class="headerlink" href="#borrowing" title="Permanent link">&para;</a></h1>
-<h2 id="resumo">Resumo<a class="headerlink" href="#resumo" title="Permanent link">&para;</a></h2>
-<p>Pode-se passar a referência de valor de um dono para outra variável sem passar transferência usando <code>&amp;</code>, que também precisa de um <code>mut</code> próprio para ser mutável.</p>
 <h2 id="para-conveniencia">Para conveniência:<a class="headerlink" href="#para-conveniencia" title="Permanent link">&para;</a></h2>
-<p>Ao usar domínio, traduza para ownership.</p>
+<p>Ao usar domínio, traduza para ownership. Ao usar emprestar, traduza para borrowing.</p>
+<h2 id="resumo">Resumo<a class="headerlink" href="#resumo" title="Permanent link">&para;</a></h2>
+<p>Pode-se passar a referência de valor de um dono para outra variável sem passar transferência usando <code>&amp;</code>, que também precisa de um <code>mut</code> próprio para ser mutável, na estrutura <code>let mut foo = &amp;mut bar</code>, sendo <code>bar</code> mutável.</p>
 <h2 id="conteudo">Conteúdo<a class="headerlink" href="#conteudo" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Referenciar é olhar o valor sem transferir o domínio.</li>
-<li>Caso queira passar o conteúdo para outra variável sem passar o domínio, pode-se usar o símbolo <code>&amp;</code> para isso.</li>
-<li>Para referências serem mutáveis, elas também tem que ter o <code>mut</code> próprio</li>
 <li>Reduz a quantidade de <code>clones()</code>, tornando o código mais rápido.</li>
-<li>O valor dono precisa ser mutável para que o valor copiado seja.</li>
-<li>Podem existir múltiplas referências imutáveis, porém 1 única referência mutável, e nenhum pode acontecer ao mesmo tempo.</li>
+<li>Caso queira passar o conteúdo para outra variável sem passar o domínio, pode-se usar o símbolo <code>&amp;</code> para isso (veja código 1).</li>
+<li>Para referências serem mutáveis, elas também tem que ter o <code>mut</code> próprio, na estrutura <code>let foo = &amp;mut bar</code>, sendo <code>bar</code> mutável (veja código 2).</li>
+<li>O valor dono precisa ser mutável para que o valor copiado seja (veja código 2).</li>
+<li>Podem existir múltiplas referências imutáveis, porém 1 única referência mutável, e nenhum pode acontecer ao mesmo tempo (veja código 3).</li>
 </ul>
 <h2 id="descoberta-de-testes">Descoberta de testes<a class="headerlink" href="#descoberta-de-testes" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Referências podem vir de referências também.</li>
-<li>Se a variável dona trocar, as referências mantém a cópia que possuem da dona original.</li>
+<li>Referências podem vir de referências também (veja código 4).</li>
+<li>Uma variável que referencia outra, ao receber um novo valor, não referencia mais a antiga variável (veja código 5).</li>
 </ul>
+<h2 id="codigos-relacionados">Códigos relacionados<a class="headerlink" href="#codigos-relacionados" title="Permanent link">&para;</a></h2>
+<p>Código 1
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">fn</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"teste"</span><span class="p">.</span><span class="n">to_string</span><span class="p">();</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="hll"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="c1">// Empresta x.</span>
+</span><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+Código 2:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span>
+<span class="normal"><a href="#__codelineno-1-7">7</a></span>
+<span class="normal"><a href="#__codelineno-1-8">8</a></span>
+<span class="normal"><a href="#__codelineno-1-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">fn</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="hll"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Str"</span><span class="p">.</span><span class="n">to_string</span><span class="p">();</span>
+</span><a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="hll"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="k">mut</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+</span><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="hll"><span class="w">    </span><span class="n">y</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="sc">'1'</span><span class="p">);</span>
+</span><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="hll"><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">"{}"</span><span class="p">,</span><span class="n">y</span><span class="p">);</span><span class="w"> </span><span class="c1">// Acaba o referenciamento de x aqui. Printa Str1\n.</span>
+</span><a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">"{}"</span><span class="p">,</span><span class="n">x</span><span class="p">);</span><span class="w"> </span><span class="c1">// Printa Str1\n.</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Str2"</span><span class="p">.</span><span class="n">to_string</span><span class="p">();</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">    </span><span class="c1">//let w = &amp;mut z; - Inválido, z não é mutável.</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+Código 3:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span>
+<span class="normal"><a href="#__codelineno-2-12">12</a></span>
+<span class="normal"><a href="#__codelineno-2-13">13</a></span>
+<span class="normal"><a href="#__codelineno-2-14">14</a></span>
+<span class="normal"><a href="#__codelineno-2-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">fn</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Str"</span><span class="p">.</span><span class="n">to_string</span><span class="p">();</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="k">mut</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">    </span><span class="n">y</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="sc">'1'</span><span class="p">);</span><span class="w"> </span><span class="c1">// Muda também x incluindo 1.</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">    </span><span class="n">y</span><span class="p">.</span><span class="n">push_str</span><span class="p">(</span><span class="s">"aaaa"</span><span class="p">);</span><span class="w"> </span><span class="c1">// Muda também x incluindo aaaa.</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="hll"><span class="w">    </span><span class="c1">//let z = &amp;mut x; - Inválido, y ainda está emprestando mutável.</span>
+</span><a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="hll"><span class="w">    </span><span class="c1">//let w = &amp;x; - Inválido, y possui está emprestando como mutável.</span>
+</span><a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">"{}"</span><span class="p">,</span><span class="n">y</span><span class="p">);</span><span class="w"> </span><span class="c1">// Printa Str1aaaa\n</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Str"</span><span class="p">.</span><span class="n">to_string</span><span class="p">();</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">x</span><span class="p">;</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">x</span><span class="p">;</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">x</span><span class="p">;</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="hll"><span class="w">    </span><span class="c1">//let s = &amp;mut x; - Inválido, existem referências não mutáveis de x ainda acontecendo.</span>
+</span><a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="hll"><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">"{} {} {}"</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="n">u</span><span class="p">,</span><span class="n">t</span><span class="p">);</span><span class="w"> </span><span class="c1">// Printa Str Str Str\n.</span>
+</span><a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+Código 4:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span>
+<span class="normal"><a href="#__codelineno-3-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">fn</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Str"</span><span class="p">.</span><span class="n">to_string</span><span class="p">();</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="hll"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">x</span><span class="p">;</span>
+</span><a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">y</span><span class="p">;</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+Código 5
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-4-10">10</a></span>
+<span class="normal"><a href="#__codelineno-4-11">11</a></span>
+<span class="normal"><a href="#__codelineno-4-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">fn</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Str"</span><span class="p">;</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">x</span><span class="p">;</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">"{} {}"</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">);</span><span class="w"> </span><span class="c1">// Printa Str Str\n</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="hll"><span class="w">    </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="s">"Str2"</span><span class="p">;</span>
+</span><a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="hll"><span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Str1"</span><span class="p">;</span>
+</span><a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">"{} {}"</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">);</span><span class="w"> </span><span class="c1">// Possível printar, x não está sendo emprestado mais. Printa Str1 Str2\n</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">    </span><span class="cm">/*y = &amp;x;</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="cm">    x = "Str2";</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="cm">    println!("{} {}",x,y); - Impossível, x mudou de valor enquanto é emprestado.</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="cm">*/</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
 <h2 id="links-externos-relacionados">Links externos relacionados<a class="headerlink" href="#links-externos-relacionados" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://www.w3schools.com/rust/rust_borrowing_references.php">w3school Borrowing</a></li>
