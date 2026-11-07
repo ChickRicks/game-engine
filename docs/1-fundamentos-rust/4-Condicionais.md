@@ -19,6 +19,7 @@ match: `match foo { foo1 => bar1, ... _ => bar2}`.
 -  Para borrowing e Ownership: o bloco interno do `if` pode trocar o ownership de variáveis de escopos externos (mais detalhes em ownership e borrowing).
 ## Descoberta de testes
 - `If` aceita apenas valores booleanos, números não tem tradução de true ou false (veja código 6).
+- `match` não pede variáveis, apenas algo para concordar (veja código 7).
 ## Códigos relacionados
 Código 1:
 ```rust hl_lines="2-4" linenums="1"
@@ -78,7 +79,17 @@ Código 6:
 ```rust hl_lines="2-3" linenums="1"
 fn main(){
 	if (true) {println!("Aqui funciona");}
-	// if (9) {println!("Aqui não funciona");}.
+	// if (9) {println!("Aqui não funciona");}
+}
+```
+Código 7:
+```rust hl_lines="2" linenums="1"
+fn main(){
+	match 3 { // Válido
+	1 => println!("1"),
+	2 => println!("2"),
+	_ => println!("3"),
+	}
 }
 ```
 ## Links externos relacionados

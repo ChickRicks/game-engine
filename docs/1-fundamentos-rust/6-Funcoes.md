@@ -35,10 +35,10 @@ fn func1(){
 Código 2:
 ```rust hl_lines="2 4" linenums="1"
 fn main(){
-	func2(-11,2); // Chama func2, que printa -11 2\n.
+	func2(-11,2,5); // Chama func2, que printa -11 2 5\n.
 }
-fn func2(valor1: i32,valor2: u32){
-	println!("{} {}",valor1,valor2);
+fn func2(valor1: i32,valor2: u32,mut valor3: i32){
+	println!("{} {} {}",valor1,valor2,valor3);
 }
 ```
 Código 3:

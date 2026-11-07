@@ -1,46 +1,12 @@
-const test: u32 = 10;
-
-fn main() {
-    let mut x = 'A';
-    let y = false;
-    let b = true;
-    let z = if x == 'A' {"zs"} else {"zs"};
-    let o = "teste1";
-    let _p = "teste2";
-    let f = 5;
-    let g = 3;
-    let p: &str = "ab";
-    let
-	a
-	=
-	10;
-	let
-	c:
-	i32
-	=
-	90;
-    let mut op = '7';
-
-    println!("Hello, world {}!",x);
-    println!("Hello, world! 2: Electric boogaloo {}",y);
-    if x == 'a' {println!("Hello, world! 3: The problem is another {}",z)};
-    println!("f/g = {}",f/g);
-    if false{println!("verdadeiro");} else{(println!("falso"));}
-    println!("{}",teste());
-    println!("{}", format!("{} {}",o,f));
-    let ih = &z;
-    let ij = &ih;
-    let mut zo = z.to_string();
-    zo.push('b');
-    println!("{} {} {}",zo,ih,ij);
-    println!("{}",f + g);
-    let _ = y == b;
-    let _ = g & f;
-    for x in 'A'..='a'{
-        println!("{}",x);
-    }
-    println!(o);
-}
-fn teste() -> i32{
-    32
+fn main(){
+    let mut x = "Str".to_string();
+    let y = &mut x;
+    y.push('1');
+    y.push_str("aaaa");
+    println!("{}",y);
+    x = "Str".to_string();
+    let z = &x;
+    let w = &x;
+    let v = &x;
+    println!("{} {}",z,v);
 }
