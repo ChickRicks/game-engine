@@ -16,7 +16,7 @@ Estrutura completa: `fn foo(foo1: bar1) -> bar2{bar3}`. `return` para as funçõ
 - O conteúdo de variáveis da função envolve `foo: tipo de var` (veja código 2).
 - Para funções que retornam valores, usa-se `-> tipo de var` na criação. Todas retornam algo, caso não possua, retorna () (veja código 3).
 - Para o retorno de funções, pode se usar `return` ou, na última linha, fazer a operação sem `;`(veja código 3).
-- Pode passar ownership para as variáveis complexas caso não seja usado `&` com a variável (veja em ownership).
+- Pode passar ownership para as variáveis complexas caso não seja usado `&` com a variável (veja em [ownership](9-Ownership)).
 
 ## Descoberta de testes
 - Não sei se parece bom usar `fn` que retorna valor sem `return`, fica confuso.

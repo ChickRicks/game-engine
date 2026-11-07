@@ -52,7 +52,7 @@ fn main(){
 	y.push('1'); // Muda também x incluindo 1.
 	y.push_str("aaaa"); // Muda também x incluindo aaaa.
 	//let z = &mut x; - Inválido, y ainda está emprestando mutável.
-	//let w = &x; - Inválido, y possui está emprestando como mutável.
+	//let w = &x; - Inválido, y está emprestando como mutável.
 	println!("{}",y); // Printa Str1aaaa\n
 	x = "Str".to_string();
 	let v = &x;
