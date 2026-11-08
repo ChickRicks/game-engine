@@ -7,7 +7,7 @@ autor: ChickRicks
 # Ownership
 
 ## Resumo
-Em geral, um valor possui apenas um dono, exceto se ela for emprestada.
+Um valor possui apenas um dono, e pode emprestar a outras, sem deixar de ser dona.
 
 ## Conteúdo
 - Montada planejada para manter o uso de memória segura, sem uso de garbage collector de memória.
@@ -15,8 +15,8 @@ Em geral, um valor possui apenas um dono, exceto se ela for emprestada.
 - Quando o dono sai de escopo, ele é removido da memória (veja código 1).
 - [Existem formas de "emprestar" o valor](10-Borrowing.md#conteudo), mas em geral só existe um dono do valor.
 - Variáveis complexas trocam de dono, variáveis simples copiam seu valor para frente (veja código 2).
-	- Variáveis simples: i32,bool,char,&str;
-	- Variáveis complexas: String, Vec;
+	- Variáveis simples(copy): i32,bool,char,&str;
+	- Variáveis complexas(move): String, Vec;
 - `.clone()` pode ser usado para copiar valores para outra variável, sem trocar o dono do valor (veja código 3).
 
 ## Descoberta de testes

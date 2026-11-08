@@ -16,7 +16,7 @@ autor: ChickRicks
 - Mais de um print possível, incluindo intercalado.
 - Não serão ignorados espaços brancos dentro da palavra chave, mas dentro de conteúdo de string funciona (`Cont\neúdo` funciona, e ele considera o texto com uma quebra de linha).
 - Ter uma "!" dentro de print! e println! demonstram ser macros.
-- String do rust entende carácteres funcionais (\n para quebra de linha, \0 para vazio, etc).
+- String do rust entende carácteres funcionais (\n para quebra de linha, \0 para byte nulo, etc).
 - Comentários de linha única tem "//" (Veja código 2).
 - Comentários de muitas linhas tem '/ * ' de começo e ' \*/' no final (veja código 2).
 ## Descoberta de teste

@@ -18,7 +18,7 @@ Pode-se passar a referência de valor de um dono para outra variável sem passar
 - Caso queira passar o conteúdo para outra variável sem passar o domínio, pode-se usar o símbolo `&` para isso (veja código 1).
 - Para referências serem mutáveis, elas também tem que ter o `mut` próprio, na estrutura `let foo = &mut bar`, sendo `bar` mutável (veja código 2).
 - O valor dono precisa ser mutável para que o valor copiado seja (veja código 2).
-- Podem existir múltiplas referências imutáveis, porém 1 única referência mutável, e nenhum pode acontecer ao mesmo tempo (veja código 3).
+- Podem existir, exclusivamente, ou uma referência mutável, ou múltiplas referências imutáveis(veja código 3).
 
 ## Descoberta de testes
 - Referências podem vir de referências também (veja código 4).
@@ -38,7 +38,7 @@ fn main(){
 	let mut x = "Str".to_string();
 	let y = &mut x;
 	y.push('1');
-	println!("{}",y); // Acaba o referenciamento de x aqui. Printa Str1\n.
+	println!("{}",y); // O empréstimo expira no último uso de y. Printa Str1\n.
 	println!("{}",x); // Printa Str1\n.
 	let z = "Str2".to_string();
 	//let w = &mut z; - Inválido, z não é mutável.

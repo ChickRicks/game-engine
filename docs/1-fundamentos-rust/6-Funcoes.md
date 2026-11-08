@@ -10,13 +10,14 @@ autor: ChickRicks
 Estrutura completa: `fn foo(foo1: bar1) -> bar2{bar3}`. `return` para as funções que retornam algo.
 
 ## Conteúdo
-- Função possui estrutura `fn foo(foo1) -> bar{bar}`, todos sendo necessários (veja código 1).
+- Funções são recomendadas a usarem snake_case.
+- Função possui estrutura completa `fn foo(foo1) -> bar1{bar}`, parâmetros e retornos são opcionais (`foo1` e `bar1`)(veja código 1).
 - Chamar uma função é `foo()` (veja código 1).
 - Para funções que recebem mais de um valor, fica `fn foo(foo1: bar1, foo2: bar2){}` (veja código 2).
 - O conteúdo de variáveis da função envolve `foo: tipo de var` (veja código 2).
 - Para funções que retornam valores, usa-se `-> tipo de var` na criação. Todas retornam algo, caso não possua, retorna () (veja código 3).
 - Para o retorno de funções, pode se usar `return` ou, na última linha, fazer a operação sem `;`(veja código 3).
-- Pode passar ownership para as variáveis complexas caso não seja usado `&` com a variável (veja em [ownership](9-Ownership)).
+- Pode passar ownership para as variáveis complexas caso não seja usado `&` com a variável (veja em [ownership](9-Ownership.md)).
 
 ## Descoberta de testes
 - Não sei se parece bom usar `fn` que retorna valor sem `return`, fica confuso.

@@ -29,7 +29,7 @@ Possuem 3:
 - Para `foo2` ser incluso, deve ser `for foo in foo1..=foo2{bar}` (veja código 5).
 - A variável incremental (`foo`) aumenta sozinha escolhendo o próximo valor válido naturalmente.
 - `break` e `continue` funcionam normalmente para o `for` (veja código 6).
-- `for` consome o iterador, arrays ficam vazias no fim (mais detalhes em [ownership](9-Ownership.md) e [borrowing](10-Borrowing.md)).
+- `for` consome o iterador, arrays de variáveis complexas deixam de existir na memória (mais detalhes em [ownership](9-Ownership.md) e [borrowing](10-Borrowing.md)).
 ## Descoberta de testes
 -  Possui prioridade  de execução de cima pra baixo. `breaks` barram o que ia acontecer depois, e `continue` reverifica a condição, sem olhar o resto do corpo (veja código 7).
 - No `for`, `foo1` e `foo2` podem ser variáveis criadas anteriormente (veja código 8).
@@ -61,7 +61,7 @@ fn main(){
 			break count;
 		}
 		count += 1;
-	} // Isso eventualmente retorna 5 para x
+	}; // Isso eventualmente retorna 5 para x
 }
 ```
 Código 3:
@@ -123,10 +123,9 @@ fn main(){
 }
 ```
 Código 7:
-```rust hl_lines="6 11 15 20 24" linenums="1"
+```rust hl_lines="5 10 14 19 23" linenums="1"
 fn main(){
 	let mut x = 1;
-	let mut i = 0;
 	loop{
 		break;
 		println!("{}",x); // Não printa, break acontece antes.

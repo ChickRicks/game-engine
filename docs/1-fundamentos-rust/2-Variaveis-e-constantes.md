@@ -94,7 +94,7 @@ Código 5:
 ```rust hl_lines="2-3" linenums="1"
 fn main(){
 	let x = 10;
-	let x = 25;
+	let x = '1';
 	// Funciona, chama-se "Shadowing" (melhor explicado com ownership e borrowing)
 }
 ```
@@ -110,7 +110,9 @@ Código 7:
 ```rust hl_lines="3" linenums="1"
 fn main(){
 	let a = 0;
-	//let b; - Inválido, declaração sem atribuição
+	//let b; - Inválido, não possui um tipo de variável.
+	let c;
+	c = 1; // Válido, variável possui atribuição
 }
 ```
 ## Links

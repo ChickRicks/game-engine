@@ -1,7 +1,7 @@
 ---
 status: pendente
-criado: "2026-11-08"
-modificado: "2026-11-08"
+criado: 2026-11-08
+modificado: 2026-11-08
 autor: ChickRicks
 ---
 # Tuple
@@ -23,6 +23,24 @@ Guarda múltiplos valores de diferentes tipos. É de tamanho fixo, possui a estr
 - Similar a arrays, tuples copiam valores simples e emprestam as complexas (veja código 6).
 
 ## Códigos relacionados
+Código 1:
+```rust hl_lines="2-3" linenums="1"
+fn main(){
+	let x = (1,'2',"Três");
+	println!("{:?}",x); // Printa (1,'2',"Três")\n.
+}
+```
+Código 2:
+```rust hl_lines="3" linenums="1"
+fn main(){
+	let x = (1,'2',"Três");
+	println!("{} {}",x.0,x.2); // Printa 1 "Três"\n.
+}
+```
+Código 3:
+```rust hl_lines="" linenums="1"
+fn main(){}
+```
 
 ## Links externos relacionados
 

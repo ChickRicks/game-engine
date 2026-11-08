@@ -73,5 +73,5 @@ fn main(){
 ## Links externos relacionados
 - [W3School arrays](https://www.w3schools.com/rust/rust_arrays.php)
 ## Links
-- 👈 **Anterior:** [Tipos de estruturas](../1-fundamentos-rust/11-Tipos-de-estruturas-de-dados.md)
-- ➡️ **Próximo:** [Vectors](Estruturas-de-dados/Vector.md)
+- 👈 **Anterior:** [Tipos de estruturas](../11-Tipos-de-estruturas-de-dados.md)
+- ➡️ **Próximo:** [Vectors](Vector.md)

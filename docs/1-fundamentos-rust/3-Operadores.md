@@ -17,7 +17,7 @@ autor: ChickRicks
 	- `*` : Multiplicação (`foo * foo2`);
 	- `/` : Divisão (`foo / foo2`);
 	- `%` : Resto da divisão/módulo (`foo%foo2`);
-- Operadores definidores de variável (veja código 2):
+- Operadores de atribuição (veja código 2):
 	- ` = ` : Move o valor da direita para a esquerda em casos de variáveis complexas, ou copia em caso de variáveis simples (`foo = bar`);
 	- `+=` : Some o valor da esquerda ao da direita, e depois salva o valor (`foo += bar` = `foo = foo + bar`);
 	- `-=` : Subtraia o valor da esquerda ao da direita, e depois salva o valor (`foo -= bar` = `foo = foo - bar`);
@@ -35,12 +35,18 @@ autor: ChickRicks
 	- `&&` -> E lógico (`foo && foo`);
 	- `||` -> OU lógico (`foo || foo`);
 	- `!` -> NÃO lógico (`!foo`);
-- Se a parte esquerda de `&&` for falsa, ela retorna falso, sem avaliação da direita (veja código 5).
-- Se a parte esquerda de `||` for verdadeira, ela retorna verdadeiro, sem avaliação da direita (veja código 5).
-- Ao criar variáveis, ela pode receber uma "função" para resolver, e receber o resultado dela (veja código 6).
+- Operadores bitwise (veja código 5):
+	- `&` -> E bit a bit (`foo & foo`);
+	- `|` -> OU bit a bit (`foo| foo`);
+	- `^` -> OU exclusivo bit a bit (`foo ^ foo`);
+	- `<<` -> Shift de valor a esquerda (`foo << bar`);
+	- `>>` -> Shift de valor a direita (`foo >> bar`);
+- Se a parte esquerda de `&&` for falsa, ela retorna falso, sem avaliação da direita (veja código 6).
+- Se a parte esquerda de `||` for verdadeira, ela retorna verdadeiro, sem avaliação da direita (veja código 6).
+- Ao criar variáveis, ela pode receber uma "função" para resolver, e receber o resultado dela (veja código 7).
 
 ## Descoberta de testes
-- Divisão inteira não aproxima, retorna o valor inteiro sem arredondar (Veja código 7).
+- Divisão inteira não aproxima, retorna o valor inteiro sem arredondar (Veja código 8).
 
 ## Códigos relacionados
 Código 1:
@@ -96,6 +102,19 @@ fn main(){
 }
 ```
 Código 5:
+```rust hl_lines="4-8" linenums="1"
+fn main(){
+	let x = 9;
+	let y = 5;
+	x & y; // Retorna 1, só possuem o 1 em comum
+	x | y; // Retorna 13, possuem 1,4 e 8 como 1
+	x ^ y; // Retorna 12, possuem 4 e 8 como 1 exclusivos, e 1 como 1 em conjunto.
+	(x << 1); // x anda para esquerda 1 vez e vira 18.
+	(y >> 1); // y anda para direita 1 vez, e vira 2.
+	// Como o resultado das operações não está sendo aplicada, ele retorna um warning ao compilar esse código
+}
+```
+Código 6:
 ```rust hl_lines="4-7" linenums="1"
 fn main(){
 	let x = true;
@@ -107,7 +126,7 @@ fn main(){
 	// Como o resultado das operações não está sendo aplicada, ele retorna um warning ao compilar esse código
 }
 ```
-Código 6:
+Código 7:
 ```rust hl_lines="3-4" linenums="1"
 fn main(){
 	let x = 10; // Recebe 10
@@ -115,7 +134,7 @@ fn main(){
 	let z = y / 2; // Recebe 35, o resultado de y / 2
 }
 ```
-Código 7:
+Código 8:
 ```rust hl_lines="3" linenums="1"
 fn main(){
 	let x: u32 = 10; // Declaração explícita para exemplo

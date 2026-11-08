@@ -10,7 +10,7 @@ autor: ChickRicks
 Guarda múltiplos valores de mesmo tipo, e pode variar seu tamanho. Para montar, usa-se `let foo = vec![bar1,bar2,...];`. Possui funções iguais a da array, além de `push(valor)` para expandir o vector no final, e `pop()` para remover no final. Também pode usar `insert()` para inserir em um espaço específico, usando `foo.insert(índice,valor);` e `remove()`, na estrutura `foo.remove(índice);`.
 
 ## Conteúdo
-- Vectors possuem uma estrutura similar às [arrays](Estruturas-de-dados/Array.md), porém podem mudar de tamanho.
+- Vectors possuem uma estrutura similar às [arrays](Array.md), porém podem mudar de tamanho.
 - Para criar um vector, tem que usar a estrutura `let foo = vec![bar1,bar2,...];` (veja código 1).
 - Para poder mudar o tamanho de um vector, primeiramente ele precisa ser mutável (veja código 1).
 - Assim como arrays, pode-se usar a função `len()`, chama os seu valores usando `foo[n]`, com n saindo de 0, e printando inteiramente usando `{:?}` (veja código 2).
@@ -74,5 +74,5 @@ fn main(){
 - [W3School Vectors](https://www.w3schools.com/rust/rust_vectors.php)
 
 ## Links
-- 👈 **Anterior:** [Arrays](Estruturas-de-dados/Array.md)
+- 👈 **Anterior:** [Arrays](Array.md)
 - ➡️ **Próximo:** [Tuples](Tuple.md)

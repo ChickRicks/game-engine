@@ -12,7 +12,7 @@ if (completo): `if foo {bar} else if foo2 {bar2} else {bar3}`.
 match: `match foo { foo1 => bar1, ... _ => bar2}`.
 ## Conteúdo
 - ifs possuem estrutura: `if foo {foo} else if foo2 {foo2} ... else {foo3}` (veja código 1). 
-- Ifs também podem ser usados como "função" de uma variável, porém, em caso de if else, eles devem retornar o mesmo valor (veja código 2).
+- Ifs também podem ser usados como "função" de uma variável, porém, em caso de if else, eles devem retornar o mesmo tipo de valor (veja código 2).
 - Match possui estrutura `match foo { foo => bar, ...  _ => bar}`, sendo _ valor caso não esteja dentro dos outros (veja código 3).
 - Match aceita uso de | caso alguns valores devam retornar o mesmo resultado (veja código 4).
 - Similar ao if, também pode ser uma "função", com as mesmas regras do if (os valores que retornam tem que ser do mesmo tipo) (veja código 5).
@@ -67,7 +67,7 @@ fn main(){
 		1 | 2 | 3 => 2,
 		4 | 5 | 6 => 6,
 		_ => 0,
-	} // y recebe 6
+	}; // y recebe 6
 	/*let z = match x {
 		1 | 2 | 3 => 2,
 		4 | 5 | 6 => '1',
