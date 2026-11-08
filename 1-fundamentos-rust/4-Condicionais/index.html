@@ -2088,7 +2088,7 @@ match: <code>match foo { foo1 =&gt; bar1, ... _ =&gt; bar2}</code>.</p>
 <h2 id="conteudo">Conteúdo<a class="headerlink" href="#conteudo" title="Permanent link">&para;</a></h2>
 <ul>
 <li>ifs possuem estrutura: <code>if foo {foo} else if foo2 {foo2} ... else {foo3}</code> (veja código 1). </li>
-<li>Ifs também podem ser usados como "função" de uma variável, porém, em caso de if else, eles devem retornar o mesmo valor (veja código 2).</li>
+<li>Ifs também podem ser usados como "função" de uma variável, porém, em caso de if else, eles devem retornar o mesmo tipo de valor (veja código 2).</li>
 <li>Match possui estrutura <code>match foo { foo =&gt; bar, ...  _ =&gt; bar}</code>, sendo _ valor caso não esteja dentro dos outros (veja código 3).</li>
 <li>Match aceita uso de | caso alguns valores devam retornar o mesmo resultado (veja código 4).</li>
 <li>Similar ao if, também pode ser uma "função", com as mesmas regras do if (os valores que retornam tem que ser do mesmo tipo) (veja código 5).</li>
@@ -2175,7 +2175,7 @@ Código 5:
 </span><a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">        </span><span class="mi">1</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
 <a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">        </span><span class="mi">4</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span>
 <a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">        </span><span class="n">_</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="c1">// y recebe 6</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">    </span><span class="p">};</span><span class="w"> </span><span class="c1">// y recebe 6</span>
 <a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="hll"><span class="w">    </span><span class="cm">/*let z = match x {</span>
 </span><a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="cm">        1 | 2 | 3 =&gt; 2,</span>
 <a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="cm">        4 | 5 | 6 =&gt; '1',</span>

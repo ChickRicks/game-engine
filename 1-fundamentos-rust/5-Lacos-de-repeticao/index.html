@@ -2104,7 +2104,7 @@
 <li>Para <code>foo2</code> ser incluso, deve ser <code>for foo in foo1..=foo2{bar}</code> (veja código 5).</li>
 <li>A variável incremental (<code>foo</code>) aumenta sozinha escolhendo o próximo valor válido naturalmente.</li>
 <li><code>break</code> e <code>continue</code> funcionam normalmente para o <code>for</code> (veja código 6).</li>
-<li><code>for</code> consome o iterador, arrays ficam vazias no fim (mais detalhes em <a href="../9-Ownership/">ownership</a> e <a href="../10-Borrowing/">borrowing</a>).</li>
+<li><code>for</code> consome o iterador, arrays de variáveis complexas deixam de existir na memória (mais detalhes em <a href="../9-Ownership/">ownership</a> e <a href="../10-Borrowing/">borrowing</a>).</li>
 </ul>
 <h2 id="descoberta-de-testes">Descoberta de testes<a class="headerlink" href="#descoberta-de-testes" title="Permanent link">&para;</a></h2>
 <ul>
@@ -2156,7 +2156,7 @@ Código 2:
 </span><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="hll"><span class="w">            </span><span class="k">break</span><span class="w"> </span><span class="n">count</span><span class="p">;</span>
 </span><a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="hll"><span class="w">        </span><span class="p">}</span>
 </span><a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="hll"><span class="w">        </span><span class="n">count</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-</span><a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="c1">// Isso eventualmente retorna 5 para x</span>
+</span><a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">    </span><span class="p">};</span><span class="w"> </span><span class="c1">// Isso eventualmente retorna 5 para x</span>
 <a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 Código 3:
@@ -2281,34 +2281,32 @@ Código 7:
 <span class="normal"><a href="#__codelineno-6-23">23</a></span>
 <span class="normal"><a href="#__codelineno-6-24">24</a></span>
 <span class="normal"><a href="#__codelineno-6-25">25</a></span>
-<span class="normal"><a href="#__codelineno-6-26">26</a></span>
-<span class="normal"><a href="#__codelineno-6-27">27</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="k">fn</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
+<span class="normal"><a href="#__codelineno-6-26">26</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="k">fn</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">    </span><span class="k">loop</span><span class="p">{</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="w">        </span><span class="k">break</span><span class="p">;</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="hll"><span class="w">        </span><span class="fm">println!</span><span class="p">(</span><span class="s">"{}"</span><span class="p">,</span><span class="n">x</span><span class="p">);</span><span class="w"> </span><span class="c1">// Não printa, break acontece antes.</span>
-</span><a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="kc">true</span><span class="p">){</span>
-<a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">{</span>
-<a id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="w">            </span><span class="n">x</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<a id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="hll"><span class="w">            </span><span class="k">continue</span><span class="p">;</span><span class="w"> </span><span class="c1">// Nada abaixo que está dentro do while vai acontecer quando x for 1.</span>
-</span><a id="__codelineno-6-12" name="__codelineno-6-12"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-6-13" name="__codelineno-6-13"></a><span class="w">        </span><span class="fm">println!</span><span class="p">(</span><span class="s">"{}"</span><span class="p">,</span><span class="n">x</span><span class="p">);</span><span class="w"> </span><span class="c1">// Esse printa depois de x não for 1.</span>
-<a id="__codelineno-6-14" name="__codelineno-6-14"></a><span class="w">        </span><span class="k">break</span><span class="p">;</span>
-<a id="__codelineno-6-15" name="__codelineno-6-15"></a><span class="hll"><span class="w">        </span><span class="fm">println!</span><span class="p">(</span><span class="s">"{}"</span><span class="p">,</span><span class="n">x</span><span class="p">);</span><span class="w"> </span><span class="c1">// Esse nunca printa (depois do break).</span>
-</span><a id="__codelineno-6-16" name="__codelineno-6-16"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-6-17" name="__codelineno-6-17"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="mi">0</span><span class="o">..</span><span class="mi">10</span><span class="p">{</span>
-<a id="__codelineno-6-18" name="__codelineno-6-18"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">{</span>
-<a id="__codelineno-6-19" name="__codelineno-6-19"></a><span class="w">            </span><span class="n">x</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<a id="__codelineno-6-20" name="__codelineno-6-20"></a><span class="hll"><span class="w">            </span><span class="k">continue</span><span class="p">;</span><span class="w"> </span><span class="c1">// Nada abaixo que está dentro do for vai acontecer quando i for 0.</span>
-</span><a id="__codelineno-6-21" name="__codelineno-6-21"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-6-22" name="__codelineno-6-22"></a><span class="w">        </span><span class="fm">println!</span><span class="p">(</span><span class="s">"{}"</span><span class="p">,</span><span class="n">x</span><span class="p">);</span><span class="w"> </span><span class="c1">// Esse vai printar quando i não for 0.</span>
-<a id="__codelineno-6-23" name="__codelineno-6-23"></a><span class="w">        </span><span class="k">break</span><span class="p">;</span>
-<a id="__codelineno-6-24" name="__codelineno-6-24"></a><span class="hll"><span class="w">        </span><span class="fm">println!</span><span class="p">(</span><span class="s">"{}"</span><span class="p">,</span><span class="n">x</span><span class="p">);</span><span class="w"> </span><span class="c1">// Esse nunca vai printar (depois do break).</span>
-</span><a id="__codelineno-6-25" name="__codelineno-6-25"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-6-26" name="__codelineno-6-26"></a><span class="w">    </span><span class="c1">// Código vai gerar warnings porque não alcança o que foi falado.</span>
-<a id="__codelineno-6-27" name="__codelineno-6-27"></a><span class="p">}</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="w">    </span><span class="k">loop</span><span class="p">{</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="hll"><span class="w">        </span><span class="fm">println!</span><span class="p">(</span><span class="s">"{}"</span><span class="p">,</span><span class="n">x</span><span class="p">);</span><span class="w"> </span><span class="c1">// Não printa, break acontece antes.</span>
+</span><a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="kc">true</span><span class="p">){</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">{</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="w">            </span><span class="n">x</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="hll"><span class="w">            </span><span class="k">continue</span><span class="p">;</span><span class="w"> </span><span class="c1">// Nada abaixo que está dentro do while vai acontecer quando x for 1.</span>
+</span><a id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12"></a><span class="w">        </span><span class="fm">println!</span><span class="p">(</span><span class="s">"{}"</span><span class="p">,</span><span class="n">x</span><span class="p">);</span><span class="w"> </span><span class="c1">// Esse printa depois de x não for 1.</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13"></a><span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14"></a><span class="hll"><span class="w">        </span><span class="fm">println!</span><span class="p">(</span><span class="s">"{}"</span><span class="p">,</span><span class="n">x</span><span class="p">);</span><span class="w"> </span><span class="c1">// Esse nunca printa (depois do break).</span>
+</span><a id="__codelineno-6-15" name="__codelineno-6-15"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="mi">0</span><span class="o">..</span><span class="mi">10</span><span class="p">{</span>
+<a id="__codelineno-6-17" name="__codelineno-6-17"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">{</span>
+<a id="__codelineno-6-18" name="__codelineno-6-18"></a><span class="w">            </span><span class="n">x</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-6-19" name="__codelineno-6-19"></a><span class="hll"><span class="w">            </span><span class="k">continue</span><span class="p">;</span><span class="w"> </span><span class="c1">// Nada abaixo que está dentro do for vai acontecer quando i for 0.</span>
+</span><a id="__codelineno-6-20" name="__codelineno-6-20"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-6-21" name="__codelineno-6-21"></a><span class="w">        </span><span class="fm">println!</span><span class="p">(</span><span class="s">"{}"</span><span class="p">,</span><span class="n">x</span><span class="p">);</span><span class="w"> </span><span class="c1">// Esse vai printar quando i não for 0.</span>
+<a id="__codelineno-6-22" name="__codelineno-6-22"></a><span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-6-23" name="__codelineno-6-23"></a><span class="hll"><span class="w">        </span><span class="fm">println!</span><span class="p">(</span><span class="s">"{}"</span><span class="p">,</span><span class="n">x</span><span class="p">);</span><span class="w"> </span><span class="c1">// Esse nunca vai printar (depois do break).</span>
+</span><a id="__codelineno-6-24" name="__codelineno-6-24"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-6-25" name="__codelineno-6-25"></a><span class="w">    </span><span class="c1">// Código vai gerar warnings porque não alcança o que foi falado.</span>
+<a id="__codelineno-6-26" name="__codelineno-6-26"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 Código 8:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
