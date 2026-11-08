@@ -10,3 +10,5 @@
 
 [Enums](Estruturas-de-dados/Enum.md): Guarda "templates" de valor qualquer.
 
+- 👈 **Anterior:** [Borrowing](10-Borrowing.md)
+- ➡️ **Próximo:** [Lifetimes](999-lifetimes.md)
