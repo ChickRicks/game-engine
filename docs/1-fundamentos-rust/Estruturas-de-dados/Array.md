@@ -1,7 +1,7 @@
 ---
 status: Em andamento
 criado: 2026-11-02
-modificado: 2026-11-02
+modificado: 2026-11-07
 autor: ChickRicks
 ---
 # Array
@@ -73,5 +73,5 @@ fn main(){
 ## Links externos relacionados
 - [W3School arrays](https://www.w3schools.com/rust/rust_arrays.php)
 ## Links
-- 👈 **Anterior:** [Tipos de estruturas]()
-- ➡️ **Próximo:** [XXX](XXX)
+- 👈 **Anterior:** [Tipos de estruturas](../1-fundamentos-rust/11-Tipos-de-estruturas-de-dados.md)
+- ➡️ **Próximo:** [Vectors](Estruturas-de-dados/Vector.md)
