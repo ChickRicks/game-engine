@@ -79,6 +79,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#tuple" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -894,6 +899,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--Em andamento"></span>
+  
+
+  
 
       </a>
     </li>
@@ -914,6 +926,33 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tuple
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--pendente"></span>
+  
+
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -929,8 +968,100 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--pendente"></span>
+  
+
+  
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#resumo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conteudo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conteúdo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descoberta-de-testes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Descoberta de testes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#codigos-relacionados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Códigos relacionados
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links-externos-relacionados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Links externos relacionados
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Links
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1854,6 +1985,82 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#resumo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conteudo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conteúdo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descoberta-de-testes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Descoberta de testes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#codigos-relacionados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Códigos relacionados
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links-externos-relacionados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Links externos relacionados
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Links
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1873,7 +2080,31 @@
   
 
 
-  <h1>Tuple</h1>
+<h1 id="tuple">Tuple<a class="headerlink" href="#tuple" title="Permanent link">&para;</a></h1>
+<h2 id="resumo">Resumo<a class="headerlink" href="#resumo" title="Permanent link">&para;</a></h2>
+<p>Guarda múltiplos valores de diferentes tipos. É de tamanho fixo, possui a estrutura <code>let foo = (bar1,bar2,...);</code>, sendo chamada com <code>foo.n</code>, sendo n começando em 0. Pode ser "desempacotada", chamando variáveis para seus resultados na estrutura <code>let (foo1,foo2,...) = tuple</code>.</p>
+<h2 id="conteudo">Conteúdo<a class="headerlink" href="#conteudo" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Tuples são boas para guardar múltiplos valores variados, porém são estáticas.</li>
+<li>Para criar uma tuple, a estrutura é <code>let foo = (bar1,bar2,...);</code>, sendo que qualquer <code>bar</code> pode ter qualquer valor (veja código 1).</li>
+<li>Para printar uma tuple, usa-se o mesmo <code>{:?}</code>, printando os valores da tuple dentro de () (veja código 1).</li>
+<li>Valores de tuples são acessadas usando a estrutura <code>foo.n</code>, sendo n um valor entre 0 e o tamanho da tuple (veja código 2).</li>
+<li>Ao criar uma tuple, você está a "empacotando" em uma variável.</li>
+<li>Para "desempacotar" uma tuple, você cria uma variável para cada valor a desempacotar usando, assumuindo uma tuple <code>(foo1,foo2,...) = tuple;</code> (veja código 3).</li>
+<li>Tuples podem ser resultado de funções (veja código 4).</li>
+</ul>
+<h2 id="descoberta-de-testes">Descoberta de testes<a class="headerlink" href="#descoberta-de-testes" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Para "desempacotar" uma tuple, você precisa de uma equivalência de tamanho (veja código 5).</li>
+<li>Similar a arrays, tuples copiam valores simples e emprestam as complexas (veja código 6).</li>
+</ul>
+<h2 id="codigos-relacionados">Códigos relacionados<a class="headerlink" href="#codigos-relacionados" title="Permanent link">&para;</a></h2>
+<h2 id="links-externos-relacionados">Links externos relacionados<a class="headerlink" href="#links-externos-relacionados" title="Permanent link">&para;</a></h2>
+<h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
+<ul>
+<li>👈 <strong>Anterior:</strong> <a href="Estrutura-de-dados/Vector.md">Vectors</a></li>
+<li>➡️ <strong>Próximo:</strong> <a href="XXX">XXX</a></li>
+</ul>
 
 
 
@@ -1881,7 +2112,8 @@
 
 
 
-
+  
+  
 
 
 
