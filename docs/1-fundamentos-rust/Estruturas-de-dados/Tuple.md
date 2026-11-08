@@ -1,5 +1,5 @@
 ---
-status: pendente
+status: Em andamento
 criado: 2026-11-08
 modificado: 2026-11-08
 autor: ChickRicks
@@ -20,7 +20,7 @@ Guarda múltiplos valores de diferentes tipos. É de tamanho fixo, possui a estr
 
 ## Descoberta de testes
 - Para "desempacotar" uma tuple, você precisa de uma equivalência de tamanho (veja código 5).
-- Similar a arrays, tuples copiam valores simples e emprestam as complexas (veja código 6).
+- Similar a arrays, tuples copiam valores simples e movem as complexas, incluindo no "desempacotamento" (veja código 6).
 
 ## Códigos relacionados
 Código 1:
@@ -34,16 +34,48 @@ Código 2:
 ```rust hl_lines="3" linenums="1"
 fn main(){
 	let x = (1,'2',"Três");
-	println!("{} {}",x.0,x.2); // Printa 1 "Três"\n.
+	println!("{} {}",x.0,x.2); // Printa 1 Três\n.
 }
 ```
 Código 3:
-```rust hl_lines="" linenums="1"
-fn main(){}
+```rust hl_lines="3" linenums="1"
+fn main(){
+	let x = (1,'2',"Três");
+	let (y,z,w) = x; // Aqui y recebe 1, z recebe '2' e w recebe "Três"
+}
 ```
-
+Código 4:
+```rust hl_lines="2 4-5" linenums="1"
+fn main(){
+	let x = result();
+	println!("{:?}",x); // Printa (34,"teste")\n.
+}
+fn result() -> (i32,&str){
+	return (34,"teste");
+}
+```
+Código 5:
+```rust hl_lines="3-5" linenums="1"
+fn main(){
+	let x = (1,'2',"Três");
+	let (y,z,w) = x; // Funciona, mesmo tamanho.
+	// let (v,u,t,s) = x; - Inválido: maior que o tamanho de x.
+	// let (r,q) = x; - Inválido: menor que o tamanho de x. 
+}
+```
+Código 6:
+```rust hl_lines="4-7" linenums="1"
+fn main(){
+	let x = (1,'2');
+	let y = ("Três","Quatro".to_string());
+	let (z,w) = x; // Valores simples: são copiados.
+	let (u,v) = y; // Copia o &str, move a String.
+	println!("{:?}",x); // Ainda possível, nenhum valor foi movido.
+	//println!("{:?}",y); - Inválido: y possui um valor movido ("Quatro"). 
+}
+```
 ## Links externos relacionados
-
+- [W3School Tuples](https://www.w3schools.com/rust/rust_tuples.php)
 ## Links
-- 👈 **Anterior:** [Vectors](Estrutura-de-dados/Vector.md)
+- 👈 **Anterior:** [Vectors](Vector.md)
 - ➡️ **Próximo:** [XXX](XXX)

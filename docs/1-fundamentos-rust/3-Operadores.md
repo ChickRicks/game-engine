@@ -1,7 +1,7 @@
 ---
 status: Em andamento
 criado: 2026/11/01
-modificado: 2026-11-04
+modificado: 2026-11-08
 autor: ChickRicks
 ---
 
@@ -44,9 +44,10 @@ autor: ChickRicks
 - Se a parte esquerda de `&&` for falsa, ela retorna falso, sem avaliação da direita (veja código 6).
 - Se a parte esquerda de `||` for verdadeira, ela retorna verdadeiro, sem avaliação da direita (veja código 6).
 - Ao criar variáveis, ela pode receber uma "função" para resolver, e receber o resultado dela (veja código 7).
+- Operações podem apenas acontecer entre os mesmos tipos (i32 para i32, por exemplo) (veja código 8).
 
 ## Descoberta de testes
-- Divisão inteira não aproxima, retorna o valor inteiro sem arredondar (Veja código 8).
+- Divisão inteira não aproxima, retorna o valor inteiro sem arredondar (Veja código 9).
 
 ## Códigos relacionados
 Código 1:
@@ -135,6 +136,15 @@ fn main(){
 }
 ```
 Código 8:
+```rust hl_lines="4-5" linenums="1"
+fn main(){
+	let x: i32 = -9;
+	let y: u32 = 10;
+	// println!("{}",x + y); - Inválido, x é i32 enquanto y é u32.
+	println!("{}",x + y as i32); // Válido, y é tratado como i32 temporariamente. Printa 1.
+}
+```
+Código 9:
 ```rust hl_lines="3" linenums="1"
 fn main(){
 	let x: u32 = 10; // Declaração explícita para exemplo

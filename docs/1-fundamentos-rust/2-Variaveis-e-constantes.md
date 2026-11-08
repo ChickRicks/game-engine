@@ -1,7 +1,7 @@
 ---
 status: Em andamento
 criado: 2026/11/01
-modificado: 2026-11-04
+modificado: 2026-11-08
 autor: ChickRicks
 ---
 # Variaveis e constantes
@@ -32,12 +32,13 @@ Constante: `const foo1: foo2 = bar;`, sendo foo2 o tipo da constante.
 - Constantes possuem estrutura `const foo: foo2 = bar;`, sendo que foo2 é o tipo de variável (veja código 3).
 - A estrutura é obrigatória incluir o tipo da constante (veja código 3).
 - Ideal usar letras maiúsculas para constantes, facilitam a diferenciação (veja código 3).
+- Variáveis podem ser mudadas temporariamente usando `foo as type`(veja código 4).
 
 ## Descoberta de testes
--  Quebras de linha nos espaços continuam ignorados (dado que não corte palavras chaves ou valores) (veja código 4).
-- `let x = foo; let x = foo2;` é válido (shadowing) (veja código 5).
-- `let foo = bar` fora de funções não funciona (sem variáveis globais), mas constantes podem (veja código 6).
-- Não pode declarar variável sem atribuir valor nela (veja código 7);
+-  Quebras de linha nos espaços continuam ignorados (dado que não corte palavras chaves ou valores) (veja código 5).
+- `let x = foo; let x = foo2;` é válido (shadowing) (veja código 6).
+- `let foo = bar` fora de funções não funciona (sem variáveis globais), mas constantes podem (veja código 7).
+- Não pode declarar variável sem atribuir valor nela (veja código 8).
 ## Links externos relacionados
 - [w3schools rust variables](https://www.w3schools.com/rust/rust_variables.php) até [w3schools constants](https://www.w3schools.com/rust/rust_constants.php).
 
@@ -76,6 +77,13 @@ fn main(){
 }
 ```
 Código 4:
+```rust hl_lines="3" linenums="1"
+fn main(){
+	let x: i32 = 9; 
+	let y: u32 = x as u32; // Válido, x temporariamente é u32 para a atribuição.
+}
+```
+Código 5:
 ```rust hl_lines="2-10" linenums="1"
 fn main(){
 	let
@@ -90,7 +98,7 @@ fn main(){
 	// Funcional, porém pouco legível
 }
 ```
-Código 5:
+Código 6:
 ```rust hl_lines="2-3" linenums="1"
 fn main(){
 	let x = 10;
@@ -98,7 +106,7 @@ fn main(){
 	// Funciona, chama-se "Shadowing" (melhor explicado com ownership e borrowing)
 }
 ```
-Código 6:
+Código 7:
 ```rust hl_lines="1" linenums="1"
 // let x = 10; - Não permitido, escopo global
 const Y: u32 = 10; // Permitido, constantes podem ser criadas em escopo público
@@ -106,7 +114,7 @@ fn main(){
 	let z = 20;
 }
 ```
-Código 7:
+Código 8:
 ```rust hl_lines="3" linenums="1"
 fn main(){
 	let a = 0;
