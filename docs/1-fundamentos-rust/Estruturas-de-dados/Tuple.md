@@ -78,4 +78,4 @@ fn main(){
 - [W3School Tuples](https://www.w3schools.com/rust/rust_tuples.php)
 ## Links
 - 👈 **Anterior:** [Vectors](Vector.md)
-- ➡️ **Próximo:** [XXX](XXX)
+- ➡️ **Próximo:** [Hashmaps](Hashmap.md)
