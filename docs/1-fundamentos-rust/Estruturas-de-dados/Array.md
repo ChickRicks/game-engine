@@ -19,7 +19,7 @@ Guarda múltiplos valores de mesmo tipo, usando `let foo = [bar1,bar2,...];`. Po
 - Existe uma forma de printar uma array inteira, usando `{:?}` (veja código 4)
 
 ## Descoberta de testes
-- Usar um `for` para printar os valores simples da array não consome a array, mas consome com valores complexos (veja código 5).
+- Usar um `for` para printar os valores simples da array não move os valores da array simples, mas move os valores complexos (veja código 5).
 ## Códigos relacionados
 Código 1:
 ```rust hl_lines="2-5" linenums="1"

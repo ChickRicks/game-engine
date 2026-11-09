@@ -1,6 +1,10 @@
+use std::collections::HashMap;
 fn main(){
-	let x: i32 = -9;
-	let y: u32 = 10;
-	// println!("{}",x + y); - Inválido, x é i32 enquanto y é u32.
-	println!("{}",x + y as i32); // Válido, y é tratado como i32 temporariamente. Printa 1.
+	let mut x = HashMap::new();
+	x.insert(1,"Um");
+	x.insert(2,"Dois");
+	x.insert(3,"Três");
+	for (chave,valor) in &x{
+		println!("{} {}", chave, valor); // Printa chave valor\n para cada valor de x
+	}
 }

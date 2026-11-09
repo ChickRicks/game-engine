@@ -30,7 +30,7 @@ Código 2:
 ```rust hl_lines="3 5" linenums="1"
 fn main(){
 	let x = vec![1,2,1,2,3,1,2,3,4];
-	for num in &x{ // A necessidade de &x é que vectors são consumidos em fors, melhor explicado no código 5.
+	for num in &x{ // A necessidade de &x é que os valores de vectors são movidos em fors, melhor explicado no código 5.
 		println!("{}",num); // Printa cada valor de x.
 	}
 	println!("{} {:?}",x.len(),x); // Printa 9 [1,2,1,2,3,1,2,3,4]\n
@@ -60,7 +60,7 @@ Código 5:
 fn main(){
 	let x = vec![1,7,2,1,2,9];
 	for num in x{
-		println!("{}",num); // Printando cada número para tentar exaurir, que no fim consome o vector.
+		println!("{}",num); // Printando cada número para tentar exaurir, que no fim move os valores do vector.
 	}
 	//println!("{:?}",x); - Inválido: diferentemente de arrays, aqui foi consumido pelo for.
 	let y = vec!["a".to_string(),"b".to_string(),"c".to_string(),"d".to_string(),"e".to_string()];
