@@ -1,0 +1,22 @@
+services:
+  dev:
+    build: .
+    container_name: motor-grafico-dev
+    stdin_open: true
+    tty: true
+    volumes:
+      - .:/app
+      - cargo-registry:/usr/local/cargo/registry
+      - cargo-git:/usr/local/cargo/git
+      - target-cache:/app/target
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    environment:
+      - DISPLAY=${DISPLAY:-:0}
+    devices:
+      - /dev/dri:/dev/dri
+    command: sleep infinity
+
+volumes:
+  cargo-registry:
+  cargo-git:
+  target-cache:
