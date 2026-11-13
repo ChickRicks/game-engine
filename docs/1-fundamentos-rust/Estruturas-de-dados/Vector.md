@@ -17,7 +17,7 @@ Guarda múltiplos valores de mesmo tipo, e pode variar seu tamanho. Para montar,
 - Para adicionar valores no fim de um vector, usa a função `push(valor)`, e para remover o valor final, usa a função `pop()`, que retorna o valor removido (veja código 3).
 - Para adicionar em um espaço específico, usa a função `insert(índice,valor)`, empurrando os valores para frente, e para remover um valor em um espaço específico, usa a função `remove(índice)`, puxando os valores após o índice para fechar o buraco e retornando o valor removido (veja código 4);
 ## Descoberta de testes
-- Similarmente as arrays, vectors consomem os valores complexos, mas também consomem os simples (veja código 5).
+- Diferente de arrays, vectors consomem todos os tipos de variável, incluindo as simples (veja código 5).
 ## Códigos relacionados
 Código 1:
 ```rust hl_lines="2-3" linenums="1"
@@ -50,7 +50,7 @@ Código 4:
 ```rust hl_lines="3-4" linenums="1"
 fn main(){
 	let mut x = vec![1,6,4,2,5];
-	x.insert(3,0); // Adiciona 0 no índice 3 do vector x, depois empurra. vector resultante: [1,6,4,0,2,5].
+	x.insert(3, 0); // Adiciona 0 no índice 3 do vector x, depois empurra. vector resultante: [1,6,4,0,2,5].
 	x.remove(1); // Remove o valor no índice 1 do vector x, depois puxa os valores. vector resultante: [1,4,0,2,5].
 	println!("{:?}",x); // Printa [1,4,0,2,5].
 }

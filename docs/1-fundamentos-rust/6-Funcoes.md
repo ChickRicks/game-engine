@@ -17,10 +17,10 @@ Estrutura completa: `fn foo(foo1: bar1) -> bar2{bar3}`. `return` para as funçõ
 - O conteúdo de variáveis da função envolve `foo: tipo de var` (veja código 2).
 - Para funções que retornam valores, usa-se `-> tipo de var` na criação. Todas retornam algo, caso não possua, retorna () (veja código 3).
 - Para o retorno de funções, pode se usar `return` ou, na última linha, fazer a operação sem `;`(veja código 3).
-- Pode passar ownership para as variáveis complexas caso não seja usado `&` com a variável (veja em [ownership](9-Ownership.md)).
+- Passa ownership para as variáveis complexas caso não seja usado `&` com a variável (veja em [ownership](9-Ownership.md)).
 
 ## Descoberta de testes
-- Não sei se parece bom usar `fn` que retorna valor sem `return`, fica confuso.
+- `return` implícito compila sem avisos ou problemas, mas pode reduzir legibilidade.
 - O retorno implícito é exclusivo do fim de linha, não se pode retornar `if` como statement (veja código 4).
 
 ## Códigos relacionados
@@ -39,6 +39,7 @@ fn main(){
 	func2(-11,2,5); // Chama func2, que printa -11 2 5\n.
 }
 fn func2(valor1: i32,valor2: u32,mut valor3: i32){
+	valor3 += 10;
 	println!("{} {} {}",valor1,valor2,valor3);
 }
 ```
@@ -58,8 +59,8 @@ fn func4(valor1: i32) -> i32{
 Código 4:
 ```rust hl_lines="2-4" linenums="1"
 fn func1() -> i32{
-	if (false) {return 0;} //Válido
-	//else if (false) {1} - Inválido: É um statement, ele não retorna (), mas i32.
+	if false {return 0;} //Válido
+	//else if false {1} - Inválido: É um statement, ele não retorna (), mas i32.
 	2 // Válido
 }
 ```

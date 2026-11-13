@@ -8,7 +8,7 @@ autor: ChickRicks
 # Operadores
 
 ## Resumo
- Operadores válidos: `+`, `-`, `/`, `*`, `%`, ` =`, `+=`, `-=`, `*=`, `/=`, `%=`, ` ==`, `!=`, `>`, `<`, `>=`, `<=`, `&&`, `||`, `!`.
+ Operadores válidos: `+`, `-`, `/`, `*`, `%`, ` =`, `+=`, `-=`, `*=`, `/=`, `%=`, ` ==`, `!=`, `>`, `<`, `>=`, `<=`, `&&`, `||`, `!`,`&`,`|`,`^`,`<<`,`>>`.
 
 ## Conteúdo
 - Operadores aritméticos (veja código 1):
@@ -20,9 +20,9 @@ autor: ChickRicks
 - Operadores de atribuição (veja código 2):
 	- ` = ` : Move o valor da direita para a esquerda em casos de variáveis complexas, ou copia em caso de variáveis simples (`foo = bar`);
 	- `+=` : Some o valor da esquerda ao da direita, e depois salva o valor (`foo += bar` = `foo = foo + bar`);
-	- `-=` : Subtraia o valor da esquerda ao da direita, e depois salva o valor (`foo -= bar` = `foo = foo - bar`);
-	- `*=` : Multiplique o valor da esquerda ao da direita, e depois salva o valor (`foo *= bar` = ` foo = foo * bar`);
-	- `/=` : Divida o valor da esquerda ao da direita, e depois salva o valor (`foo /= bar` = `foo = foo/bar`);
+	- `-=` : Subtraia o valor da direita ao da esquerda, e depois salva o valor (`foo -= bar` = `foo = foo - bar`);
+	- `*=` : Multiplique o valor da esquerda pelo da direita, e depois salva o valor (`foo *= bar` = ` foo = foo * bar`);
+	- `/=` : Divida o valor da esquerda pelo da direita, e depois salva o valor (`foo /= bar` = `foo = foo/bar`);
 	- `%=` : Faça o módulo da esquerda ao da direita, e depois salva o valor (`foo %= bar` = `foo = foo % bar`);
 - Operadores Comparadores (veja código 3):
 	-  ` == ` : Igualdade entre os 2 (`foo == foo`);
@@ -43,7 +43,7 @@ autor: ChickRicks
 	- `>>` -> Shift de valor a direita (`foo >> bar`);
 - Se a parte esquerda de `&&` for falsa, ela retorna falso, sem avaliação da direita (veja código 6).
 - Se a parte esquerda de `||` for verdadeira, ela retorna verdadeiro, sem avaliação da direita (veja código 6).
-- Ao criar variáveis, ela pode receber uma "função" para resolver, e receber o resultado dela (veja código 7).
+- Ao criar variáveis, ela pode receber uma expresão para resolver, e receber o resultado da expressão. (veja código 7).
 - Operações podem apenas acontecer entre os mesmos tipos (i32 para i32, por exemplo) (veja código 8).
 
 ## Descoberta de testes

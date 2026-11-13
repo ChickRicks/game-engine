@@ -5,7 +5,7 @@ flowchart TD
 	C -- Sim --> D["Faz o código interno."]
 	C -- Não --> E{"Tem mais condicionais/else if"}
 	E -- Sim --> C
-	E -- Não --> F{"Possui um else/saída com todas as condições negativas?"}
+	E -- Não --> F{"Possui um else/saída para todas as condições negativas?"}
 	F -- Sim --> D
 	F -- Não --> G["Código"]
 	D --> G

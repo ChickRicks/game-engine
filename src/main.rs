@@ -4,7 +4,8 @@ fn main(){
 	x.insert(1,"Um");
 	x.insert(2,"Dois");
 	x.insert(3,"Três");
-	for (chave,valor) in &x{
-		println!("{} {}", chave, valor); // Printa chave valor\n para cada valor de x
+	for val in x{
+		println!("{:?}",val);
 	}
-}
+	// println!("{:?}",x);  // - Inválido, x foi transferido para o for 
+	}

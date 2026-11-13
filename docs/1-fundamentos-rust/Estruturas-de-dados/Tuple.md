@@ -10,12 +10,12 @@ autor: ChickRicks
 Guarda múltiplos valores de diferentes tipos. É de tamanho fixo, possui a estrutura `let foo = (bar1,bar2,...);`, sendo chamada com `foo.n`, sendo n começando em 0. Pode ser "desempacotada", chamando variáveis para seus resultados na estrutura `let (foo1,foo2,...) = tuple`.
 
 ## Conteúdo
-- Tuples são boas para guardar múltiplos valores variados, porém são estáticas.
+- Tuples guardam valores variados em um tamanho definido na criação.
 - Para criar uma tuple, a estrutura é `let foo = (bar1,bar2,...);`, sendo que qualquer `bar` pode ter qualquer valor (veja código 1).
 - Para printar uma tuple, usa-se o mesmo `{:?}`, printando os valores da tuple dentro de () (veja código 1).
-- Valores de tuples são acessadas usando a estrutura `foo.n`, sendo n um valor entre 0 e o tamanho da tuple (veja código 2).
+- Valores de tuples são acessadas usando a estrutura `foo.n`, sendo n um valor entre 0 e o tamanho da tuple -1 (veja código 2).
 - Ao criar uma tuple, você está a "empacotando" em uma variável.
-- Para "desempacotar" uma tuple, você cria uma variável para cada valor a desempacotar usando, assumuindo uma tuple `(foo1,foo2,...) = tuple;` (veja código 3).
+- Para "desempacotar" uma tuple, você cria uma variável para cada valor a desempacotar, usando assumindo uma tuple `(foo1,foo2,...) = tuple;` (veja código 3).
 - Tuples podem ser resultado de funções (veja código 4).
 
 ## Descoberta de testes
@@ -27,7 +27,7 @@ Código 1:
 ```rust hl_lines="2-3" linenums="1"
 fn main(){
 	let x = (1,'2',"Três");
-	println!("{:?}",x); // Printa (1,'2',"Três")\n.
+	println!("{:?}",x); // Printa (1, '2', "Três")\n.
 }
 ```
 Código 2:
@@ -48,7 +48,7 @@ Código 4:
 ```rust hl_lines="2 4-5" linenums="1"
 fn main(){
 	let x = result();
-	println!("{:?}",x); // Printa (34,"teste")\n.
+	println!("{:?}",x); // Printa (34, "teste")\n.
 }
 fn result() -> (i32,&str){
 	return (34,"teste");
@@ -70,7 +70,7 @@ fn main(){
 	let y = ("Três","Quatro".to_string());
 	let (z,w) = x; // Valores simples: são copiados.
 	let (u,v) = y; // Copia o &str, move a String.
-	println!("{:?}",x); // Ainda possível, nenhum valor foi movido.
+	println!("{:?}",x); // Ainda possível, nenhum valor de x foi movido.
 	//println!("{:?}",y); - Inválido: y possui um valor movido ("Quatro"). 
 }
 ```

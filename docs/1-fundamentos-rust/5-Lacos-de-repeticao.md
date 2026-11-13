@@ -91,7 +91,7 @@ fn main(){
 		break;
 		}
 	x += 1;
-	println!("{}", x); //printa de 1 a 7, sem contar o 6
+	println!("{}", x); //printa de 1 a 8, sem contar o 7
 	}
 }
 ```
@@ -119,7 +119,7 @@ fn main(){
 		x += 1;
 		if i == 7 {break;} // vai ignorar o resto dos valores quando i for 7.
 	}
-	println!("{}",x); // vai printar 6\n
+	println!("{}",x); // vai printar 7\n
 }
 ```
 Código 7:
@@ -130,7 +130,7 @@ fn main(){
 		break;
 		println!("{}",x); // Não printa, break acontece antes.
 	}
-	while (true){
+	while true{
 		if x == 1{
 			x += 1;
 			continue; // Nada abaixo que está dentro do while vai acontecer quando x for 1.

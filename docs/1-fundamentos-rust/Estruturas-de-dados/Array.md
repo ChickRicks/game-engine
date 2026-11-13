@@ -15,7 +15,7 @@ Guarda múltiplos valores de mesmo tipo, usando `let foo = [bar1,bar2,...];`. Po
 - Assim como outras variáveis, pode ser mutável, tornando os valores dentro da array mutáveis (veja código 1).
 - Para chamar um valor de uma array, usa a estrutura `foo[n]`, sendo que n começa em 0 e vai até o limite da array (veja código 1).
 - Pode-se ver o tamanho de uma array usando o comando `foo.len()`, retornando o total de valores (veja código 2).
-- Uma função `for` aceita variáveis arrays, passando por cada valor do for (veja código 3).
+- Um laço `for` aceita variáveis arrays, passando por cada valor do for (veja código 3).
 - Existe uma forma de printar uma array inteira, usando `{:?}` (veja código 4)
 
 ## Descoberta de testes
@@ -39,7 +39,7 @@ fn main(){
 	println!("{} {}",x.len(),y.len()); // Printa 5 8\n.
 }
 ```
-Código 3
+Código 3:
 ```rust hl_lines="3" linenums="1"
 fn main(){
 	let x = [1,2,3,4,5];
@@ -48,14 +48,14 @@ fn main(){
 	}
 }
 ```
-Código 4
+Código 4:
 ```rust hl_lines="3" linenums="1"
 fn main(){
 	let x = [1,2,3,4,5,6];
 	println!("{:?}",x); // Printa [1,2,3,4,5,6]\n.
 }
 ```
-Código 5
+Código 5:
 ```rust hl_lines="4 6-7 9 11" linenums="1"
 fn main(){
 	let x = [1,7,2,1,2,9];

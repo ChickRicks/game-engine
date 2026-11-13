@@ -7,10 +7,10 @@ autor: ChickRicks
 # Strings
 
 ## Resumo
-String de literais: `foo.to_string()` ou `String::from("foo")` para copiar uma string; `push` e `push_str` para adicionar pedaços de texto definidos, `format!` para concatenar strings, `.len()` para o tamanho de string em bytes, e `chars().count()` em caracteres
+Para criar string de literais: `foo.to_string()` ou `String::from("foo")` para copiar uma string; `push` e `push_str` para adicionar pedaços de texto definidos, `format!` para concatenar strings, `.len()` para o tamanho de string em bytes, e `chars().count()` em caracteres
 
 ## Conteúdo
-- [Formatos de String](2-Variaveis-e-constantes.md#conteudo)(veja código 2 no link):
+- [Formatos de String](2-Variaveis-e-constantes.md#conteudo)(veja código 2 em Variáveis e Constantes):
 	- &str ,"imutável", em geral, literal, é uma referência;
 	- String é mutável, tem ownership e tem uma heap, sempre dona;
 - Duas formas de criar string de um literal (veja código 1): 
@@ -20,8 +20,8 @@ String de literais: `foo.to_string()` ou `String::from("foo")` para copiar uma s
 - `push` para um caracter único (`foo.push('b')`) (veja código 2).
 -  Para `push` e `push_str` funcionarem, a variável que está sendo afetada precisa ser mutável (veja código 2).
 - Duas formas de concatenar strings (veja código 3):
-	-  Macro `format!` com os textos a serem concatenados (`foo = format!("foo {} {}",bar1,bar2)`), sem consumir as variáveis, apenas as copiando;
-	-  Usando o operador `+` , porém menos recomendado (`foo = bar1 + bar2 + bar3` + ...), já que usar `+` acaba consumindo a string a esquerda. `bar2`, `bar3` e os que vem depois tem que ser strings fixas `&str`;
+	-  Macro `format!` com os textos a serem concatenados (`foo = format!("foo {} {}",bar1,bar2)`), sem consumir as variáveis, apenas as emprestando;
+	-  Usando o operador `+` , porém menos recomendado (`foo = bar1 + bar2 + bar3` + ...), já que usar `+` acaba consumindo a string à esquerda. `bar2`, `bar3` e os que vem depois tem que ser strings fixas `&str`;
 - `.len()` em uma string para retornar seu valor em bytes (`foo.len()`) e `.chars().count()` para contagem de caracteres (`foo.chars().count()`) (veja código 4).
 - Ao usar strings em uma função, ela perde o domínio, a não ser que use `.clone()` para passar uma cópia dela (veja código 5).
 
@@ -33,8 +33,8 @@ Código 1:
 ```rust hl_lines="2 4-5" linenums="1"
 fn main(){
 	let x: String = "Caso 1".to_string();
-	let y_s: &str = "Caso 2";
-	let y_S: String = y_s.to_string();
+	let y_S: &str = "Caso 2";
+	let y_S2: String = y_s.to_string();
 	let z: String = String::from("Caso 3");
 }
 ```
@@ -59,16 +59,16 @@ fn main(){
 }
 ```
 Código 4:
-```rust hl_lines="3 4" linenums="1"
+```rust hl_lines="4-5" linenums="1"
 fn main(){
 	let x = "Teste de tamanho".to_string();
 	let y = "Testes com mudanças".to_string();
 	println!("{} {}",x.len(),x.chars().count()); // Retorna 16 16\n
 	println!("{} {}",y.len(),y.chars().count()); // Retorna 20 19\n
-	// len() usa a quantidade de bytes, enquanto chars().count() conta a quantidade de caracteres, importante caso usa a tabela ASCII expandida
+	// len() usa a quantidade de bytes, enquanto chars().count() conta a quantidade de caracteres, importante caso use a tabela ASCII expandida
 }
 ```
-Código 5
+Código 5:
 ```rust hl_lines="3 5" linenums="1"
 fn main(){
 	let x = "Teste".to_string();
@@ -81,7 +81,7 @@ fn teste(mut var1: String){
 	println!("{}",var1);
 }
 ```
-Código 6
+Código 6:
 ```rust hl_lines="5" linenums="1"
 fn main(){
 	let x = "teste";

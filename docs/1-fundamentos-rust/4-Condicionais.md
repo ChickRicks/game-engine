@@ -7,7 +7,7 @@ autor: ChickRicks
 # Condicionais
 
 ## Resumo
-Estrutura do ifs, if_else, else if e match
+Estrutura do ifs, if/else, else if e match
 if (completo): `if foo {bar} else if foo2 {bar2} else {bar3}`.
 match: `match foo { foo1 => bar1, ... _ => bar2}`.
 ## Conteúdo
@@ -15,17 +15,17 @@ match: `match foo { foo1 => bar1, ... _ => bar2}`.
 - Ifs também podem ser usados como "função" de uma variável, porém, em caso de if else, eles devem retornar o mesmo tipo de valor (veja código 2).
 - Match possui estrutura `match foo { foo => bar, ...  _ => bar}`, sendo _ valor caso não esteja dentro dos outros (veja código 3).
 - Match aceita uso de | caso alguns valores devam retornar o mesmo resultado (veja código 4).
-- Similar ao if, também pode ser uma "função", com as mesmas regras do if (os valores que retornam tem que ser do mesmo tipo) (veja código 5).
+- Similar ao if, também pode ser uma expressão, com as mesmas regras do if (os valores que retornam tem que ser do mesmo tipo) (veja código 5).
 -  Para borrowing e Ownership: o bloco interno do `if` pode trocar o ownership de variáveis de escopos externos (mais detalhes em ownership e borrowing).
 ## Descoberta de testes
 - `If` aceita apenas valores booleanos, números não tem tradução de true ou false (veja código 6).
-- `match` não pede variáveis, apenas algo para concordar (veja código 7).
+- `match` não pede variáveis, mas sim algum literal (variável, valor ou expressão) (veja código 7).
 ## Códigos relacionados
 Código 1:
 ```rust hl_lines="2-4" linenums="1"
 fn main(){
-	if (false){} // É analisado primeiro.
-	else if (false){} // Depois esse, caso o if seja falso.
+	if false{} // É analisado primeiro.
+	else if false{} // Depois esse, caso o if seja falso.
 	else{} // Por fim esse, caso todos sejam falsos.
 }
 ```
@@ -78,8 +78,8 @@ fn main(){
 Código 6:
 ```rust hl_lines="2-3" linenums="1"
 fn main(){
-	if (true) {println!("Aqui funciona");}
-	// if (9) {println!("Aqui não funciona");}
+	if true {println!("Aqui funciona");}
+	// if 9 {println!("Aqui não funciona");}
 }
 ```
 Código 7:
