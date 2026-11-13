@@ -2089,7 +2089,7 @@
 
 <h1 id="operadores">Operadores<a class="headerlink" href="#operadores" title="Permanent link">&para;</a></h1>
 <h2 id="resumo">Resumo<a class="headerlink" href="#resumo" title="Permanent link">&para;</a></h2>
-<p>Operadores válidos: <code>+</code>, <code>-</code>, <code>/</code>, <code>*</code>, <code>%</code>, <code>=</code>, <code>+=</code>, <code>-=</code>, <code>*=</code>, <code>/=</code>, <code>%=</code>, <code>==</code>, <code>!=</code>, <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code>, <code>&amp;&amp;</code>, <code>||</code>, <code>!</code>.</p>
+<p>Operadores válidos: <code>+</code>, <code>-</code>, <code>/</code>, <code>*</code>, <code>%</code>, <code>=</code>, <code>+=</code>, <code>-=</code>, <code>*=</code>, <code>/=</code>, <code>%=</code>, <code>==</code>, <code>!=</code>, <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code>, <code>&amp;&amp;</code>, <code>||</code>, <code>!</code>,<code>&amp;</code>,<code>|</code>,<code>^</code>,<code>&lt;&lt;</code>,<code>&gt;&gt;</code>.</p>
 <h2 id="conteudo">Conteúdo<a class="headerlink" href="#conteudo" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Operadores aritméticos (veja código 1):<ul>
@@ -2103,9 +2103,9 @@
 <li>Operadores de atribuição (veja código 2):<ul>
 <li><code>=</code> : Move o valor da direita para a esquerda em casos de variáveis complexas, ou copia em caso de variáveis simples (<code>foo = bar</code>);</li>
 <li><code>+=</code> : Some o valor da esquerda ao da direita, e depois salva o valor (<code>foo += bar</code> = <code>foo = foo + bar</code>);</li>
-<li><code>-=</code> : Subtraia o valor da esquerda ao da direita, e depois salva o valor (<code>foo -= bar</code> = <code>foo = foo - bar</code>);</li>
-<li><code>*=</code> : Multiplique o valor da esquerda ao da direita, e depois salva o valor (<code>foo *= bar</code> = <code>foo = foo * bar</code>);</li>
-<li><code>/=</code> : Divida o valor da esquerda ao da direita, e depois salva o valor (<code>foo /= bar</code> = <code>foo = foo/bar</code>);</li>
+<li><code>-=</code> : Subtraia o valor da direita ao da esquerda, e depois salva o valor (<code>foo -= bar</code> = <code>foo = foo - bar</code>);</li>
+<li><code>*=</code> : Multiplique o valor da esquerda pelo da direita, e depois salva o valor (<code>foo *= bar</code> = <code>foo = foo * bar</code>);</li>
+<li><code>/=</code> : Divida o valor da esquerda pelo da direita, e depois salva o valor (<code>foo /= bar</code> = <code>foo = foo/bar</code>);</li>
 <li><code>%=</code> : Faça o módulo da esquerda ao da direita, e depois salva o valor (<code>foo %= bar</code> = <code>foo = foo % bar</code>);</li>
 </ul>
 </li>
@@ -2134,7 +2134,7 @@
 </li>
 <li>Se a parte esquerda de <code>&amp;&amp;</code> for falsa, ela retorna falso, sem avaliação da direita (veja código 6).</li>
 <li>Se a parte esquerda de <code>||</code> for verdadeira, ela retorna verdadeiro, sem avaliação da direita (veja código 6).</li>
-<li>Ao criar variáveis, ela pode receber uma "função" para resolver, e receber o resultado dela (veja código 7).</li>
+<li>Ao criar variáveis, ela pode receber uma expresão para resolver, e receber o resultado da expressão. (veja código 7).</li>
 <li>Operações podem apenas acontecer entre os mesmos tipos (i32 para i32, por exemplo) (veja código 8).</li>
 </ul>
 <h2 id="descoberta-de-testes">Descoberta de testes<a class="headerlink" href="#descoberta-de-testes" title="Permanent link">&para;</a></h2>

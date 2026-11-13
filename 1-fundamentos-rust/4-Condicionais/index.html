@@ -2089,7 +2089,7 @@
 
 <h1 id="condicionais">Condicionais<a class="headerlink" href="#condicionais" title="Permanent link">&para;</a></h1>
 <h2 id="resumo">Resumo<a class="headerlink" href="#resumo" title="Permanent link">&para;</a></h2>
-<p>Estrutura do ifs, if_else, else if e match
+<p>Estrutura do ifs, if/else, else if e match
 if (completo): <code>if foo {bar} else if foo2 {bar2} else {bar3}</code>.
 match: <code>match foo { foo1 =&gt; bar1, ... _ =&gt; bar2}</code>.</p>
 <h2 id="conteudo">Conteúdo<a class="headerlink" href="#conteudo" title="Permanent link">&para;</a></h2>
@@ -2098,13 +2098,13 @@ match: <code>match foo { foo1 =&gt; bar1, ... _ =&gt; bar2}</code>.</p>
 <li>Ifs também podem ser usados como "função" de uma variável, porém, em caso de if else, eles devem retornar o mesmo tipo de valor (veja código 2).</li>
 <li>Match possui estrutura <code>match foo { foo =&gt; bar, ...  _ =&gt; bar}</code>, sendo _ valor caso não esteja dentro dos outros (veja código 3).</li>
 <li>Match aceita uso de | caso alguns valores devam retornar o mesmo resultado (veja código 4).</li>
-<li>Similar ao if, também pode ser uma "função", com as mesmas regras do if (os valores que retornam tem que ser do mesmo tipo) (veja código 5).</li>
+<li>Similar ao if, também pode ser uma expressão, com as mesmas regras do if (os valores que retornam tem que ser do mesmo tipo) (veja código 5).</li>
 <li>Para borrowing e Ownership: o bloco interno do <code>if</code> pode trocar o ownership de variáveis de escopos externos (mais detalhes em ownership e borrowing).</li>
 </ul>
 <h2 id="descoberta-de-testes">Descoberta de testes<a class="headerlink" href="#descoberta-de-testes" title="Permanent link">&para;</a></h2>
 <ul>
 <li><code>If</code> aceita apenas valores booleanos, números não tem tradução de true ou false (veja código 6).</li>
-<li><code>match</code> não pede variáveis, apenas algo para concordar (veja código 7).</li>
+<li><code>match</code> não pede variáveis, mas sim algum literal (variável, valor ou expressão) (veja código 7).</li>
 </ul>
 <h2 id="codigos-relacionados">Códigos relacionados<a class="headerlink" href="#codigos-relacionados" title="Permanent link">&para;</a></h2>
 <p>Código 1:
@@ -2113,8 +2113,8 @@ match: <code>match foo { foo1 =&gt; bar1, ... _ =&gt; bar2}</code>.</p>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span>
 <span class="normal"><a href="#__codelineno-0-4">4</a></span>
 <span class="normal"><a href="#__codelineno-0-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">fn</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="hll"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="kc">false</span><span class="p">){}</span><span class="w"> </span><span class="c1">// É analisado primeiro.</span>
-</span><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="hll"><span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="kc">false</span><span class="p">){}</span><span class="w"> </span><span class="c1">// Depois esse, caso o if seja falso.</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="hll"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="kc">false</span><span class="p">{}</span><span class="w"> </span><span class="c1">// É analisado primeiro.</span>
+</span><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="hll"><span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="kc">false</span><span class="p">{}</span><span class="w"> </span><span class="c1">// Depois esse, caso o if seja falso.</span>
 </span><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="hll"><span class="w">    </span><span class="k">else</span><span class="p">{}</span><span class="w"> </span><span class="c1">// Por fim esse, caso todos sejam falsos.</span>
 </span><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
@@ -2195,8 +2195,8 @@ Código 6:
 <span class="normal"><a href="#__codelineno-5-2">2</a></span>
 <span class="normal"><a href="#__codelineno-5-3">3</a></span>
 <span class="normal"><a href="#__codelineno-5-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="k">fn</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="hll"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="kc">true</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="fm">println!</span><span class="p">(</span><span class="s">"Aqui funciona"</span><span class="p">);}</span>
-</span><a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="hll"><span class="w">    </span><span class="c1">// if (9) {println!("Aqui não funciona");}</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="hll"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">{</span><span class="fm">println!</span><span class="p">(</span><span class="s">"Aqui funciona"</span><span class="p">);}</span>
+</span><a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="hll"><span class="w">    </span><span class="c1">// if 9 {println!("Aqui não funciona");}</span>
 </span><a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 Código 7:
