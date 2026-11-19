@@ -1,11 +1,9 @@
-use std::collections::HashMap;
+const _x: i32 = -1;
 fn main(){
-	let mut x = HashMap::new();
-	x.insert(1,"Um");
-	x.insert(2,"Dois");
-	x.insert(3,"Três");
-	for val in x{
-		println!("{:?}",val);
-	}
-	// println!("{:?}",x);  // - Inválido, x foi transferido para o for 
-	}
+	let result = soma_iter(100,0);
+	println!("{}",result);
+}
+
+fn soma_iter(n: u64, acc: u64) -> u64 {
+    if n == 0 { acc } else { soma_iter(n - 1, acc + n) }
+}
