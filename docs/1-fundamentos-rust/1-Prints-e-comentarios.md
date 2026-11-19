@@ -9,6 +9,21 @@ autor: ChickRicks
 ## Resumo
 
 `println!(foo)` para print com quebra de linha, `print!("foo")` para prints sem a quebra, `//` para comentários de uma linha, `/* comentário */` para comentários de mais de uma linha.
+??? example "Ver UML — move vs. copy"
+	```mermaid
+	flowchart TD
+		A["Código"] --> B["macro print"]
+		B --> C{"Tem Placeholder?"}
+		C -- Sim --> D["Substitui os valores de placeholder pelo valor ligado"]
+		C -- Não --> E["Imprime o Texto"]
+		D --> C
+		E --> F{"Qual macro de print?"}
+		F -- println --> G["Imprime em stdout + uma quebra de linha"]
+		F -- print --> H["Imprime em stdout"]
+		G --> I["Código"]
+		H --> I
+	```
+
 ## Conteúdo
 
 - `println!("Conteúdo");` : print com quebra de linha (veja código 1).
