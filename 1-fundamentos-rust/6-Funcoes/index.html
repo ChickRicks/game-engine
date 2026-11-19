@@ -2092,7 +2092,7 @@
 <p>Estrutura completa: <code>fn foo(foo1: bar1) -&gt; bar2{bar3}</code>. <code>return</code> para as funções que retornam algo.</p>
 <h2 id="conteudo">Conteúdo<a class="headerlink" href="#conteudo" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Funções são recomendadas a usarem snake_case.</li>
+<li>Funções são recomendadas a usarem <code>snake_case</code>.</li>
 <li>Função possui estrutura completa <code>fn foo(foo1) -&gt; bar1{bar}</code>, parâmetros e retornos são opcionais (<code>foo1</code> e <code>bar1</code>)(veja código 1).</li>
 <li>Chamar uma função é <code>foo()</code> (veja código 1).</li>
 <li>Para funções que recebem mais de um valor, fica <code>fn foo(foo1: bar1, foo2: bar2){}</code> (veja código 2).</li>
@@ -2100,11 +2100,13 @@
 <li>Para funções que retornam valores, usa-se <code>-&gt; tipo de var</code> na criação. Todas retornam algo, caso não possua, retorna () (veja código 3).</li>
 <li>Para o retorno de funções, pode se usar <code>return</code> ou, na última linha, fazer a operação sem <code>;</code>(veja código 3).</li>
 <li>Passa ownership para as variáveis complexas caso não seja usado <code>&amp;</code> com a variável (veja em <a href="../9-Ownership/">ownership</a>).</li>
+<li>Funções em rust aceitam recursão (função chamando ela mesma) (veja código 4).</li>
 </ul>
 <h2 id="descoberta-de-testes">Descoberta de testes<a class="headerlink" href="#descoberta-de-testes" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>return</code> implícito compila sem avisos ou problemas, mas pode reduzir legibilidade.</li>
-<li>O retorno implícito é exclusivo do fim de linha, não se pode retornar <code>if</code> como statement (veja código 4).</li>
+<li><code>return</code> implícito compila sem avisos, mas pode reduzir legibilidade.</li>
+<li>O retorno implícito é exclusivo do fim do bloco, o pedido de <code>return</code> exige statement <code>()</code>, o que o <code>if</code> é, não podendo retornar os seus braços. (veja código 5).</li>
+<li>Em rust, recursão sem caso de parada eventualmente gera stack overflow, e depois aborta, não fica preso permanentemente.</li>
 </ul>
 <h2 id="codigos-relacionados">Códigos relacionados<a class="headerlink" href="#codigos-relacionados" title="Permanent link">&para;</a></h2>
 <p>Código 1:
@@ -2128,11 +2130,11 @@ Código 2:
 <span class="normal"><a href="#__codelineno-1-5">5</a></span>
 <span class="normal"><a href="#__codelineno-1-6">6</a></span>
 <span class="normal"><a href="#__codelineno-1-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">fn</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="hll"><span class="w">    </span><span class="n">func2</span><span class="p">(</span><span class="o">-</span><span class="mi">11</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">);</span><span class="w"> </span><span class="c1">// Chama func2, que printa -11 2 5\n.</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="hll"><span class="w">    </span><span class="n">func2</span><span class="p">(</span><span class="o">-</span><span class="mi">11</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span><span class="w"> </span><span class="c1">// Chama func2, que printa -11 2 15\n.</span>
 </span><a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="p">}</span>
 <a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="hll"><span class="k">fn</span><span class="w"> </span><span class="nf">func2</span><span class="p">(</span><span class="n">valor1</span><span class="p">:</span><span class="w"> </span><span class="kt">i32</span><span class="p">,</span><span class="n">valor2</span><span class="p">:</span><span class="w"> </span><span class="kt">u32</span><span class="p">,</span><span class="k">mut</span><span class="w"> </span><span class="n">valor3</span><span class="p">:</span><span class="w"> </span><span class="kt">i32</span><span class="p">){</span>
-</span><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span><span class="n">valor3</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">"{} {} {}"</span><span class="p">,</span><span class="n">valor1</span><span class="p">,</span><span class="n">valor2</span><span class="p">,</span><span class="n">valor3</span><span class="p">);</span>
+</span><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="hll"><span class="w">    </span><span class="n">valor3</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+</span><a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">"{} {} {}"</span><span class="p">,</span><span class="n">valor1</span><span class="p">,</span><span class="n">valor2</span><span class="p">,</span><span class="n">valor3</span><span class="p">);</span>
 <a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 Código 3:
@@ -2150,7 +2152,7 @@ Código 3:
 </span><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">"{}"</span><span class="p">,</span><span class="n">func4</span><span class="p">(</span><span class="mi">3</span><span class="p">));</span><span class="w"> </span><span class="c1">// Printa o resultado de func4 recebendo 3, que é -6\n.</span>
 <a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="hll"><span class="p">}</span>
 </span><a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="hll"><span class="k">fn</span><span class="w"> </span><span class="nf">func3</span><span class="p">(</span><span class="n">valor1</span><span class="p">:</span><span class="w"> </span><span class="kt">i32</span><span class="p">)</span><span class="w"> </span><span class="p">-&gt;</span><span class="w"> </span><span class="kt">i32</span><span class="p">{</span>
-</span><a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">valor1</span><span class="o">*</span><span class="mi">3</span><span class="p">;</span><span class="w">    </span>
+</span><a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">valor1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w">  </span>
 <a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="p">}</span>
 <a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="k">fn</span><span class="w"> </span><span class="nf">func4</span><span class="p">(</span><span class="n">valor1</span><span class="p">:</span><span class="w"> </span><span class="kt">i32</span><span class="p">)</span><span class="w"> </span><span class="p">-&gt;</span><span class="w"> </span><span class="kt">i32</span><span class="p">{</span>
 <a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">    </span><span class="n">valor1</span><span class="o">*-</span><span class="mi">2</span>
@@ -2161,15 +2163,32 @@ Código 4:
 <span class="normal"><a href="#__codelineno-3-2">2</a></span>
 <span class="normal"><a href="#__codelineno-3-3">3</a></span>
 <span class="normal"><a href="#__codelineno-3-4">4</a></span>
-<span class="normal"><a href="#__codelineno-3-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">fn</span><span class="w"> </span><span class="nf">func1</span><span class="p">()</span><span class="w"> </span><span class="p">-&gt;</span><span class="w"> </span><span class="kt">i32</span><span class="p">{</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="hll"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="p">{</span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;}</span><span class="w"> </span><span class="c1">//Válido</span>
-</span><a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="hll"><span class="w">    </span><span class="c1">//else if false {1} - Inválido: É um statement, ele não retorna (), mas i32.</span>
-</span><a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="hll"><span class="w">    </span><span class="mi">2</span><span class="w"> </span><span class="c1">// Válido</span>
-</span><a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="p">}</span>
+<span class="normal"><a href="#__codelineno-3-5">5</a></span>
+<span class="normal"><a href="#__codelineno-3-6">6</a></span>
+<span class="normal"><a href="#__codelineno-3-7">7</a></span>
+<span class="normal"><a href="#__codelineno-3-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">fn</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">"{}"</span><span class="p">,</span><span class="n">fat</span><span class="p">(</span><span class="mi">10</span><span class="p">));</span><span class="w"> </span><span class="c1">// retorna 3628800</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">    </span><span class="c1">// println!("{}",fat(1000)); - Inválido: u64 overflow (excede o limite de bits do u64).</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="p">}</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="hll"><span class="k">fn</span><span class="w"> </span><span class="nf">fat</span><span class="p">(</span><span class="n">n</span><span class="p">:</span><span class="w"> </span><span class="kt">u64</span><span class="p">)</span><span class="w"> </span><span class="p">-&gt;</span><span class="w"> </span><span class="kt">u64</span><span class="w"> </span><span class="p">{</span>
+</span><a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="hll"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">{</span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;}</span>
+</span><a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="hll"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">n</span><span class="o">*</span><span class="n">fat</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+</span><a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="hll"><span class="p">}</span>
+</span></code></pre></div></td></tr></table></div>
+Código 5:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span>
+<span class="normal"><a href="#__codelineno-4-4">4</a></span>
+<span class="normal"><a href="#__codelineno-4-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">fn</span><span class="w"> </span><span class="nf">func1</span><span class="p">()</span><span class="w"> </span><span class="p">-&gt;</span><span class="w"> </span><span class="kt">i32</span><span class="p">{</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="hll"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="p">{</span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;}</span><span class="w"> </span><span class="c1">//Válido</span>
+</span><a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="hll"><span class="w">    </span><span class="c1">//else if false {1} - Inválido: É um statement, ele não retorna (), mas i32.</span>
+</span><a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="hll"><span class="w">    </span><span class="mi">2</span><span class="w"> </span><span class="c1">// Válido</span>
+</span><a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div></p>
 <h2 id="links-externos-relacionados">Links externos relacionados<a class="headerlink" href="#links-externos-relacionados" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://www.w3schools.com/rust/rust_functions.php">w3school funcitons</a></li>
+<li><a href="https://www.w3schools.com/rust/rust_functions.php">w3school functions</a></li>
 </ul>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
 <ul>
@@ -2238,6 +2257,8 @@ Código 4:
     
     
       <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+        <script src="../../javascripts/mermaid.js"></script>
       
         <script src="../../javascripts/mathjax.js"></script>
       

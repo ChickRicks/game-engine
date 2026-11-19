@@ -2090,6 +2090,20 @@
 <h1 id="prints-e-comentarios">Prints e Comentários<a class="headerlink" href="#prints-e-comentarios" title="Permanent link">&para;</a></h1>
 <h2 id="resumo">Resumo<a class="headerlink" href="#resumo" title="Permanent link">&para;</a></h2>
 <p><code>println!(foo)</code> para print com quebra de linha, <code>print!("foo")</code> para prints sem a quebra, <code>//</code> para comentários de uma linha, <code>/* comentário */</code> para comentários de mais de uma linha.</p>
+<details class="example">
+<summary>Ver UML — move vs. copy</summary>
+<pre class="mermaid"><code>flowchart TD
+    A["Código"] --&gt; B["macro print"]
+    B --&gt; C{"Tem Placeholder?"}
+    C -- Sim --&gt; D["Substitui os valores de placeholder pelo valor ligado"]
+    C -- Não --&gt; E["Imprime o Texto"]
+    D --&gt; C
+    E --&gt; F{"Qual macro de print?"}
+    F -- println --&gt; G["Imprime em stdout + uma quebra de linha"]
+    F -- print --&gt; H["Imprime em stdout"]
+    G --&gt; I["Código"]
+    H --&gt; I</code></pre>
+</details>
 <h2 id="conteudo">Conteúdo<a class="headerlink" href="#conteudo" title="Permanent link">&para;</a></h2>
 <ul>
 <li><code>println!("Conteúdo");</code> : print com quebra de linha (veja código 1).</li>
@@ -2227,6 +2241,8 @@ Código 4:
     
     
       <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+        <script src="../../javascripts/mermaid.js"></script>
       
         <script src="../../javascripts/mathjax.js"></script>
       

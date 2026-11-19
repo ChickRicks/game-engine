@@ -1890,16 +1890,15 @@
 
 
 <h1 id="insercao">Inserção<a class="headerlink" href="#insercao" title="Permanent link">&para;</a></h1>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>flowchart TD
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    A["Valor"] --&gt; B{"É folha?"}
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    B -- Sim --&gt; C["Insere como um nó vermelho"]
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    C --&gt; G["Começa o processo de arrumar a árvore"]
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    B -- Não --&gt; D{"É maior ou menor?"}
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    D -- Maior --&gt; E["Vai a direita"]
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    D -- Menor --&gt; F["Vai a esquerda"]
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    E --&gt; B
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    F --&gt; B
-</code></pre></div>
+<pre class="mermaid"><code>flowchart TD
+    A["Valor"] --&gt; B{"É folha?"}
+    B -- Sim --&gt; C["Insere como um nó vermelho"]
+    C --&gt; G["Começa o processo de arrumar a árvore"]
+    B -- Não --&gt; D{"É maior ou menor?"}
+    D -- Maior --&gt; E["Vai a direita"]
+    D -- Menor --&gt; F["Vai a esquerda"]
+    E --&gt; B
+    F --&gt; B</code></pre>
 
 
 
@@ -1959,6 +1958,8 @@
     
     
       <script src="../../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+        <script src="../../../javascripts/mermaid.js"></script>
       
         <script src="../../../javascripts/mathjax.js"></script>
       

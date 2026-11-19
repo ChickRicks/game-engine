@@ -1884,18 +1884,17 @@
 
   <h1>UML Print</h1>
 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>flowchart TD
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    A["Código"] --&gt; B["print"]
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    B --&gt; C{"Tem Placeholder?"}
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    C -- Sim --&gt; D["Substitui as {} pelo valor ligado"]
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    C -- Não --&gt; E["Imprime o Texto"]
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    D --&gt; C
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    E --&gt; F{"Qual tipo de print?"}
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    F -- println --&gt; G["Imprime em stdout + uma quebra de linha"]
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    F -- print --&gt; H["Imprime em stdout"]
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    G --&gt; I["Código"]
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    H --&gt; I
-</code></pre></div>
+<pre class="mermaid"><code>flowchart TD
+    A["Código"] --&gt; B["macro print"]
+    B --&gt; C{"Tem Placeholder?"}
+    C -- Sim --&gt; D["Substitui os espaços de placeholder pelo valor ligado"]
+    C -- Não --&gt; E["Imprime o Texto"]
+    D --&gt; C
+    E --&gt; F{"Qual macro de print?"}
+    F -- println --&gt; G["Imprime em stdout + uma quebra de linha"]
+    F -- print --&gt; H["Imprime em stdout"]
+    G --&gt; I["Código"]
+    H --&gt; I</code></pre>
 
 
 
@@ -1955,6 +1954,8 @@
     
     
       <script src="../../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+        <script src="../../../javascripts/mermaid.js"></script>
       
         <script src="../../../javascripts/mathjax.js"></script>
       

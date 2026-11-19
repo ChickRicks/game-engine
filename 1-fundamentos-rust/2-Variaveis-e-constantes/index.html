@@ -2087,12 +2087,42 @@
   
 
 
-<h1 id="variaveis-e-constantes">Variaveis e constantes<a class="headerlink" href="#variaveis-e-constantes" title="Permanent link">&para;</a></h1>
+<h1 id="variaveis-e-constantes">Variáveis e Constantes<a class="headerlink" href="#variaveis-e-constantes" title="Permanent link">&para;</a></h1>
 <h2 id="resumo">Resumo<a class="headerlink" href="#resumo" title="Permanent link">&para;</a></h2>
 <p>Estrutura de Variáveis e constantes.
 Variável imutável: <code>let foo = bar;</code>
 Variável mutável: <code>let mut foo = bar;</code>
 Constante: <code>const foo1: foo2 = bar;</code>, sendo foo2 o tipo da constante.</p>
+<details class="example">
+<summary>UML exemplo de variáveis:</summary>
+<pre class="mermaid"><code>flowchart TD
+    A["Código"] --&gt; B[let]
+    B --&gt; C{"Escopo Global?"}
+    C -- Não --&gt; D{"Nome de variável válido?"}
+    C -- Sim --&gt; E["Erro: variáveis devem estar dentro de escopos não globais"]
+    D -- Sim --&gt; F{"Possui mut? (afeta reatribuição futura, não a declaração de variáveis)"}
+    D -- Não --&gt; G["Erro léxico"]
+    F -- Sim, mutável --&gt; H{"Possui alguma especificação de tipo?"}
+    F -- Não, imutável --&gt; H
+    H -- Não --&gt; I{"Possui alguma atribuição de valor no escopo criado?"}
+    I -- Não --&gt; J["Erro semântico: a variável não possui tipo"]
+    H -- Sim --&gt; K["Variável declarada, e seu valor é guardado, caso possua."]
+    I -- Sim --&gt; K
+    K --&gt; L["Código"]</code></pre>
+</details>
+<details class="example">
+<summary>UML exemplo de constantes:</summary>
+<pre class="mermaid"><code>flowchart TD
+    A["Código"] --&gt; B[const]
+    B --&gt; C{"Nome de constante válido?"}
+    C -- Sim --&gt; D{"Possui especificação de tipo?"}
+    C -- Não --&gt; E["Erro léxico"]
+    D -- Sim --&gt; F{"Recebe valor no escopo criado?"}
+    D -- Não --&gt; G["Erro semântico: constantes precisam de especificação de tipo (i32, por exemplo)"]
+    F -- Sim --&gt; H["Salva seu valor no escopo atual"]
+    F -- Não --&gt; I["Erro semântico: constantes precisam ter valor no escopo criado"]
+    H --&gt; J["Código"]</code></pre>
+</details>
 <h2 id="conteudo">Conteúdo<a class="headerlink" href="#conteudo" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Declaração de variável: <code>let foo = bar;</code> (Veja código 1)</li>
@@ -2102,9 +2132,9 @@ Constante: <code>const foo1: foo2 = bar;</code>, sendo foo2 o tipo da constante.
 <li>Rust aceita inteiros, pontos flutuantes, caracteres, booleana, strings, entre outras estruturas. (veja código 2)</li>
 <li>Tem como deixar explícito o chamado de tipo de variável usando: <code>let foo: foo = bar;</code>.</li>
 <li>Tipos de variável: (veja código 2):<ul>
-<li>i32: Números inteiros (-inf,+inf);</li>
-<li>u32: Números naturais + 0 (0,+inf);</li>
-<li>f64: números de ponto flutuante;</li>
+<li>i32 ou i64: Números inteiros (-inf,+inf);</li>
+<li>u32 ou u64: Números naturais + 0 (0,+inf);</li>
+<li>f32 ou f64: números de ponto flutuante;</li>
 <li>char: um carácter único;</li>
 <li>&amp;str: uma string fixa;</li>
 <li>String: uma string que pode mudar;</li>
@@ -2115,14 +2145,14 @@ Constante: <code>const foo1: foo2 = bar;</code>, sendo foo2 o tipo da constante.
 <li>Constantes possuem estrutura <code>const foo: foo2 = bar;</code>, sendo que foo2 é o tipo de variável (veja código 3).</li>
 <li>A estrutura é obrigatória incluir o tipo da constante (veja código 3).</li>
 <li>Ideal usar letras maiúsculas para constantes, facilitam a diferenciação (veja código 3).</li>
-<li>Variáveis podem retornar valores diferentes usando <code>foo as type</code>(veja código 4).</li>
+<li>Variáveis podem produzir valores diferentes usando <code>foo as type</code>(veja código 4).</li>
 </ul>
 <h2 id="descoberta-de-testes">Descoberta de testes<a class="headerlink" href="#descoberta-de-testes" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Quebras de linha nos espaços continuam ignorados (dado que não corte palavras chaves ou valores) (veja código 5).</li>
+<li>Quebras de linha nos espaços continuam ignorados (dado que não corte palavras-chave ou valores) (veja código 5).</li>
 <li><code>let x = foo; let x = foo2;</code> é válido (shadowing) (veja código 6).</li>
 <li><code>let foo = bar</code> fora de funções não funciona (sem variáveis globais), mas constantes podem (veja código 7).</li>
-<li>Não pode declarar variável sem existir atribuição de valor (veja código 8).</li>
+<li>Não pode declarar variável sem existir atribuição de tipo (veja código 8).</li>
 </ul>
 <h2 id="links-externos-relacionados">Links externos relacionados<a class="headerlink" href="#links-externos-relacionados" title="Permanent link">&para;</a></h2>
 <ul>
@@ -2141,7 +2171,7 @@ Constante: <code>const foo1: foo2 = bar;</code>, sendo foo2 o tipo da constante.
 </span><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="hll"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
 </span><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="hll"><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">"{} {}"</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">);</span><span class="w"> </span><span class="c1">// Isso printa 10 20\n</span>
 </span><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="hll"><span class="w">    </span><span class="n">y</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="c1">// Válido, y é mutável</span>
-</span><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="c1">//x += y - Inválido, x é imutável</span>
+</span><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="c1">//x += y; - Inválido, x é imutável</span>
 <a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 Código 2:
@@ -2240,19 +2270,20 @@ Código 8:
 <span class="normal"><a href="#__codelineno-7-3">3</a></span>
 <span class="normal"><a href="#__codelineno-7-4">4</a></span>
 <span class="normal"><a href="#__codelineno-7-5">5</a></span>
-<span class="normal"><a href="#__codelineno-7-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="k">fn</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
+<span class="normal"><a href="#__codelineno-7-6">6</a></span>
+<span class="normal"><a href="#__codelineno-7-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="k">fn</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
 <a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="hll"><span class="w">    </span><span class="c1">//let b; - Inválido, não possui um tipo de variável.</span>
-</span><a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">c</span><span class="p">;</span>
-<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="w">    </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// Válido, variável possui atribuição</span>
-<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="p">}</span>
+</span><a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="hll"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">c</span><span class="p">;</span>
+</span><a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="hll"><span class="w">    </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// Válido, variável possui atribuição</span>
+</span><a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="hll"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">d</span><span class="p">:</span><span class="w"> </span><span class="kt">u32</span><span class="p">;</span><span class="w"> </span><span class="c1">// Válido, possui tipo declarado</span>
+</span><a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div></p>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
 <ul>
-<li>👈 <strong>Anterior:</strong> <a href="../1-Prints-e-comentarios/">Prints e comentários</a></li>
+<li>👈 <strong>Anterior:</strong> <a href="../1-Prints-e-comentarios/">Prints e Comentários</a></li>
 <li>➡️ <strong>Próximo:</strong> <a href="../3-Operadores/">Operadores</a></li>
 </ul>
-<hr />
 
 
 
@@ -2315,6 +2346,8 @@ Código 8:
     
     
       <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+        <script src="../../javascripts/mermaid.js"></script>
       
         <script src="../../javascripts/mathjax.js"></script>
       

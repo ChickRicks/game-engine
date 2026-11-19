@@ -1884,17 +1884,16 @@
 
   <h1>UML Condicional</h1>
 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>flowchart TD
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    A["Código"] --&gt; B[If]
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    B --&gt; C{"Atinge a condição?"}
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    C -- Sim --&gt; D["Faz o código interno."]
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    C -- Não --&gt; E{"Tem mais condicionais/else if"}
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    E -- Sim --&gt; C
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    E -- Não --&gt; F{"Possui um else/saída para todas as condições negativas?"}
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    F -- Sim --&gt; D
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    F -- Não --&gt; G["Código"]
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    D --&gt; G
-</code></pre></div>
+<pre class="mermaid"><code>flowchart TD
+    A["Código"] --&gt; B[If]
+    B --&gt; C{"Atinge a condição?"}
+    C -- Sim --&gt; D["Faz o código interno."]
+    C -- Não --&gt; E{"Tem mais condicionais/else if"}
+    E -- Sim --&gt; C
+    E -- Não --&gt; F{"Possui um else/saída para todas as condições negativas?"}
+    F -- Sim --&gt; D
+    F -- Não --&gt; G["Código"]
+    D --&gt; G</code></pre>
 
 
 
@@ -1954,6 +1953,8 @@
     
     
       <script src="../../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+        <script src="../../../javascripts/mermaid.js"></script>
       
         <script src="../../../javascripts/mathjax.js"></script>
       
