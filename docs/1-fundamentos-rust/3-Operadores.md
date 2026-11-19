@@ -4,7 +4,6 @@ criado: 2026/11/01
 modificado: 2026-11-08
 autor: ChickRicks
 ---
-
 # Operadores
 
 ## Resumo
