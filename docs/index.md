@@ -14,6 +14,8 @@ Documentação do desenvolvimento de um motor de jogos geral, escrito em Rust.
 		
 		Testes: Ao final de cada capítulo, eu faço um teste de conhecimento para reduzir as incertezas que posso ter deixado para trás. As ideias serão feitas por mim, e serão verificadas com a IA como correção.
 		
+		Fontes de estudo: Existem formas diferentes de se estudar um tópico (início de rust, por exemplo). A IA junta as plataformas de estudo que seriam melhores para o meu estudo, facilitando a pesquisa de novas informações, sem substituir o meu estudo, já que a IA não está gerando o resumo para mim, apenas coletando aonde pesquisar.
+		
 	IAs usadas:
 		
 		Lumo: O início do projeto usava o lumo para fazer a estruturação inicial, porém sua duração limitada no plano gratuito era um peso grande no progresso do projeto.
