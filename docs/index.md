@@ -4,13 +4,13 @@ Documentação do desenvolvimento de um motor de jogos geral, escrito em Rust.
 
 !!! warning "Aviso sobre uso de IA:"
 	Esse projeto foi escrito por humanos. Mas o projeto inteiro não foi 100% humano.
-	Aonde teve uso de IA
+	Aonde teve uso de IA:
 		
-		Estruturação do mkdocs: a estrutura vista contendo 1-,2-,etc, foi feito por IA inicialmente. Qualquer mudança terá revisão minha.
+		Estruturação do mkdocs: a estrutura vista contendo 1-,2-,etc, foi feito por IA inicialmente. Qualquer mudança terá revisão minha, e potencialmente feito por mim.
 		
 		Correções: os textos vem dos meus aprendizados, incluindo os testes aleatórios para ver comportamento. Porém, é passado na IA para poder fazer as correções necessárias para diminuir ambiguidade ou para tornar o texto menos informal.
 		
-		Ferramentas: Eu não conheço todas as ferramentas que o mkdocs ou o obsidian (o escritor que estou usando) possuem. Uso a IA para poder expandir formas de expressar o conteúdo que criei.
+		Ferramentas: Eu não conheço todas as ferramentas que o mkdocs ou o obsidian (o escritor que estou usando para escrever meus conhecimentos) possuem. Uso a IA para poder expandir formas de expressar o conteúdo que criei.
 		
 		Testes: Ao final de cada capítulo, eu faço um teste de conhecimento para reduzir as incertezas que posso ter deixado para trás. As ideias serão feitas por mim, e serão verificadas com a IA como correção.
 		
