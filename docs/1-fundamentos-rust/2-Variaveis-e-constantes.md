@@ -56,18 +56,18 @@ Constante: `const foo1: foo2 = bar;`, sendo foo2 o tipo da constante.
 	- char: um carácter único;
 	- &str: uma string fixa;
 	- String: uma string que pode mudar;
-	- bool: booleana (V ou F);
+	- bool: booleanos (V ou F);
 - Print aceita os dados mostrados (veja código 2).
 - Constantes possuem estrutura `const foo: foo2 = bar;`, sendo que foo2 é o tipo de variável (veja código 3).
 - A estrutura é obrigatória incluir o tipo da constante (veja código 3).
 - Ideal usar letras maiúsculas para constantes, facilitam a diferenciação (veja código 3).
-- Variáveis podem produzir valores diferentes usando `foo as type`(veja código 4).
+- Variáveis podem produzir valores diferentes usando `foo as type`, sem mudar o tipo original da variável (veja código 4).
 
 ## Descoberta de testes
 -  Quebras de linha nos espaços continuam ignorados (dado que não corte palavras-chave ou valores) (veja código 5).
 - `let x = foo; let x = foo2;` é válido (shadowing) (veja código 6).
 - `let foo = bar` fora de funções não funciona (sem variáveis globais), mas constantes podem (veja código 7).
-- Não pode declarar variável sem existir atribuição de tipo (veja código 8).
+- Não pode declarar variável sem existir alguma forma que consiga ligar a variável a um tipo de valor, seja uma atribuição de valor ou uma anotação explícita (veja código 8).
 ## Links externos relacionados
 - [w3schools rust variables](https://www.w3schools.com/rust/rust_variables.php) até [w3schools constants](https://www.w3schools.com/rust/rust_constants.php).
 
@@ -81,10 +81,9 @@ fn main(){
 	y *= x; // Válido, y é mutável
 	//x += y; - Inválido, x é imutável
 }
-
 ```
 Código 2:
-```rust hl_lines="2-9" linenums="1"
+```rust hl_lines="2-7 9" linenums="1"
 fn main(){
 	let a: i32 = -1; // Número inteiro
 	let b: u32 = 2; // Número natural

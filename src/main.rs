@@ -1,4 +1,4 @@
-const _x: i32 = -1;
+const _x: i32 = -16;
 fn main(){
 	let result = soma_iter(100,0);
 	println!("{}",result);

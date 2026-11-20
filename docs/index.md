@@ -2,6 +2,7 @@
 
 Documentação do desenvolvimento de um motor de jogos geral, escrito em Rust.
 
+
 ## Sobre este projeto
 
 Registro da trilha de estudos, decisões técnicas e progresso na construção

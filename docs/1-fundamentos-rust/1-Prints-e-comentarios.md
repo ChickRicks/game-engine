@@ -45,6 +45,7 @@ fn main(){
 	print!("Hello world 2: Electric boogaloo"); // Retorna no terminal Hello world 2: Electric boogaloo.
 }
 ```
+
 Código 2:
 ```rust linenums="1"
 // Isso é um comentário de uma única linha
@@ -54,9 +55,9 @@ para fechar, é necessário colocar */
 Código 3:
 ```rust hl_lines="2-5" linenums="1"
 fn main(){
-	print!
-	("Funciona normalmente");
 	println!
+	("Funciona normalmente");
+	print!
 	("Também funciona :)");
 }
 ```

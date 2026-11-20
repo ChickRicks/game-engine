@@ -20,40 +20,41 @@ Variáveis ficam no escopo definido, que é definido pela quantidade de {} que e
 - Novos escopos podem ser abertos sem uma função (veja código 3).
 - Mudanças no valor dentro de um escopo muda o valor da variável do escopo externo, respeitando se a variável é mutável e não for shadowing (veja código 4).
 ## Códigos relacionados
-Código 1
+Código 1:
 ```rust hl_lines="1 3 5 9 11 15-17" linenums="1"
 // Escopo 1 (global).
 fn main(){
 	// Escopo 2 (local a main).
 	if true{
 		// Escopo 3.1 (local ao if acima).
-		break;
 	}
 	loop{
 		// Escopo 3.2 (local ao loop acima).
 		if false{
 			//Escopo 4 (local ao if acima).
+			break;
 		}
+		break;
 	}
 	match 2 {
 		1 => true || true, // Escopo 3.3 (local ao braço do match acima).
 		2 => false || false, // Escopo 3.4 (local ao braço do match acima).
 		_ => true || false // Escopo 3.5 (local ao braço do match acima).
-	}
+	};
 	// Esse código retorna um warning (valores no match não retornam a algum lugar)
 }
 ```
-Código 2
+Código 2:
 ```rust hl_lines="4-6" linenums="1"
 fn main(){
 	let x = 0;
 	if true{
 		let y = 0; 
-		let x = 10; // Válido.
+		let x = 10; // Válido, acontece shadowing nesse escopo.
 	} // Depois daqui, y some da memória, como valor, e o x local também, voltando ao valor de x do escopo anterior.
 }
 ```
-Código 3
+Código 3:
 ```rust hl_lines="2-7" linenums="1"
 fn main(){
 	{
@@ -77,8 +78,10 @@ fn main(){
 		// y = 20; - Inválido, y não é mutável
 		let x = 15;
 		println!("{} {}",x,y); // vai printar 15 10\n.
+		//x = 20; - Inválido, x não é mutável nesse escopo.
 	}
-	println!("{}",x); // vai printar 20\n.
+	x = 25;
+	println!("{}",x); // vai printar 25\n.
 }
 ```
 ## Links externos relacionados
