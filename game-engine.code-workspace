@@ -3,5 +3,18 @@
 		{
 			"path": "."
 		}
-	]
+	],
+	"settings": {
+		"rust-analyzer.cargo.features": "all",
+		"rust-analyzer.checkOnSave": "clippy",
+		"rust-analyzer.linkedProjects": ["Cargo.toml"],
+		"files.exclude": {
+		"**/docs": true,
+		"**/site":true,
+		"**/.venv":true,
+		"**/.obsidian": true,
+		"**/.github":true,
+		"**/target":true
+		}
+	}
 }

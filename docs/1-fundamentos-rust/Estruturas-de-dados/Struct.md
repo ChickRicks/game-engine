@@ -87,7 +87,7 @@ fn main(){
 }
 ```
 ## Links externos relacionados
-
+[w3school structs](https://www.w3schools.com/rust/rust_structs.php)
 ## Links
 - 👈 **Anterior:** [Hashmaps](Hashmap.md)
 - ➡️ **Próximo:** [Enums](Enum.md)
